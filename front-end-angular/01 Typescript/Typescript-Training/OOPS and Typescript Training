@@ -1,0 +1,107 @@
+/ *
+What is OOP? naaa
+
+https://dotnettutorials.net/lesson/object-oriented-programming-csharp/
+https://dev.to/rajrathod/ mastering-object-oriented-programming-with-typescript-encapsulation-abstraction-inheritance-and-polymorphism-explained-c6pk
+
+Object Oriented Programming language(OOPS):-
+It is a methodology to write the program where we specify the code in form of classes and objects.
+
+=> Why do we need Oops?
+Object oreinted programing help us to think in terms of real world objects.
+
+=> What are the important pillars of oops?
+
+There are Seven important pilars of oops.
+
+Object
+Class
+Encapsulation  - Hide complexity, which should not be shows outside the object it hide that.
+Abstraction  - It shows only what is neccesary.
+Polymorphism  - have same name but multiple purpose. Example overloading method.
+Inheritance  - Parent child relationship, where we have something common in the parent and the child can inherit and add something more to it
+
+/*
+
+01 - Object
+
+Objects are instances of classes. They are created using the new keyword followed by the class name. Objects have their own set of properties and can invoke the methods defined in the class.
+
+02 -  Class
+
+Class is a user defined data type. it is like a template. In c# variable are termed as instances of classes. which are the actual objects.
+
+Types of classes
+
+03 ENCAPSULATION
+
+- hide the complexitiy its called ENCAPSULATION we can implement by access modifer
+- Encapsulation provides the ability to hide the internal details of an object from its users.The concept of encapsulation is also known as data hiding or information hiding. In c# , Encapsulation is implemented using the access modifier keywords.
+-  Access Modifier TypeScript supports three access modifiers - public, private, and protected.
+
+04  Abstraction -
+
+- Abstraction happens during desgin phase what has to show public during execution phase developer uses encapsulation to implement abstraction to uses access modifiers.
+
+05 Polymorphism
+
+        Have same name but multiple purpose 
+
+        Two types of polymorphism - 
+
+        1 Static  Polymorphism  (Compile Time  Polymorphism)
+            
+            Method overloading
+
+            => What is method overloading?
+                
+                Method with same names with diffrent signatures.
+
+           
+
+        2 Dynamic Polymorphism  ( Run Time Polymorphism)
+
+
+
+            Method Overriding
+
+                What is the use of virtual keyword?
+                
+                Virtual keyword help us to define some logic in the parent class which can be overridden in the child class
+
+            => What is overriding ? 
+              
+              Using virtual keyword and overriding we can write our own logic in child class with same function name .
+
+
+            Interface
+
+            Abstract Class
+
+
+Inheritance -
+
+Inheritance is one of the core principal of oops where we can define a parent(base class) and a child(drive class) relationship between two orm more classes.
+
+Types of Inheritance
+
+
+
+Interface and Abstract class 
+
+https://www.c-sharpcorner.com/UploadFile/d0e913/abstract-class-interface-two-villains-of-every-interview/
+https://www.c-sharpcorner.com/UploadFile/d0e913/abstract-class-interface-two-villains-of-every-interview756/
+
+
+Static classes and method
+
+Constructor -
+The Constructor is a method in a typescript class that automatically gets called when the class is being instantiated. Constructor always run before any lifecycle hook and it's not a part of lifecycle hooks.
+Constructor is used to inject dependencies or services into the component class.
+
+
+
+
+*/
+
+
