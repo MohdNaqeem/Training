@@ -1,0 +1,10 @@
+$primary-800: hsl(0, 6%, 24%);
+$primary-400: hsl(0, 93%, 68%);
+$primary-300: hsl(0, 36%, 70%);
+
+$gradient-primary: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+$gradient-secondary: linear-gradient(
+  135deg,
+  hsl(0, 0%, 100%),
+  hsl(0, 100%, 98%)
+);

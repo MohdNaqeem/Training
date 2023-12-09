@@ -1,0 +1,19 @@
+<p>rooms works!</p>
+<h1>Welcome to {{hotelName}}</h1>
+
+<div [hidden]="hideRooms">
+    Number of Rooms:
+    <div [innerText]="numberOfRooms"></div>
+</div>
+
+<!-- This is called optional chaining -->
+{{rooms.availableRooms ?? 'No rooms'}}
+
+<div *ngIf="rooms?.availableRooms">
+   List of Rooms
+</div>
+
+<button (click)="toggle()">Toggle</button>
+
+<input type="text" #box (keyup)="getData(box.value)">
+<button (click)="getData('Hello')">Click me</button>

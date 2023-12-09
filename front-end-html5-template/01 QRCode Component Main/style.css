@@ -1,0 +1,56 @@
+:root {
+  /* COLORS */
+  --white: hsl(0, 0%, 100%);
+  --lightgrey: hsl(212, 45%, 89%);
+  --grayishblue: hsl(220, 15%, 55%);
+  --darkblue: hsl(218, 44%, 22%);
+
+  /* FONTS */
+  --ff-main: "Poppins", sans-serif;
+
+  /* FONT WEIGHTS */
+  --fw-normal: 400;
+  --fw-bold: 700;
+
+  /* FONT SIZES */
+  --fs-paragraph: 15px;
+}
+
+* {
+  font-family: var(--ff-main);
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+  background-color: var(--lightgrey);
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 20em;
+  max-width: 80%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: var(--white);
+  padding: 1em;
+  border-radius: 1.4em;
+  align-self: center;
+}
+
+img {
+  border-radius: 1.4em;
+}
+
+h2 {
+  color: var(--darkblue);
+  padding: 1em 0;
+}
+
+p {
+  font-size: var(--fs-paragraph);
+  color: var(--grayishblue);
+  width: 90%;
+}

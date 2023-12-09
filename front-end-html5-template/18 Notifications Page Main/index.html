@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Notifications page</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <div class="notifications__header">
+        <div>
+          <h1>Notifications</h1>
+          <span class="unread"></span>
+        </div>
+        <span class="readAll">Mark all as read</span>
+      </div>
+      <section class="notification new">
+        <img src="./assets/images/avatar-mark-webber.webp" alt="" />
+        <div class="notification__body">
+          <div>
+            <span class="person">Mark Webber</span>
+            <span class="notificationActivity"
+              >reacted to your recent post</span
+            >
+            <span class="notificationContent">
+              My first tournament today!
+            </span>
+            <div class="dot"></div>
+          </div>
+          <span class="notificationTime">1m ago</span>
+        </div>
+      </section>
+      <section class="notification new">
+        <img src="./assets/images/avatar-angela-gray.webp" alt="" />
+        <div class="notification__body">
+          <div>
+            <span class="person">Angela Gray</span>
+            <span class="notificationActivity">followed you</span>
+            <div class="dot"></div>
+          </div>
+
+          <span class="notificationTime">5m ago</span>
+        </div>
+      </section>
+      <section class="notification new">
+        <img src="./assets/images/avatar-jacob-thompson.webp" alt="" />
+        <div class="notification__body">
+          <div>
+            <span class="person">Jacob Thompson</span>
+            <span class="notificationActivity">has joined your group</span
+            ><span class="notificationContent"> Chess Club</span>
+            <div class="dot"></div>
+          </div>
+          <span class="notificationTime">1 day ago</span>
+        </div>
+      </section>
+      <section class="notification">
+        <img src="./assets/images/avatar-rizky-hasanuddin.webp" alt="" />
+        <div class="notification__body">
+          <div>
+            <span class="person">Rizky Hasanuddin</span>
+            <span class="notificationActivity">sent you a private message</span>
+            <div class="dot"></div>
+          </div>
+          <span class="notificationTime"> 5 days ago </span>
+          <p class="notification__message">
+            Hello, thanks for setting up the Chess Club. I've been a member for
+            a few weeks now and I'm already having lots of fun and improving my
+            game.
+          </p>
+        </div>
+      </section>
+      <section class="notification">
+        <img src="./assets/images/avatar-kimberly-smith.webp" alt="" />
+        <div class="notification__body">
+          <div>
+            <span class="person">Kimberly Smith</span>
+            <span class="notificationActivity"
+              >commented on your picture
+              <img src="./assets/images/image-chess.webp"
+            /></span>
+            <div class="dot"></div>
+          </div>
+          <span class="notificationTime"> 1 week ago </span>
+        </div>
+      </section>
+      <section class="notification">
+        <img src="./assets/images/avatar-nathan-peterson.webp" alt="" />
+        <div class="notification__body">
+          <div>
+            <span class="person">Nathan Peterson</span>
+            <span class="notificationActivity"
+              >reacted to your recent post</span
+            >
+            <span class="notificationContent">
+              5 end-game strategies to increase your win rate
+            </span>
+            <div class="dot"></div>
+          </div>
+          <span class="notificationTime"> 2 weeks ago</span>
+        </div>
+      </section>
+      <section class="notification">
+        <img src="./assets/images/avatar-anna-kim.webp" alt="" />
+        <div class="notification__body">
+          <div>
+            <span class="person">Anna Kim</span>
+            <span class="notificationActivity">left the group</span>
+            <span class="notificationContent">Chess Club</span>
+            <div class="dot"></div>
+          </div>
+          <span class="notificationTime">2 weeks ago </span>
+        </div>
+      </section>
+    </main>
+    <script src="./main.js"></script>
+  </body>
+</html>

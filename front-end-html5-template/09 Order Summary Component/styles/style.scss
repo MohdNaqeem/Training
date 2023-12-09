@@ -1,0 +1,94 @@
+@use "./mixins/colors";
+@use "./mixins/typography";
+@use "./mixins/utilities";
+
+body {
+  @include utilities.flex(row, center, center, 0);
+  background-color: colors.$primary;
+  font-family: typography.$ff-primary;
+  color: colors.$neutral-300;
+  text-align: center;
+}
+
+.main-card {
+  max-width: 450px;
+  background-color: colors.$neutral-100;
+  border-radius: 20px;
+
+  .main-card__hero-wrapper {
+    overflow: hidden;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+
+  .main-card__body-wrapper {
+    @include utilities.flex(column, center, center, 0);
+    & > * {
+      width: 70%;
+      margin-block: 0.5rem;
+    }
+    h1 {
+      padding-top: 2rem;
+      font-size: 28px;
+      color: colors.$neutral-500;
+    }
+    p {
+      line-height: 1.5;
+      padding-bottom: 2rem;
+    }
+  }
+
+  .plan-wrapper {
+    width: 70%;
+    border-radius: 10px;
+    @include utilities.flex(row, space-between, center, 0);
+    background-color: colors.$neutral-300-transparent;
+    .expanded-plans {
+      @include utilities.flex(column, center, center, 1rem);
+    }
+    .chosen-plan {
+      h2 {
+        font-size: typography.$fs-300;
+        color: colors.$neutral-500;
+        font-weight: typography.$fw-900;
+      }
+    }
+    button {
+      background-color: colors.$neutral-100;
+      color: colors.$highlight;
+      text-decoration: underline;
+      font-size: 14px;
+      margin-left: 3rem;
+      &:hover {
+        color: colors.$highlight-hover;
+      }
+    }
+  }
+  button {
+    border: none;
+    font-weight: typography.$fw-700;
+    cursor: pointer;
+  }
+  button#payment {
+    background-color: colors.$highlight;
+    border-radius: 5px;
+    margin-top: 4rem;
+    padding-block: 0.5rem;
+    color: colors.$neutral-100;
+    box-shadow: 0px 5px 10px colors.$shadow;
+    &:hover {
+      background-color: colors.$highlight-hover;
+    }
+  }
+
+  button#cancel {
+    background-color: colors.$neutral-100;
+    color: colors.$neutral-300;
+    margin-block: 1.5rem 2.5rem;
+  }
+}
+
+.attribution {
+  position: fixed;
+  bottom: 0;
+}

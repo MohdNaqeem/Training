@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String reverse without reversing of individual words (Array of elements can be reverse with reverse() method
+        but for string it is won't possible so required to split
+        and then join().</title>
+</head>
+
+<body>
+    <script>
+        function removeDuplicates() {
+            var string = "Momin Mohd Naqeem"
+            let result = string.split('').reverse().join('').split(' ').reverse().join(' ')
+            return result
+        }
+        console.log(removeDuplicates())
+    </script>
+</body>
+
+</html>

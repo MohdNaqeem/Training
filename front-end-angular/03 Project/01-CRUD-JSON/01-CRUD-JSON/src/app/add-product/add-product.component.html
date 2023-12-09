@@ -1,0 +1,51 @@
+<nav class="navbar bg-dark">
+    <div class="container-fluid">
+        <a style="color: white; margin-left: 45%;">Add Product</a>
+        <a style="color: white;">Crud With JSON</a>
+    </div>
+</nav>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <form #addproduct="ngForm" (ngSubmit)="addproduct.form.valid && adddata(addproduct.value)">
+                    <div class="mb-3">
+                      <label>Product Id</label>
+                      <input type="email" class="form-control" name="productId" #productId="ngModel"ngModel placeholder="ABC101" required> 
+                    </div>
+
+                    <div class="mb-3">
+                        <label>Product Name</label>
+                        <input type="email" class="form-control" name="productname" #productname="ngModel"ngModel placeholder="Iphone 15" required> 
+                      </div>
+
+                      <div class="mb-3">
+                        <label>Product price</label>
+                        <input type="email" class="form-control" name="productprice" #productprice="ngModel"ngModel placeholder="140000/rs" required> 
+                      </div>
+
+                      <div class="mb-3">
+                        <label>Product Category</label>
+                        <input type="email" class="form-control" name="productcategory" #productcategory="ngModel"ngModel placeholder="Tech" required> 
+                      </div>
+
+                      <div class="mb-3">
+                        <label>Product Description</label>
+                        <input type="email" class="form-control" name="productdescription" #productdescription="ngModel"ngModel placeholder="ABC101" required> 
+                      </div>
+
+                      <div class="mb-3">
+                        <label>Product URL</label>
+                        <input type="email" class="form-control" name="producturl" #producturl="ngModel"ngModel placeholder="abc.jpg/jpeg/png" required> 
+                      </div>
+
+                      <div class="button">
+                        <button type="submit" class="btn btn-primary">Add Product</button>
+                        <button routerLink="/view-product" type="submit" class="btn btn-warning mx-2">View Product</button>
+                      </div>
+                    
+                  </form>
+            </div>
+        </div>
+    </div>
+</div>

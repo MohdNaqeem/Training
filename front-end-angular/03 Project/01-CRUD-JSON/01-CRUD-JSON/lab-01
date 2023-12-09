@@ -1,0 +1,17 @@
+=> Command of Json Serve
+   npm install -g json-server
+   json-server --watch db.json
+
+   Topic 
+   01 Component
+   02 Module
+   03 Pass value from typescript to html
+   04 Click function and event
+   05 Angular property binding
+   06 Event handeling and click funtion in angular
+   07 Class binding and Add css in angular
+   08 Two way data binding
+   09 Conditional statement
+   10 Switch case
+   11 For loop
+   12 pass data from parent to child component

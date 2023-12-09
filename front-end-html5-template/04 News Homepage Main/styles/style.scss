@@ -1,0 +1,115 @@
+@use "_colors" as c;
+@use "_typography" as t;
+
+// LAYOUT ELEMENTS
+
+body {
+  font-family: t.$fontfamily-primary;
+  font-size: t.$fontsize-400;
+  color: c.$color-neutral-800;
+}
+
+aside {
+  background-color: c.$color-neutral-800;
+}
+
+picture {
+  width: 100%;
+  img {
+    width: 100%;
+  }
+}
+
+// ACTIVE ELEMENTS
+
+nav button {
+  border: none;
+  background-color: transparent;
+}
+
+main button {
+  background-color: c.$color-primary-600;
+  border: none;
+  text-transform: uppercase;
+  color: c.$color-neutral-200;
+  padding: 0.75rem 2rem;
+  letter-spacing: t.$letterspacing-wide;
+  font-weight: t.$fontweight-bold;
+  &:hover {
+    cursor: pointer;
+    background-color: c.$color-neutral-800;
+  }
+}
+
+// TYPOGRAPHY
+
+ul {
+  list-style: none;
+}
+
+li {
+  color: c.$color-neutral-600;
+  &:hover {
+    cursor: pointer;
+    color: c.$color-primary-400;
+  }
+}
+
+h1 {
+  font-size: t.$fontsize-800;
+  font-weight: t.$fontweight-extrabold;
+  line-height: t.$lineheight-thin;
+}
+
+h2 {
+  font-size: t.$fontsize-600;
+  color: c.$color-primary-400;
+}
+
+h3 {
+  font-size: t.$fontsize-500;
+  color: c.$color-neutral-200;
+  &:hover {
+    cursor: pointer;
+    color: c.$color-primary-400;
+  }
+}
+h4 {
+  font-size: t.$fontsize-500;
+  color: c.$color-neutral-800;
+  &:hover {
+    cursor: pointer;
+    color: c.$color-primary-600;
+  }
+}
+
+p {
+  color: c.$color-neutral-600;
+}
+
+footer span {
+  color: c.$color-neutral-400;
+  font-size: t.$fontsize-600;
+  font-weight: t.$fontweight-bold;
+}
+
+// PC
+@media screen and (min-width: 760px) {
+  body {
+    font-size: 1.3 * t.$fontsize-400;
+  }
+  h1 {
+    font-size: 1.5 * t.$fontsize-800;
+    line-height: 1.7 * t.$lineheight-thin;
+  }
+  h2 {
+    font-size: 1.3 * t.$fontsize-600;
+  }
+  h3,
+  h4 {
+    font-size: 1.2 * t.$fontsize-500;
+  }
+  footer span {
+    font-size: 1.5 * t.$fontsize-600;
+  }
+}

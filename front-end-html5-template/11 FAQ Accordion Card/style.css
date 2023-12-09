@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+:root {
+  /* COLORS */
+  --color-neutral-100: hsl(240, 5%, 91%);
+  --color-neutral-300: hsl(240, 6%, 50%);
+  --color-neutral-500: hsl(237, 12%, 33%);
+  --color-primary-700: hsl(238, 29%, 16%);
+  --color-highlight-400: hsl(14, 88%, 65%);
+  --color-gradient-warm: hsl(273, 75%, 66%);
+  --color-gradient-cold: hsl(240, 73%, 65%);
+
+  /* FONTS */
+  --fontfamily-primary: "Kumbh Sans", sans-serif;
+}
+
+body {
+  background-image: linear-gradient(
+    var(--color-gradient-warm),
+    var(--color-gradient-cold)
+  );
+  background-attachment: fixed;
+
+  padding: 7rem 2rem;
+  font-family: var(--fontfamily-primary);
+  color: var(--color-neutral-500);
+}
+
+main {
+  background-color: white;
+  border-radius: 25px;
+  padding: 1rem;
+  position: relative;
+  margin-top: 3rem;
+}
+
+img.hero {
+  position: absolute;
+  width: 60%;
+  max-width: 300px;
+  left: 50%;
+  transform: translate(-50%, -70%);
+}
+
+img.shadow {
+  position: absolute;
+  width: 70%;
+  max-width: 300px;
+
+  left: 50%;
+  transform: translate(-50%, -20%);
+}
+.faq-wrapper {
+  padding: 7rem 1rem 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+h1 {
+  margin: auto;
+  color: var(--color-primary-700);
+}
+
+div.toggle {
+  display: flex;
+  justify-content: space-between;
+}
+
+div.toggle > img {
+  align-self: center;
+}
+
+hr {
+  border: 1px solid var(--color-neutral-100);
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+/* TOGGLE FUNCTIONALITY */
+
+div.toggle:hover {
+  cursor: pointer;
+}
+
+p.answer {
+  display: none;
+  padding-block: 1rem;
+}
+
+.show {
+  display: block !important;
+}
+
+@media screen and (min-width: 1000px) {
+  main {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+    max-width: 1200px;
+    margin: auto;
+  }
+  img.hero,
+  img.shadow {
+    position: absolute;
+    left: 9rem;
+    top: 17rem;
+    max-width: 400px;
+  }
+  .faq-wrapper {
+    flex: 0 0 60%;
+    padding-top: 3rem;
+  }
+}

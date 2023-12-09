@@ -1,0 +1,117 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: hsl(217deg, 54%, 11%);
+  font-family: "Outfit", sans-serif;
+  font-size: 18px;
+  color: hsl(215deg, 51%, 70%);
+}
+
+.main-card {
+  max-height: 100%;
+  max-width: 80%;
+}
+
+.card-wrapper {
+  width: 100%;
+  max-width: 400px;
+  background-color: hsl(216deg, 50%, 16%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1.5rem;
+  border-radius: 10px;
+}
+
+.image-wrapper img {
+  border-radius: 10px;
+}
+
+.main-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.main-wrapper h1 {
+  font-size: 18px;
+  font-weight: 600;
+  padding-top: 2rem;
+  padding-bottom: 0.5rem;
+  color: hsl(0deg, 0%, 100%);
+}
+.main-wrapper h1:hover {
+  color: hsl(178deg, 100%, 50%);
+  cursor: pointer;
+}
+.main-wrapper p {
+  padding-block: 0.5rem;
+}
+
+.main-wrapper--bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  padding-block: 0.5rem;
+}
+.main-wrapper--bottom div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+.main-wrapper--bottom div:first-child span {
+  color: hsl(178deg, 100%, 50%);
+  font-weight: 600;
+}
+
+@media only screen and (max-width: 344px) {
+  .main-wrapper--bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+.author-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  gap: 1rem;
+  border-top: 1px solid hsl(0deg, 0%, 100%);
+  padding-top: 1rem;
+}
+.author-wrapper img {
+  width: 15%;
+}
+.author-wrapper p span {
+  color: hsl(0deg, 0%, 100%);
+}
+.author-wrapper p span:hover {
+  cursor: pointer;
+  color: hsl(178deg, 100%, 50%);
+}
+
+@media only screen and (max-width: 344px) {
+  .author-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+  }
+  .author-wrapper img {
+    width: 30%;
+  }
+}
+.attribution {
+  position: fixed;
+  bottom: 0;
+}/*# sourceMappingURL=style.css.map */

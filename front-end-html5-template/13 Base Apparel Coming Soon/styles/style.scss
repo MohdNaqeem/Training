@@ -1,0 +1,66 @@
+@use "mixins/colors" as c;
+@use "mixins/typography" as t;
+
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+
+body {
+  font-family: t.$fontfamily-primary;
+  color: c.$primary-300;
+  font-size: t.$fontsize-primary;
+  background-image: c.$gradient-secondary;
+}
+
+h1 {
+  font-size: clamp(
+    t.$fontsize-heading / 2,
+    t.$fontsize-heading,
+    t.$fontsize-heading * 2
+  );
+  text-align: center;
+  font-weight: t.$fontweight-bold;
+  text-transform: uppercase;
+  line-height: t.$lineheight-normal;
+  letter-spacing: t.$letterspacing-normal;
+  color: c.$primary-800;
+  span {
+    color: c.$primary-300;
+    font-weight: t.$fontweight-light;
+  }
+}
+
+p {
+  text-align: justify;
+  font-weight: t.$fontweight-bold;
+}
+
+form {
+  input {
+    border: 1px solid c.$primary-300;
+    outline: none;
+    border-radius: 30px;
+    color: c.$primary-300;
+    background-color: transparent;
+    padding: 0.75rem;
+    &::placeholder {
+      color: c.$primary-300;
+    }
+  }
+  button {
+    background-image: c.$gradient-primary;
+    border: none;
+    cursor: pointer;
+    padding: 1rem 1.75rem;
+    border-radius: 30px;
+    &:hover {
+      box-shadow: 0px 0px 5px c.$primary-400;
+    }
+  }
+}
+
+@media only screen and (min-width: 700px) {
+  h1 {
+    text-align: left;
+    font-size: t.$fontsize-heading * 1.5;
+    line-height: t.$lineheight-normal * 1.5;
+  }
+}

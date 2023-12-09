@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove Duplicate charcters</title>
+</head>
+
+<body>
+    <script>
+        /* 
+        Notes
+        
+        What is set object ? 
+        A JavaScript Set is a collection of unique values. Each value can only occur once in a Set.A Set 
+        can hold any value of any data type. whether primitive values or object references.
+        
+        */
+
+
+        /* Remove Duplicate characters from array of element and find the count of an elements using set
+           object */
+
+        var arr = [55, 44, 55, 67, 67, 67, 67, 8, 8, 8, 8, 8, 65, 1, 2, 3, 3, 34, 5];
+        var unique = [...new Set(arr)]
+        console.log(unique)
+
+        // for practice 
+        const demo = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 9, 8, 7, 6, 5, 4, 3, 3, 21]
+        const res = [...new Set(demo)]
+        console.log(demo)
+
+        // for practice
+        const arrSet = [1, 2, 3, 4, 4, 1, 2, 2, 5, 6, 7, 8, 9, 0]
+        const output = [...new Set(arrSet)]
+        console.log(output)
+    </script>
+</body>
+
+</html>

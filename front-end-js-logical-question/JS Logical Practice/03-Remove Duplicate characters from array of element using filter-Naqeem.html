@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove Duplicate characters from array of element using filter</title>
+</head>
+
+<body>
+    <script>
+
+        //  Remove Duplicate characters from array of element using filter
+
+        var myArray = ['a', 1, 'a', 2, '1'];
+        var unique = myArray.filter((value, index, arr) => arr.indexOf(value) === index);
+        console.log(unique)
+        
+        // for practice 
+        var array = [2,3,4,5,2,3,1,"1","a","a"]
+        const output = array.filter((item, index, value) => array.indexOf(item) === index)
+        console.log(output)
+
+        // Here we are doing using foreach loop
+
+    </script>
+</body>
+
+</html>

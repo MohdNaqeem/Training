@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // To find longest word from a string using functions
+        // function longestWord() {
+        //     var demo = "Hello Mohd Naqeem Raza Abubakar"
+        //     let result = demo.split(' ').sort((a, b) => {
+        //         return b.length - a.length
+        //     })
+        //     console.log(result[0]);
+        //     console.log(result[0].length);
+        // }
+        // longestWord()
+
+        function findlongestWord() {
+            var demo = "Momin Mohd Naqeem Raza Abubkar"
+            let result = demo.split(' ').sort((a,b)=>{
+                return b.length - a.length
+            })
+            console.log(result[0])
+        }
+        findlongestWord()
+
+        function findword() {
+            let arr = "Momin Mohd NaqeemRazaAbubakar"
+            let res = arr.split(' ').sort((a,b)=> {
+                return b.length - a.length
+            })
+            console.log(res[0])
+        }
+        findword()
+
+
+        let arr = ["Momin", "Mohd"]
+        let res = arr.sort()
+        console.log(res)
+    </script>
+</body>
+
+</html>

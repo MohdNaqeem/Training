@@ -1,0 +1,112 @@
+@use "./mixins/colors";
+@use "./mixins/typography";
+@use "./mixins/utilities";
+
+// LAYOUT
+* {
+  //   border: 1px solid red;
+}
+body {
+  @include utilities.flex(column, center, center);
+  background-color: colors.$neutral-900;
+  font-family: typography.$ff-primary;
+  font-size: typography.$fs-300;
+  color: colors.$primary;
+}
+
+.main-card {
+  max-height: 100%;
+  max-width: 80%;
+}
+
+.card-wrapper {
+  width: 100%;
+  max-width: 400px;
+
+  background-color: colors.$neutral-500;
+  @include utilities.flex(column, center, center);
+  //   box-shadow: 15px 15px 3px colors.$neutral-500;
+  padding: 1.5rem;
+  border-radius: 10px;
+}
+
+.image-wrapper {
+  img {
+    border-radius: 10px;
+  }
+}
+
+.main-wrapper {
+  @include utilities.flex(column, center, center);
+
+  .main-wrapper--top {
+  }
+  h1 {
+    font-size: typography.$fs-300;
+    font-weight: typography.$fw-600;
+    padding-top: 2rem;
+    padding-bottom: 0.5rem;
+    color: colors.$neutral-100;
+    &:hover {
+      color: colors.$highlight;
+      cursor: pointer;
+    }
+  }
+  p {
+    padding-block: 0.5rem;
+  }
+}
+
+.main-wrapper--bottom {
+  @include utilities.flex(row, space-between, center);
+  width: 100%;
+  padding-block: 0.5rem;
+  div {
+    @include utilities.flex(row, center, center);
+    gap: 0.5rem;
+    &:first-child span {
+      color: colors.$highlight;
+      font-weight: typography.$fw-600;
+    }
+  }
+}
+
+@media only screen and (max-width: 344px) {
+  .main-wrapper--bottom {
+    @include utilities.flex(column, center, center);
+    gap: 1rem;
+  }
+}
+
+.author-wrapper {
+  @include utilities.flex(row, flex-start, center);
+  gap: 1rem;
+  border-top: 1px solid colors.$neutral-100;
+  padding-top: 1rem;
+  img {
+    width: 15%;
+  }
+  p {
+    span {
+      color: colors.$neutral-100;
+      &:hover {
+        cursor: pointer;
+        color: colors.$highlight;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 344px) {
+  .author-wrapper {
+    @include utilities.flex(column, flex-start, center);
+    img {
+      width: 30%;
+    }
+  }
+}
+
+.attribution {
+  position: fixed;
+  bottom: 0;
+}

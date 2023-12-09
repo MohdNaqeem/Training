@@ -1,0 +1,131 @@
+@use "_colors";
+@use "_typography";
+
+body {
+  background-color: colors.$neutral-200;
+}
+
+* {
+  font-family: typography.$ffPrimary;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+main {
+  gap: 1rem;
+  width: 500px;
+
+  & > * {
+    padding: 1.5rem;
+    border-radius: 15px;
+  }
+
+  .myBalance {
+    background-color: colors.$primaryWarm;
+    color: colors.$neutral-100;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    h1 {
+      font-size: 1rem;
+    }
+    h1 + span {
+      font-size: 2rem;
+      font-weight: typography.$fwBold;
+    }
+  }
+  .spending {
+    background-color: colors.$neutral-100;
+    width: 100%;
+    color: colors.$neutral-700;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    h2 {
+      font-size: 2rem;
+    }
+
+    .chart ul {
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      padding: 0;
+
+      height: 300px;
+    }
+    .chart ul li {
+      flex-basis: 10%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+    }
+
+    .chart ul div {
+      background-color: colors.$primaryWarm;
+      width: 100%;
+      border-radius: 5px;
+      &:hover {
+        background-color: colors.$neutral-200;
+        cursor: pointer;
+      }
+      &:active {
+        background-color: colors.$primaryCold;
+      }
+    }
+
+    .chart ul span {
+      color: colors.$neutral-400;
+      height: 10%;
+      display: block;
+    }
+  }
+
+  .total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    h1 {
+      font-size: 1rem;
+      font-weight: typography.$fwNormal;
+    }
+    h1 + span {
+      font-size: 2rem;
+      font-weight: typography.$fwBold;
+    }
+  }
+  h3 {
+    color: colors.$neutral-400;
+    font-weight: typography.$fwNormal;
+  }
+
+  h3 + span {
+    color: colors.$neutral-700;
+    font-size: 2rem;
+    font-weight: typography.$fwBold;
+  }
+  .percentageChange {
+    & span:first-child {
+      font-weight: typography.$fwBold;
+      display: block;
+      text-align: right;
+    }
+    & span + span {
+      color: colors.$neutral-400;
+    }
+  }
+}
+
+div.attribution {
+  position: fixed;
+  bottom: 0;
+}

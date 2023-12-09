@@ -1,0 +1,64 @@
+picture,
+img {
+  -o-object-fit: fill !important;
+     object-fit: fill !important;
+}
+
+main {
+  position: relative;
+}
+main .main__blurb {
+  padding: 2rem;
+}
+main .main__blurb form {
+  position: relative;
+}
+main .main__blurb form input {
+  width: 100%;
+}
+main .main__blurb form button {
+  position: absolute;
+  right: 0;
+}
+
+.logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 1rem;
+}
+
+div.hero {
+  padding-top: calc(33px + 2rem);
+  width: 100%;
+}
+div.hero img.hero {
+  width: 100%;
+}
+
+@media screen and (min-width: 700px) {
+  body {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+  }
+  main {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    max-width: 1920px;
+  }
+  main > * {
+    flex-basis: 50%;
+  }
+  .logo {
+    position: static;
+  }
+  div.hero {
+    padding: 0;
+  }
+}/*# sourceMappingURL=layout.css.map */

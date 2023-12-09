@@ -1,0 +1,100 @@
+body {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  background-color: hsl(225deg, 100%, 94%);
+  font-family: "Red Hat Display", sans-serif;
+  color: hsl(224deg, 23%, 55%);
+  text-align: center;
+}
+
+.main-card {
+  max-width: 450px;
+  background-color: hsl(225deg, 100%, 98%);
+  border-radius: 20px;
+}
+.main-card .main-card__hero-wrapper {
+  overflow: hidden;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.main-card .main-card__body-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+}
+.main-card .main-card__body-wrapper > * {
+  width: 70%;
+  margin-block: 0.5rem;
+}
+.main-card .main-card__body-wrapper h1 {
+  padding-top: 2rem;
+  font-size: 28px;
+  color: hsl(223deg, 47%, 23%);
+}
+.main-card .main-card__body-wrapper p {
+  line-height: 1.5;
+  padding-bottom: 2rem;
+}
+.main-card .plan-wrapper {
+  width: 70%;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+  background-color: rgba(114, 128, 167, 0.02);
+}
+.main-card .plan-wrapper .expanded-plans {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.main-card .plan-wrapper .chosen-plan h2 {
+  font-size: 16px;
+  color: hsl(223deg, 47%, 23%);
+  font-weight: 900;
+}
+.main-card .plan-wrapper button {
+  background-color: hsl(225deg, 100%, 98%);
+  color: hsl(245deg, 75%, 52%);
+  text-decoration: underline;
+  font-size: 14px;
+  margin-left: 3rem;
+}
+.main-card .plan-wrapper button:hover {
+  color: rgba(56, 41, 224, 0.7);
+}
+.main-card button {
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+}
+.main-card button#payment {
+  background-color: hsl(245deg, 75%, 52%);
+  border-radius: 5px;
+  margin-top: 4rem;
+  padding-block: 0.5rem;
+  color: hsl(225deg, 100%, 98%);
+  box-shadow: 0px 5px 10px rgba(128, 128, 128, 0.4);
+}
+.main-card button#payment:hover {
+  background-color: rgba(56, 41, 224, 0.7);
+}
+.main-card button#cancel {
+  background-color: hsl(225deg, 100%, 98%);
+  color: hsl(224deg, 23%, 55%);
+  margin-block: 1.5rem 2.5rem;
+}
+
+.attribution {
+  position: fixed;
+  bottom: 0;
+}/*# sourceMappingURL=style.css.map */

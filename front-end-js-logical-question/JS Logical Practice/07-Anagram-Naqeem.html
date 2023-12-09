@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anagram</title>
+</head>
+
+<body>
+    <script>
+        function checkStringsAnagram() {
+            var a = "Naqeem";
+            var b = "naqeme"
+            let str1 = a.toLowerCase().split('').sort().join('');
+            let str2 = b.toLowerCase().split('').sort().join('');
+            if (str1 === str2) {
+                console.log("True");
+            }
+            else {
+                console.log("False");
+            }
+        }
+        checkStringsAnagram()
+    </script>
+</body>
+
+</html>

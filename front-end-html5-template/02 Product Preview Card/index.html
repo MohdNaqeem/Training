@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Frontend Mentor | Product preview card component</title>
+  </head>
+  <body>
+    <main>
+      <div class="picture">
+        <picture>
+          <source
+            media="(max-width: 599px)"
+            srcset="./images/image-product-mobile.jpg"
+          />
+          <source
+            media="(min-width: 600px)"
+            srcset="./images/image-product-desktop.jpg"
+          />
+          <img
+            src="./images/image-product-desktop.jpg"
+            alt="Product photo of the perfume bottle"
+          />
+        </picture>
+      </div>
+      <div class="blurb">
+        <span>Perfume</span>
+        <h1>Gabrielle Essence Eau De Parfum</h1>
+        <p>
+          A floral, solar and voluptuous interpretation composed by Olivier
+          Polge, Perfumer-Creator for the House of CHANEL.
+        </p>
+        <div class="blurb__pricing">
+          <span class="price">$149.99</span> <span>$169.99</span>
+        </div>
+        <button><img src="images/icon-cart.svg" /> Add to Cart</button>
+      </div>
+    </main>
+    <!-- FOOTER -->
+    <style>
+      body {
+        padding-bottom: 100px;
+      }
+      .attribution {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        font-size: 13px;
+        text-align: right;
+        background-color: rgb(0, 0, 0, 0.5);
+        padding: 0.5rem;
+      }
+
+      .attribution a,
+      .attribution span {
+        font-weight: var(--fw-bold);
+        color: white;
+      }
+    </style>
+    <footer class="attribution">
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >
+      <span>|</span>
+      <a href="https://www.github.com/isamardzija">isamardzija</a>.
+    </footer>
+    <!-- END OF FOOTER -->
+  </body>
+</html>

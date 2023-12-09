@@ -1,0 +1,32 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+  text-align: center;
+}
+
+main{
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
+main div{
+  box-shadow: 0 5px 50px 0 rgba(0, 0, 0, 0.15);
+  padding: 10px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: chocolate;
+}

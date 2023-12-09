@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap");
+
+:root {
+  /* COLORS */
+  --color-primary-200: hsl(210, 46%, 95%);
+  --color-primary-400: hsl(212, 23%, 69%);
+  --color-primary-600: hsl(214, 17%, 51%);
+  --color-primary-800: hsl(217, 19%, 35%);
+
+  /* FONTS */
+  --fontfamily-primary: "Manrope", sans-serif;
+}
+
+.hide {
+  display: none !important;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background-color: var(--color-primary-200);
+  font-family: var(--fontfamily-primary);
+}
+
+main {
+  max-width: 800px;
+}
+
+main,
+.main__card {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 25px;
+}
+
+.main__image {
+  overflow: hidden;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+}
+
+.blurb {
+  padding: 2rem;
+}
+
+h1 {
+  font-size: 18px;
+  padding-block: 1rem;
+  color: var(--color-primary-800);
+}
+
+p,
+span {
+  font-size: 15px;
+  color: var(--color-primary-600);
+}
+
+.author__bar,
+.share__bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10vh;
+  padding-inline: 2rem;
+}
+
+.share__bar__icons {
+  display: flex;
+  flex-basis: 60%;
+  justify-content: space-around;
+}
+
+.share__bar__icons > img:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.author__info {
+  display: flex;
+  flex-direction: column;
+}
+
+span.name {
+  color: var(--color-primary-800);
+  font-weight: 700;
+}
+
+.author__bar img,
+.share__bar img {
+  width: 25px;
+}
+
+img.author__image {
+  border-radius: 100%;
+  width: 40px;
+}
+
+.share__bar {
+  background-color: var(--color-primary-800);
+}
+
+button.share {
+  margin-right: 1rem;
+  border: none;
+  border-radius: 100%;
+  padding: 0.8vh;
+  background-color: var(--color-primary-600);
+}
+
+button.share:hover {
+  background-color: var(--color-primary-400);
+  cursor: pointer;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+}
+
+@media screen and (min-width: 670px) {
+  main {
+    flex-direction: row;
+  }
+  .main__bar {
+    position: relative;
+  }
+  .share__popup {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: absolute;
+    right: -25px;
+    top: -50px;
+    background-color: var(--color-primary-800);
+    width: 200px;
+    height: 50px;
+    border-radius: 15px;
+  }
+  .main__image {
+    border-radius: 25px 0px 0px 0px;
+  }
+  .main__image img {
+    object-fit: cover;
+    height: 100%;
+  }
+}

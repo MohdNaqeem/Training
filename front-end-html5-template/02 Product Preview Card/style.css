@@ -1,0 +1,120 @@
+:root {
+  /* COLORS */
+  --color-primary-400: hsl(158, 36%, 37%);
+  --color-primary-400-hover: hsl(158, 24%, 45%);
+  --color-neutral-600: hsl(212, 21%, 14%);
+  --color-neutral-400: hsl(228, 12%, 48%);
+  --color-neutral-200: hsl(30, 38%, 92%);
+  --color-neutral-100: hsl(0, 0%, 100%);
+
+  /* FONTS */
+  --ff-primary: "Montserrat", sans-serif;
+  --ff-highlight: "Fraunces", serif;
+
+  /* FONT WEIGHTS */
+  --fw-normal: 500;
+  --fw-bold: 700;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-neutral-200);
+  font-family: var(--ff-primary);
+  color: var(--color-neutral-400);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  max-width: 400px;
+}
+
+main > * {
+  align-self: stretch;
+}
+
+.picture img {
+  border-radius: 10px 10px 0 0;
+}
+
+.blurb {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8125rem;
+  background-color: var(--color-neutral-100);
+  padding: 1.5rem;
+  border-radius: 0 0 10px 10px;
+}
+
+.blurb > span {
+  font-size: 0.8125rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+}
+
+.blurb > h1 {
+  font-family: var(--ff-highlight);
+  color: var(--color-neutral-600);
+  line-height: 1;
+}
+
+.blurb > p {
+  font-size: 0.875rem;
+}
+
+.blurb__pricing {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.price {
+  font-family: var(--ff-highlight);
+  color: var(--color-primary-400);
+  font-size: 2rem;
+}
+
+.blurb__pricing span + span {
+  text-decoration: line-through;
+  font-size: 0.875rem;
+}
+
+button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.8125rem 1.5rem;
+  color: var(--color-neutral-100);
+  font-weight: var(--fw-bold);
+  font-size: 0.875rem;
+  background-color: var(--color-primary-400);
+  border: none;
+  border-radius: 10px;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: var(--color-primary-400-hover);
+}
+
+@media screen and (min-width: 600px) {
+  main {
+    flex-direction: row;
+    max-width: 600px;
+  }
+  main > * {
+    flex-basis: 100%;
+  }
+  .picture img {
+    border-radius: 10px 0 0 10px;
+  }
+  .blurb {
+    border-radius: 0 10px 10px 0;
+  }
+}

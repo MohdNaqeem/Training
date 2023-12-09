@@ -1,0 +1,39 @@
+=> Command of download angular and run it on browser
+   npm install @angular/cli@15
+   ng new ProjectName
+   cd ProjectName
+   ng serve 
+
+=> There are three syntax of binding 
+   Interpolation
+   Property binding
+   Event binding
+
+=> What is interpolation and binding.
+   In AngularJS, Interpolation is a way to transfer the data from a TypeScript code to an HTML template 
+   (view), i.e. it is a method by which we can put an expression in between some text and get the value 
+   of that expression. Interpolation basically binds the text with the expression value.
+
+=> What is property binding
+   Property binding in Angular helps you set values for properties of HTML elements or directives. Use 
+   property binding to do things such as toggle button features, set paths programmatically, and share 
+   values between components.
+
+=> What is event binding
+   Event binding lets you listen for and respond to user actions such as keystrokes, mouse movements, 
+   clicks, and touches. See the live example / download example for a working example containing the code 
+   snippets in this guide.
+
+=> What is directives.
+   In Angular, Directives are defined as classes that can add new behavior to the elements in the 
+   template or modify existing behavior. The purpose of Directives in Angular is to maneuver the DOM, be 
+   it by adding new elements to DOM or removing elements and even changing the appearance of the DOM 
+   elements. there are two types structural and attribute directives.
+   https://www.simplilearn.com/what-are-directives-in-angular-article#:~:text=Directive%20in%20angular%20can%20be,these%20Angular%20Directive%20types%20separately.
+
+=> Built Directives
+   *ngIf
+   *ngFor
+   *ngSwitch  
+   *ngClass
+   *ngStyle

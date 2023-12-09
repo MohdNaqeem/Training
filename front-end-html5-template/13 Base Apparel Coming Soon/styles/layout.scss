@@ -1,0 +1,56 @@
+@use "mixins/utilities" as u;
+picture,
+img {
+  object-fit: fill !important;
+}
+main {
+  position: relative;
+  .main__blurb {
+    padding: 2rem;
+    form {
+      position: relative;
+
+      input {
+        width: 100%;
+      }
+      button {
+        position: absolute;
+        right: 0;
+      }
+    }
+  }
+}
+.logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 1rem;
+}
+
+div.hero {
+  padding-top: calc(33px + 2rem);
+  width: 100%;
+  img.hero {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  body {
+    @include u.flex(row, center, center, 0);
+  }
+  main {
+    @include u.flex(row-reverse, center, center, 0);
+    max-width: 1920px;
+    & > * {
+      flex-basis: 50%;
+    }
+  }
+
+  .logo {
+    position: static;
+  }
+  div.hero {
+    padding: 0;
+  }
+}

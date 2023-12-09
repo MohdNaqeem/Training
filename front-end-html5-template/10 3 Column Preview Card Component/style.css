@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+
+/* CUSTOM PROPERTIES */
+
+:root {
+  /* COLORS */
+  --color-primary-warm-400: hsl(31, 77%, 52%);
+  --color-primary-cold-600: hsl(179, 100%, 13%);
+  --color-primary-cold-400: hsl(184, 100%, 22%);
+  --color-neutral-200: hsla(0, 0%, 100%, 0.75);
+  --color-neutral-100: hsl(0, 0%, 95%);
+
+  /* FONTS */
+  --fontfamily-headings: "Big Shoulders Display", cursive;
+  --fontfamily-text: "Lexend Deca", sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--fontfamily-text);
+  padding: 4rem 1rem;
+  color: var(--color-neutral-100);
+  background-color: var(--color-neutral-200);
+}
+
+main {
+  max-width: 830px;
+  border-radius: 10px;
+}
+
+main section {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+main section img {
+  width: 70px;
+}
+
+main section h2 {
+  font-family: var(--fontfamily-headings);
+  font-size: 28px;
+  text-transform: uppercase;
+}
+
+main section p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--color-neutral-200);
+}
+
+main section button {
+  align-self: flex-start;
+  padding: 0.75rem 2rem;
+  border-radius: 25px;
+  border: none;
+}
+
+/* FIRST SECTION */
+
+section:first-child {
+  background-color: var(--color-primary-warm-400);
+}
+
+section:first-child button {
+  color: var(--color-primary-warm-400);
+}
+
+/* SECOND SECTION */
+
+section:nth-child(2) {
+  background-color: var(--color-primary-cold-400);
+}
+
+section:nth-child(2) button {
+  color: var(--color-primary-cold-400);
+}
+/* THIRD SECTION */
+
+section:last-child {
+  background-color: var(--color-primary-cold-600);
+}
+
+section:last-child button {
+  color: var(--color-primary-cold-400);
+}
+
+/* FOOTER - ATTRIBUTION */
+footer {
+  position: fixed;
+  bottom: 0;
+  padding-block: 2rem 0.5rem;
+  color: black;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (min-width: 720px) {
+  main {
+    display: flex;
+  }
+  main section {
+    justify-content: space-between;
+  }
+  main section button {
+    margin-top: 2em;
+  }
+}

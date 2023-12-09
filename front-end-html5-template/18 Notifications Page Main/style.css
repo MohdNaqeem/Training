@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap");
+
+/* CUSTOM  */
+
+:root {
+  /* COLORS */
+  --colors-primary-warm-400: hsl(1, 90%, 64%);
+  --colors-primary-cold-400: hsl(219, 85%, 26%);
+  --colors-neutral-900: hsl(224, 21%, 14%);
+  --colors-neutral-500: hsl(219, 12%, 42%);
+  --colors-neutral-400: hsl(219, 14%, 63%);
+  --colors-neutral-300: hsl(205, 33%, 90%);
+  --colors-neutral-200: hsl(211, 68%, 94%);
+  --colors-neutral-100: hsl(210, 60%, 98%);
+  --colors-neutral-000: hsl(0, 0%, 100%);
+
+  /* TYPOGRAPHY */
+  --fontfamily-primary: "Plus Jakarta Sans", sans-serif;
+  --fontsize-primary: 1rem;
+  --fontsize-heading: 1.3rem;
+  --fontsize-small: 0.925rem;
+  --fontsize-smallest: 0.8rem;
+  --fontweight-normal: 500;
+  --fontweight-bold: 800;
+}
+
+/* RESET */
+
+* {
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* CASCADE */
+
+body {
+  font-family: var(--fontfamily-primary);
+  font-size: var(--fontsize-primary);
+  padding: 0.5rem 1rem;
+  color: var(--colors-neutral-500);
+  display: flex;
+  justify-content: center;
+  background-color: var(--colors-neutral-200);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 600px;
+  background-color: var(--colors-neutral-000);
+  padding: 2rem 1rem;
+  box-shadow: 0px 0px 10px rgba(215, 215, 215, 0.86);
+}
+
+.notifications__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.notifications__header > div {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+h1 {
+  color: var(--colors-neutral-900);
+  font-size: var(--fontsize-heading);
+}
+
+.unread {
+  padding: 0.2rem 0.8rem;
+  border-radius: 20%;
+  background-color: var(--colors-primary-cold-400);
+  color: var(--colors-neutral-000);
+  font-weight: var(--fontweight-bold);
+}
+
+.readAll {
+  color: var(--colors-neutral-500);
+}
+
+.readAll:hover {
+  cursor: pointer;
+  color: var(--colors-primary-cold-400);
+}
+
+.notification {
+  display: flex;
+  column-gap: 0.5rem;
+  padding: 0.5rem;
+  position: relative;
+}
+
+.new {
+  background-color: var(--colors-neutral-100);
+  box-shadow: 0px 0px 10px rgba(215, 215, 215, 0.86);
+}
+
+.notification > img {
+  width: 33px;
+  height: 33px;
+}
+span.person {
+  font-weight: var(--fontweight-bold);
+  color: var(--colors-neutral-900);
+}
+
+span.person:hover {
+  color: var(--colors-primary-cold-400);
+  cursor: pointer;
+}
+
+span.notificationContent {
+  font-weight: var(--fontweight-bold);
+  position: relative;
+}
+span.notificationContent:hover {
+  color: var(--colors-primary-cold-400);
+  cursor: pointer;
+}
+
+span.notificationTime {
+  font-size: var(--fontsize-smallest);
+  color: var(--colors-neutral-400);
+}
+
+p.notification__message {
+  font-size: var(--fontsize-small);
+  border: 1px solid var(--colors-neutral-200);
+  padding: 0.7rem;
+}
+
+p.notification__message:hover {
+  background-color: var(--colors-neutral-200);
+  cursor: pointer;
+}
+
+.unreadNotification {
+  display: none;
+}
+
+.readStatus {
+  position: absolute;
+  right: 3px;
+  bottom: 3px;
+}
+
+.dot {
+  visibility: hidden;
+  height: 5px;
+  width: 5px;
+  background-color: red;
+  display: inline-block;
+  transform: translateY(-3px);
+  border-radius: 100%;
+  margin-left: 0.2rem;
+}
+
+.notificationActivity > img {
+  height: 40px;
+  position: absolute;
+  right: 0;
+}
+
+.notificationActivity > img:hover {
+  cursor: pointer;
+}
+
+img:hover {
+  transform: scale(1.1);
+}

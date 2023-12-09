@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
+
+:root {
+  /* COLORS */
+  --colors-primary-500: hsl(233, 47%, 7%);
+  --colors-primary-400: hsl(244, 38%, 16%);
+  --colors-accent-400: hsl(277, 64%, 61%);
+  --colors-neutral-400: hsl(0, 0%, 100%);
+  --colors-neutral-400-t1: hsla(0, 0%, 100%, 0.75);
+  --colors-neutral-400-t2: hsla(0, 0%, 100%, 0.6);
+
+  /* FONTS */
+  --fontfamily-primary: "Inter", sans-serif;
+  --fontfamily-secondary: "Lexend Deca", sans-serif;
+  --fontweight-normal: 400;
+  --fontweight-bold: 700;
+  --fontsize-400: 15px;
+}
+
+body {
+  background-color: var(--colors-primary-500);
+  color: var(--colors-neutral-400);
+  font-family: var(--fontfamily-primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1rem;
+}
+
+main {
+  background-color: var(--colors-primary-400);
+  max-width: 80%;
+  border-radius: 15px;
+  /* overflow: hidden; */
+}
+
+.main__blurb {
+  padding: 1rem;
+  text-align: center;
+  order: -1;
+}
+
+.main__blurb > * {
+  padding-block: 1rem;
+}
+
+h1 > span {
+  color: var(--colors-accent-400);
+}
+
+p {
+  color: var(--colors-neutral-400-t1);
+}
+
+.main__blurb__stats > * {
+  padding-block: 0.75rem;
+}
+
+.box span {
+  display: block;
+}
+
+.number {
+  font-size: 1.5rem;
+  font-weight: var(--fontweight-bold);
+}
+
+.word {
+  text-transform: uppercase;
+  color: var(--colors-neutral-400-t2);
+}
+
+.main__image {
+  height: 100%;
+}
+picture {
+  background-color: var(--colors-accent-400);
+  height: 100%;
+}
+
+picture img {
+  mix-blend-mode: multiply;
+  opacity: 0.7;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media only screen and (min-width: 800px) {
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+  .main__blurb {
+    padding: 2rem;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+  }
+  .main__blurb__stats {
+    display: flex;
+    gap: 2rem;
+  }
+  p {
+    max-width: 40ch;
+  }
+  h1 {
+    max-width: 20ch;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  .main__blurb {
+    align-items: center;
+    text-align: center;
+  }
+}

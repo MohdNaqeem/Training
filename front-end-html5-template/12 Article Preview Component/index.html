@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Frontend Mentor | Article preview component</title>
+  </head>
+  <body>
+    <main>
+      <div class="main__image"><img src="./images/drawers.jpg" /></div>
+      <div class="main__card">
+        <div class="blurb">
+          <h1>
+            Shift the overall look and feel by adding these wonderful touches to
+            furniture in your home
+          </h1>
+          <p>
+            Ever been in a room and felt like something was missing? Perhaps it
+            felt slightly bare and uninviting. I’ve got some simple tips to help
+            you make any room feel complete.
+          </p>
+        </div>
+        <div class="main__bar">
+          <section class="author__bar">
+            <img src="./images/avatar-michelle.jpg" class="author__image" />
+            <div class="author__info">
+              <span class="name">Michelle Appleton</span>
+              <span class="date">28 Jun 2020</span>
+            </div>
+            <div class="share__popup share__bar__icons hide">
+              <span>SHARE</span>
+              <img src="./images/icon-facebook.svg" /><img
+                src="./images/icon-twitter.svg"
+              /><img src="./images/icon-pinterest.svg" />
+            </div>
+            <button class="share"><img src="./images/icon-share.svg" /></button>
+          </section>
+          <section class="share__bar hide">
+            <div class="share__bar__icons">
+              <span>SHARE</span>
+              <img src="./images/icon-facebook.svg" /><img
+                src="./images/icon-twitter.svg"
+              /><img src="./images/icon-pinterest.svg" />
+            </div>
+            <button class="share"><img src="./images/icon-share.svg" /></button>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <style>
+      body {
+        padding-bottom: 100px;
+      }
+      .attribution {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        font-size: 13px;
+        text-align: right;
+        background-color: rgb(0, 0, 0, 0.5);
+        padding: 0.5rem;
+      }
+
+      .attribution a,
+      .attribution span {
+        font-weight: var(--fw-bold);
+        color: white;
+      }
+    </style>
+    <footer class="attribution">
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >
+      <span>|</span>
+      <a href="https://www.github.com/isamardzija">isamardzija</a>.
+    </footer>
+    <!-- END OF FOOTER -->
+    <script src="main.js"></script>
+  </body>
+</html>
