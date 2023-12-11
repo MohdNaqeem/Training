@@ -99,9 +99,42 @@ Constructor -
 The Constructor is a method in a typescript class that automatically gets called when the class is being instantiated. Constructor always run before any lifecycle hook and it's not a part of lifecycle hooks.
 Constructor is used to inject dependencies or services into the component class.
 
+*/
+
+/*
+
+Typescript training notes :
+
+=> What is TypeScript?
+   TypeScript is a superset of JavaScript; i.e., it includes all the elements of JavaScript & some other features 
+   as well. TypeScript is an open-source programming language that is developed and maintained by 
+   Microsoft.  it is converted into JavaScript. The trans compiler known as a source-to-source compiler. 
+   
+=> Why TypeScript?
+   There are several reasons why one should use TypeScript.
+    - It is an open-source programming language.
+    - It supports cross-platform development.
+    - Optional static typing means it detects the errors while writing the script.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 */
-
 
