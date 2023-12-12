@@ -7,18 +7,30 @@ import { AddProductComponent } from './add-product/add-product.component';
 import { ViewProductComponent } from './view-product/view-product.component';
 import { FormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http'
+import { GridModule } from '@progress/kendo-angular-grid';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgxImageZoomModule } from 'ngx-image-zoom';
+import { NgxImgZoomModule } from 'ngx-img-zoom';
+import { PopupModule } from '@progress/kendo-angular-popup';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     AddProductComponent,
-    ViewProductComponent
+    ViewProductComponent,
+   
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    GridModule,
+    BrowserAnimationsModule,
+    NgxImageZoomModule,
+    NgxImgZoomModule,
+    PopupModule
   ],
   providers: [],
   bootstrap: [AppComponent]

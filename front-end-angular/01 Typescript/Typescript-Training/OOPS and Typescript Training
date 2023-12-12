@@ -108,13 +108,55 @@ Typescript training notes :
 => What is TypeScript?
    TypeScript is a superset of JavaScript; i.e., it includes all the elements of JavaScript & some other features 
    as well. TypeScript is an open-source programming language that is developed and maintained by 
-   Microsoft.  it is converted into JavaScript. The trans compiler known as a source-to-source compiler. 
+   Microsoft. it is converted into JavaScript. The trans compiler known as a source-to-source compiler. 
    
 => Why TypeScript?
    There are several reasons why one should use TypeScript.
     - It is an open-source programming language.
     - It supports cross-platform development.
     - Optional static typing means it detects the errors while writing the script.
+
+=> What are Variables?
+   Variables are the names used in the programming language, and they have some values associated with
+   their data types. Values can be changed during the execution of the program. The variable name itself
+   explains that value can be vary/changed any time. A variable name should be meaningful so anyone can
+   understand the code easily.
+
+=> Why use variables?
+   As we know by using programming languages, we can create an application, or we create a structure that
+   is being used by day to day activities. The application can be used to store some data, perform some
+   actions on this data, or give us a report.
+
+=> Variable Declaration.
+   Variables can store single values & this can be changed any time during execution of the program. Variable
+   declaration by using var keyword is as it is in JavaScript. 
+      Syntax: var [variable_name] = [optional-value];
+            Or in typescript we can define like
+      var [variable_name] :[data-type]= [optional-value];
+
+=> Why let & const in TypeScript?
+   let & const are the new variable declarations used in TypeScript. These come into the picture to resolve
+   problems in the var declaration. let is used to declare a block-scoped variable which means anything
+   declared within the {} is block-scoped. static type checking is possible by using let variable declaration, so
+   while writing the script the developer can get suggestions/ warnings, etc. const is similar to let, except
+   we cannot update or re-declare it. 
+
+=> Data Types in TypeScript
+   - number
+   - string
+   - boolean
+   - tuples
+   - union
+   - any
+   - void
+   - null & undefined
+   - never
+
+=> What is the number?
+   Numbers are the digits used in the programming language; a Number is an object which holds the numeric
+   values & which are meaningful. TypeScript supports decimal, hexadecimal, octal, binary as well whenever
+   required. In general, suppose we consider a landline or mobile phone & everyone has a unique number
+   which is a combination of some digits.
 
 
 

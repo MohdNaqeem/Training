@@ -18,6 +18,14 @@
     "@angular/platform-browser": "^15.2.0",
     "@angular/platform-browser-dynamic": "^15.2.0",
     "@angular/router": "^15.2.0",
+    "@progress/kendo-angular-buttons": "^14.2.0",
+    "@progress/kendo-angular-common": "^14.2.0",
+    "@progress/kendo-angular-grid": "^14.2.0",
+    "@progress/kendo-angular-popup": "^14.2.0",
+    "@progress/kendo-theme-default": "^7.0.2",
+    "@progress/kendo-ui": "^2023.3.1114",
+    "ngx-image-zoom": "^3.0.0",
+    "ngx-img-zoom": "^4.1.2",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.12.0"
@@ -26,6 +34,7 @@
     "@angular-devkit/build-angular": "^15.2.10",
     "@angular/cli": "~15.2.10",
     "@angular/compiler-cli": "^15.2.0",
+    "@angular/localize": "^15.2.10",
     "@types/jasmine": "~4.3.0",
     "jasmine-core": "~4.5.0",
     "karma": "~6.4.0",
@@ -33,6 +42,6 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.0.0",
-    "typescript": "~4.9.4"
+    "typescript": "^4.8.2"
   }
 }
