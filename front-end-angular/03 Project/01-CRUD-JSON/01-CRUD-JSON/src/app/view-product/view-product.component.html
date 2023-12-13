@@ -6,14 +6,15 @@
 </nav>
 
 <kendo-grid [data]="products">
-    <kendo-grid-column field="producturl" title="Image">
+    <kendo-grid-column field="producturl" title="Image" >
         <ng-template kendoGridCellTemplate let-dataItem>
-            <ngx-img-zoom
+            <ngx-img-zoom 
             [zoomImageSrc]="dataItem.producturl" 
             [previewImageSrc]="dataItem.producturl" 
             [imgStyle]="'width:60px; height:60px;'" 
-            [resultStyle]="'width:400px; height:250px; position:fixed; top:55px; left:74px;'" 
-            [containerStyle]=""></ngx-img-zoom>
+            [resultStyle]="'width:400px; height:200px; position:absolute; left:62px; bottom:0px'" 
+            [containerStyle]="">
+        </ngx-img-zoom>
         </ng-template>
     </kendo-grid-column>
     <kendo-grid-column field="id" title="ID"></kendo-grid-column>

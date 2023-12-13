@@ -1,4 +1,4 @@
-import { Component, OnInit, } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../api.service';
 import { productdata } from '../Shared/productmodel';
 
@@ -20,4 +20,5 @@ export class ViewProductComponent implements OnInit {
       this.products = res;
     })
   }
+
 }
