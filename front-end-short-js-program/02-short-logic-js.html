@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>#02 Logics</title>
+</head>
+
+<body>
+    <h1>02 Javascript small logic</h1>
+    <script>
+
+        for (var i = 0; i < 4; i++) {
+            setTimeout(() => console.log(i), 5)
+        }
+
+        for (let i = 0; i < 4; i++) {
+            setTimeout(() => console.log(i), 5)
+        }
+    </script>
+
+    <!-- 
+    in this logic we are printin number using for loop. using var and let.
+    
+    in this logic in the case of var we got 4 times 4, but in the case of let we got 4 different value.
+
+    Explanation :
+
+    in the case of var we got 4 times 4 because the declaration of var move on top of the function and each timeout
+    refer common i variable so when for loop will be over it will print the final value of var.
+
+    but in the case of let we got 4 different value because declaration of let doesn't hoist so
+    that's why we got 4 different values.
+
+    This concept we called hoisting.
+    -->
+
+</body>
+
+</html>
