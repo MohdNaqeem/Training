@@ -1,2 +1,50 @@
-<h1>Hello World</h1>
-<app-rooms></app-rooms>
+<h1>Angular Training</h1>
+
+<!-- 1 -  Built-in Directives -->
+
+<!-- *ngIf Directives -->
+<div class="ngIf" *ngIf="rooms.availableRooms > 1">
+    <h3>This is a example of *ngIf directives</h3>
+    <p>If condition will be true then this paragraph will be show us</p>
+</div><br>
+
+<!-- *ngFor and ngclass Directives -->
+<div class="ngfor">
+    <h3>This is example of *ngFor directives</h3>
+    <table>
+        <tr>
+            <th>Index</th>
+            <th>Even/odd</th>
+            <th>roomType</th>
+            <th>status</th>
+            <th>price</th>
+            <th>photos</th>
+            <th>checkinTime</th>
+            <th>checkOutTime</th>
+        </tr>
+        <tr [ngClass]="e ? 'even' : 'odd' " *ngFor="let room of roomsList; let e = even; let o = odd; let i = index">
+            <td>{{i}}</td>
+            <td>{{e ? 'Even' : 'odd'}}</td>
+            <td>{{room.roomType}}</td>
+            <td>{{room.status}}</td>
+            <td>{{room.price}}</td>
+            <td>{{room.photos}}</td>
+            <td>{{room.checkinTime}}</td>
+            <td>{{room.checkOutTime}}</td>
+        </tr>
+    </table>
+</div> <br>
+
+<!-- *ngSwitch Directives -->
+<div class="ngSwitch" [ngSwitch]="role">
+    <h3>This is example of *ngSwitch</h3>
+    <div *ngSwitchCase="'User'">
+        This is a User
+    </div>
+    <div *ngSwitchCase="'Admin'">
+        This is a Admin
+    </div>
+    <div *ngSwitchDefault>
+        You can't access this page
+    </div>
+</div>

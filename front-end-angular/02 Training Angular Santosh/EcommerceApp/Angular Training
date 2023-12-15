@@ -36,9 +36,30 @@
    elements. there are two types structural and attribute directives.
    https://www.simplilearn.com/what-are-directives-in-angular-article#:~:text=Directive%20in%20angular%20can%20be,these%20Angular%20Directive%20types%20separately.
 
+=> What is structural directives.
+   Structural directives are directives which change the DOM layout by adding and removing DOM elements. Angular provides a set of built-in structural directives (such as NgIf , NgForOf , NgSwitch and others) which are commonly used in all Angular projects. For more information see Built-in directives.
+
+=> What is Attribute directives.
+   Attribute directives change the appearance or behavior of an element, component, or another directive.
+
 => Built Directives
    *ngIf
    *ngFor
    *ngSwitch  
    *ngClass
    *ngStyle
+
+=> ngIf
+   The ngIf directive removes or recreates a portion of the DOM tree based on an {expression}. If the expression assigned to ngIf evaluates to a false value then the element is removed from the DOM, otherwise a clone of the element is reinserted into the DOM.
+
+=> ngFor
+   ngFor is a structural directive used for rendering a set of elements or repeating a template for each item in a collection. The ngFor directive is commonly used to iterate over arrays or lists and generate HTML elements dynamically based on the data in the collection.
+
+=> ngSwitch
+   The ngSwitch directive is used for conditional rendering in Angular templates, providing a way to switch between multiple cases based on the value of an expression.
+
+=> ngClass
+   The ng-class directive dynamically binds one or more CSS classes to an HTML element. The value of the ng-class directive can be a string, an object, or an array. If it is a string, it should contain one or more, space-separated class names.
+
+=> ngstyle
+   The ng-style directive specifies the style attribute for the HTML element. The value of the ng-style attribute must be an object, or an expression returning an object. The object consists of CSS properties and values, in key value pairs. 

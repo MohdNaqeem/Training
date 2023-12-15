@@ -5,16 +5,14 @@
     </div>
 </nav>
 
-<kendo-grid [data]="products">
-    <kendo-grid-column field="producturl" title="Image" >
+<kendo-grid [kendoGridBinding]="products" [pageable]="true" [pageSize]="5">
+    <kendo-grid-column field="producturl" title="Image">
         <ng-template kendoGridCellTemplate let-dataItem>
-            <ngx-img-zoom 
-            [zoomImageSrc]="dataItem.producturl" 
-            [previewImageSrc]="dataItem.producturl" 
-            [imgStyle]="'width:60px; height:60px;'" 
-            [resultStyle]="'width:350px; height:200px; position:absolute; left:62px; bottom:0px'" 
-            [containerStyle]="">
-        </ngx-img-zoom>
+            <ngx-img-zoom [zoomImageSrc]="dataItem.producturl" [previewImageSrc]="dataItem.producturl"
+                [imgStyle]="'width:60px; height:60px;'"
+                [resultStyle]="'width:350px; height:200px; position:absolute; left:62px; bottom:0px'"
+                [containerStyle]="">
+            </ngx-img-zoom>
         </ng-template>
     </kendo-grid-column>
     <kendo-grid-column field="id" title="ID"></kendo-grid-column>
