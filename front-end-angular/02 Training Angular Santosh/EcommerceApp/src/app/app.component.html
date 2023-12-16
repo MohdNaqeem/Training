@@ -11,26 +11,26 @@
 <!-- *ngFor and ngclass Directives -->
 <div class="ngfor">
     <h3>This is example of *ngFor directives</h3>
-    <table>
+    <table class="table">
         <tr>
             <th>Index</th>
             <th>Even/odd</th>
             <th>roomType</th>
             <th>status</th>
             <th>price</th>
-            <th>photos</th>
             <th>checkinTime</th>
             <th>checkOutTime</th>
+            <th>Rating</th>
         </tr>
         <tr [ngClass]="e ? 'even' : 'odd' " *ngFor="let room of roomsList; let e = even; let o = odd; let i = index">
             <td>{{i}}</td>
             <td>{{e ? 'Even' : 'odd'}}</td>
-            <td>{{room.roomType}}</td>
-            <td>{{room.status}}</td>
-            <td>{{room.price}}</td>
-            <td>{{room.photos}}</td>
-            <td>{{room.checkinTime}}</td>
-            <td>{{room.checkOutTime}}</td>
+            <td>{{room.roomType }}</td>
+            <td>{{room.status | titlecase}}</td>
+            <td>{{room.price | currency : 'INR'}}</td>
+            <td>{{room.checkinTime | date : 'short'}}</td>
+            <td>{{room.checkOutTime | date : 'short'}}</td>
+            <td>{{room.Rating | number : '1.1-1'}}</td>
         </tr>
     </table>
 </div> <br>
@@ -47,4 +47,13 @@
     <div *ngSwitchDefault>
         You can't access this page
     </div>
+</div> <br>
+
+<!-- Pipes -->
+<div class="pipes">
+    <h3>This is example of pipes</h3>
+    <h4>{{lwrCasPip | lowercase }}</h4>
+    <h4>{{uprCasPip | uppercase}}</h4>
+    <h4>{{decimalPip | number }} Decimal pipe</h4>
+    <h4>{{currncyPip | currency : 'INR'}} currency pipe</h4>
 </div>

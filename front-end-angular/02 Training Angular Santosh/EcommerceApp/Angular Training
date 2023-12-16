@@ -4,6 +4,9 @@
    cd ProjectName
    ng serve 
 
+=> What is binding?
+   Angular data binding is a two-way process: it can both send and receive data. This means that when you change something in your view, the model updates automatically, and vice versa.
+   
 => There are three syntax of binding 
    Interpolation
    Property binding
@@ -63,3 +66,42 @@
 
 => ngstyle
    The ng-style directive specifies the style attribute for the HTML element. The value of the ng-style attribute must be an object, or an expression returning an object. The object consists of CSS properties and values, in key value pairs. 
+
+=> What is pipes ?
+   Angular Pipes allows its users to change the format in which data is being displayed on the screen. For instance, consider the date format. Dates can be represented in multiple ways, and the user can decide which one to use with the help of Angular Pipes.
+
+   DatePipe      {{ currentDate | date:'medium' }}
+   UpperCasePipe {{ textToTransform | uppercase }}
+   LowerCasePipe {{ textToTransform | lowercase }}
+   CurrencyPipe  {{ price | currency:'USD':true }} 
+   DecimalPipe   {{ someNumber | number:'2.2-2' }}
+   PercentPipe   {{ percentageValue | percent:'2.2-2' }} 
+   SlicePipe     {{ array | slice:1:5 }}
+   AsyncPipe     {{ asyncData | async }}
+   JsonPipe      {{ jsonData | json }}
+
+=> How to add bootstrap in our project ?
+   first we have to install bootstrap using command in terminal "npm install bootstrap".
+   then we have to inject this link "node_modules/bootstrap/dist/css/bootstrap.min.css" in our "angular.json in styles".
+   after this we have to inject this link @import "~bootstrap/dist/css/bootstrap.css"; in our global css.
+   
+=> What is Life cycle hooks?
+   Lifecycle hooks are a set of methods in Angular that are executed at specific moments during the lifecycle of a component. These methods provide a way to tap into the Angular component lifecycle and perform custom logic or operations at specific points in time.
+   - Angular components doesn't use all the components at once. It only uses the one or more which are required.
+   - Whenever angular needs to use a component, it creates a new instance of that component and start using it in DOM
+     once the  uses is done it destroy this instance and removed from DOM
+   - During this process (create instance to destroy) there are several stages that angular covers and this is 
+     called as component life cycle or life cycle hooks.
+
+=> Types of life cycle hooks
+   ngOnChanges
+   ngOnInit
+   ngDoCheck
+   ngAfterContentInit
+   ngAfterContentChecked
+   ngAfterViewInit
+   ngAfterViewChecked
+   ngOnDestroy
+
+=> ngOnchanges
+   A callback method that is invoked immediately after the default change detector has checked data-bound properties if at least one has changed, and before the view and content children are checked.
