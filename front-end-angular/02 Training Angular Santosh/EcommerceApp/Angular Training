@@ -5,7 +5,7 @@
    ng serve 
 
 => What is binding?
-   Angular data binding is a two-way process: it can both send and receive data. This means that when you change something in your view, the model updates automatically, and vice versa.
+   Data binding in Angular is a mechanism that synchronizes the data between the model and the view. There are two types: one-way binding (interpolation, property binding) and two-way binding (using ngModel).
    
 => There are three syntax of binding 
    Interpolation
@@ -33,17 +33,25 @@
    snippets in this guide.
 
 => What is directives.
-   In Angular, Directives are defined as classes that can add new behavior to the elements in the 
-   template or modify existing behavior. The purpose of Directives in Angular is to maneuver the DOM, be 
-   it by adding new elements to DOM or removing elements and even changing the appearance of the DOM 
-   elements. there are two types structural and attribute directives.
-   https://www.simplilearn.com/what-are-directives-in-angular-article#:~:text=Directive%20in%20angular%20can%20be,these%20Angular%20Directive%20types%20separately.
+   An Angular directive is a speacial type of technology that can manipulate the DOM object. Directives can do adding html elements and removing html from DOM dynamically. 
 
-=> What is structural directives.
+=> Types of directive:
+   Component directive
+   Structural directive
+   Attribute directive
+   Custom directive
+
+=> What is component directive?
+   The most significant directives in Angular are called components. It is a component directive that highlights elements in the DOM. This type of directive has a template or template URLs.
+
+=> What is structural directives?
    Structural directives are directives which change the DOM layout by adding and removing DOM elements. Angular provides a set of built-in structural directives (such as NgIf , NgForOf , NgSwitch and others) which are commonly used in all Angular projects. For more information see Built-in directives.
 
-=> What is Attribute directives.
+=> What is Attribute directives?
    Attribute directives change the appearance or behavior of an element, component, or another directive.
+
+=> What is Custom directive?
+   We can create our custom directive from scratch.
 
 => Built Directives
    *ngIf
@@ -118,3 +126,6 @@
    - Perform the component specific operations like:
      - Make call to API for page load
      - Any logic that you need to perform at very first as the component gets instantiated.
+
+=> What is change detection?
+   The purpose of this mechanism is to make sure the underlying views are always in sync with their corresponding models. This core feature of Angular is what makes the framework tick and is partly the reason why Angular is a neat choice for developing modern web apps.

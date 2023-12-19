@@ -5,15 +5,17 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TrainingCmpComponent } from './training-cmp/training-cmp.component';
 import { FormsModule } from '@angular/forms';
+import { DemoPipePipe } from './Pipes/demo-pipe.pipe';
 @NgModule({
   declarations: [
     AppComponent,
-    TrainingCmpComponent
+    TrainingCmpComponent,
+    DemoPipePipe,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

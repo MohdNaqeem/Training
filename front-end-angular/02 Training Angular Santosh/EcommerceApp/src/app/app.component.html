@@ -21,6 +21,7 @@
             <th>checkinTime</th>
             <th>checkOutTime</th>
             <th>Rating</th>
+            <th>Delete</th>
         </tr>
         <tr [ngClass]="e ? 'even' : 'odd' " *ngFor="let room of roomsList; let e = even; let o = odd; let i = index">
             <td>{{i}}</td>
@@ -31,8 +32,11 @@
             <td>{{room.checkinTime | date : 'short'}}</td>
             <td>{{room.checkOutTime | date : 'short'}}</td>
             <td>{{room.Rating | number : '1.1-1'}}</td>
+            <td><button (click)="onDelete(i)">Delete</button></td>
         </tr>
     </table>
+    <p>Data add using change detection</p>
+    <button (click)="addData()">Add new data</button>
 </div> <br>
 
 <!-- *ngSwitch Directives -->
@@ -56,6 +60,10 @@
     <h4>{{uprCasPip | uppercase}}</h4>
     <h4>{{decimalPip | number }} Decimal pipe</h4>
     <h4>{{currncyPip | currency : 'INR'}} currency pipe</h4>
+</div>
+
+<div class="custom-pipe">
+    <p>{{dummyString | demoPipe}}</p>
 </div> <br>
 
 <!-- Pass data from parent to child -->
@@ -81,17 +89,59 @@
 
 <!-- Task -->
 <h3>task</h3>
-<div class="from-area">
-    <h1>post form</h1> <br>
+<div class="task1">
+    <h1>Task 1</h1> <br>
     <input type="text" placeholder="title" [(ngModel)]="postTitle"> <br> <br>
     <textarea cols="30" rows="10" placeholder="details" [(ngModel)]="postDetails"></textarea> <br> <br>
     <input type="text" placeholder="Post Image URL" [(ngModel)]="imageURL"> <br> <br>
     <input type="text" placeholder="Post URL" [(ngModel)]="postURL"> <br> <br>
     <input type="checkbox" [(ngModel)]="addBackground">Add Background <br>
 </div>
-<div class="show-data">
+<div class="task1">
     <img [src]="imageURL" alt="" class="img">
     <h1><span [class.add-background]="addBackground">{{postTitle}}</span></h1>
     <p>{{postDetails}}</p>
     <a [href]="postURL" target="_blank" [style.display]="postURL ? 'block': 'none' ">More Details</a>
+</div> <br>
+
+<!-- Task 2 -->
+<div class="task2">
+    <h3>Task 2</h3>
+    <input type="text" placeholder="Name" [(ngModel)]="name"> <br> <br>
+    <input type="text" placeholder="Email" [(ngModel)]="userEmail"> <br> <br>
+    <textarea cols="30" rows="10" placeholder="address" [(ngModel)]="userAddress"></textarea> <br> <br>
+    <button (click)="onPushDetails()">Save Data into table</button><br> <br>
 </div>
+
+<div class="task2">
+    <table [width]="500">
+        <thead>
+            <th>Sr.no</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Address</th>
+            <th>Action</th>
+        </thead>
+        <tr *ngFor="let user of userDetails; let index = index">
+            <td>{{index + 1}}</td>
+            <td>{{user.name}}</td>
+            <td>{{user.Email}}</td>
+            <td>{{user.Address}}</td>
+            <td><button (click)="Delete(index)">Delete</button></td>
+        </tr>
+    </table>
+</div> <br> <br>
+
+<!-- Angular Service -->
+
+<div class="service2">
+    <h3>This is example of Service</h3>
+    <ul>
+        <li *ngFor="let data of serviceData">
+        {{data.name}}
+        {{data.age}}
+        {{data.email}}
+        </li>
+    </ul>
+</div>
+

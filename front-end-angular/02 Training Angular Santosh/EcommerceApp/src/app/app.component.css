@@ -6,11 +6,8 @@
     background-color: tomato;
     color: white;
 }
-.from-area{
+.task1{
    text-align: center;
-}
-.show-data{
-    text-align: center;
 }
 .img{
     width: 200px;
@@ -19,4 +16,7 @@
 .add-background{
     background-color: orange;
     padding: 10px;
+}
+.task2{
+    text-align: center;
 }
