@@ -104,4 +104,17 @@
    ngOnDestroy
 
 => ngOnchanges
-   A callback method that is invoked immediately after the default change detector has checked data-bound properties if at least one has changed, and before the view and content children are checked.
+   onChanges lifecycle hook is called when any data-bound property of a directive changes. You use it by defining an ngOnChanges() method to handle the changes. It is usually called first before ngOnInit and then subsequently after any input property changes.
+
+=> ngOnInit
+   Initialize the directive or component after Angular first displays the data-bound properties and sets the directive or component's input properties. It called only ones after ngOnchanges.
+
+=> Constructor uses :
+   - Inject any service 
+   - Initialize the feilds
+   - Do not perform any logic here.
+
+=> ngOnInit uses : 
+   - Perform the component specific operations like:
+     - Make call to API for page load
+     - Any logic that you need to perform at very first as the component gets instantiated.

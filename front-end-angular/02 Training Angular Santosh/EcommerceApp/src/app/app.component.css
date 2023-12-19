@@ -6,3 +6,17 @@
     background-color: tomato;
     color: white;
 }
+.from-area{
+   text-align: center;
+}
+.show-data{
+    text-align: center;
+}
+.img{
+    width: 200px;
+    height: 200px;
+}
+.add-background{
+    background-color: orange;
+    padding: 10px;
+}

@@ -56,4 +56,42 @@
     <h4>{{uprCasPip | uppercase}}</h4>
     <h4>{{decimalPip | number }} Decimal pipe</h4>
     <h4>{{currncyPip | currency : 'INR'}} currency pipe</h4>
+</div> <br>
+
+<!-- Pass data from parent to child -->
+<div class="data-pass">
+    <h3>This is example of pass data from parent to child</h3>
+    <app-training-cmp parent={{dataPass}}></app-training-cmp>
+</div> <br> <br>
+
+<!-- Life cycle hooks 01 ngOnchanges -->
+
+<div class="onchanges">
+    <h3>This is example of ngOnChanges</h3>
+    <app-training-cmp data={{data}}></app-training-cmp>
+    <button (click)="updateData()">Change data</button>
+</div> <br> <br>
+
+
+<!-- Event binding -->
+<div class="binding">
+    <h3>This is example of event binding</h3>
+    <input type="text" [(ngModel)]="userName" (keyup.enter)="pressButton()" #username>
+</div> <br>
+
+<!-- Task -->
+<h3>task</h3>
+<div class="from-area">
+    <h1>post form</h1> <br>
+    <input type="text" placeholder="title" [(ngModel)]="postTitle"> <br> <br>
+    <textarea cols="30" rows="10" placeholder="details" [(ngModel)]="postDetails"></textarea> <br> <br>
+    <input type="text" placeholder="Post Image URL" [(ngModel)]="imageURL"> <br> <br>
+    <input type="text" placeholder="Post URL" [(ngModel)]="postURL"> <br> <br>
+    <input type="checkbox" [(ngModel)]="addBackground">Add Background <br>
+</div>
+<div class="show-data">
+    <img [src]="imageURL" alt="" class="img">
+    <h1><span [class.add-background]="addBackground">{{postTitle}}</span></h1>
+    <p>{{postDetails}}</p>
+    <a [href]="postURL" target="_blank" [style.display]="postURL ? 'block': 'none' ">More Details</a>
 </div>
