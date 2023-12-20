@@ -1,16 +1,23 @@
 import { Injectable } from '@angular/core';
-
+import {HttpClient} from '@angular/common/http'
 @Injectable({
   providedIn: 'root'
 })
 export class UserDataService {
 
+  constructor(private http:HttpClient) {  }
   userData(){
-    return [
-      {name:"API1", age:22, email:"API@gmail.com"},
-      {name:"API2", age:22, email:"API@gmail.com"},
-      {name:"API3", age:22, email:"API@gmail.com"}
-    ]
+    return this.http.get("http://localhost:3000/products")
   }
-  constructor() { }
+  addNewData(data:any){
+    return this.http.post("http://localhost:3000/products", data)
+  }
+
+  apiDemo(){
+    return this.http.get("http://localhost:3000/demo")
+  }
+
+  addDemoApi(data:any){
+    return this.http.post("http://localhost:3000/demo", data)
+  }
 }

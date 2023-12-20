@@ -2,6 +2,8 @@ import { Component, OnInit, AfterViewInit, ViewChild } from '@angular/core';
 import { Room, RoomList } from './directive';
 import { TrainingCmpComponent } from './training-cmp/training-cmp.component';
 import { UserDataService } from './services/user-data.service';
+import { NgForm } from '@angular/forms';
+
 
 @Component({
   selector: 'app-root',
@@ -139,12 +141,40 @@ export class AppComponent implements OnInit {
     this.userDetails.splice(index,1)
   }
 
-  // Service
-  serviceData:any
-  constructor(private data2 : UserDataService){
-    this.serviceData=data2.userData()
-    console.log(data2.userData())
+  // Service : API
+  apiData : any ;
+  apiDemo : any
+  constructor(private user:UserDataService){
+    user.userData().subscribe((data)=>{
+      this.apiData=data
+    })
+
+    // Practice of making API
+    user.apiDemo().subscribe((data2)=>{
+      this.apiDemo = data2
+    })
   }
 
+  // add new data using post method
+  newApi: any
+  addNewUserDetails(data:any){
+    this.user.addNewData(data).subscribe((res)=>{
+      console.log(res)
+      this.newApi = res
+    })
+  }
 
+  // Practice of making API
+  demoAPi:any
+  addDataApi(data:any){
+    this.user.addDemoApi(data).subscribe((res)=>{
+      this.demoAPi = res
+      console.log(res)
+    })
+  }
+
+  //Template driven form
+  onSubmit(templateform:NgForm){
+    console.log(templateform.value)
+  }
 }

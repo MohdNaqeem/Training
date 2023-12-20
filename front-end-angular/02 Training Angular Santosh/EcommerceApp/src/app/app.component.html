@@ -134,14 +134,160 @@
 
 <!-- Angular Service -->
 
-<div class="service2">
-    <h3>This is example of Service</h3>
+<div class="Api">
+    <h3>How to call API</h3>
+    <p>This data is coming from api/json server</p>
     <ul>
-        <li *ngFor="let data of serviceData">
-        {{data.name}}
-        {{data.age}}
-        {{data.email}}
+        <li *ngFor="let data of apiData">
+            {{data.productId}}
+            {{data.productname}}
+            {{data.productprice}}
+            {{data.productcategory}}
+            {{data.productdescription}}
+            {{data.producturl}}
         </li>
     </ul>
 </div>
 
+<!-- Add new data using post service -->
+<div class="container mt-5">
+    <div class="form-area">
+        <form #userform="ngForm" (ngSubmit)="addNewUserDetails(userform.value)">
+            <div class="mb-3">
+                <label>Product ID</label>
+                <input type="text" ngModel name="productId" placeholder="Enter productId" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label>Product Name</label>
+                <input type="text" ngModel name="productname" placeholder="Enter productname" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label>Price</label>
+                <input type="text" ngModel name="productprice" placeholder="Enter productprice" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label>Product Category</label>
+                <input type="text" ngModel name="productcategory" placeholder="Enter productcategory"
+                    class="form-control">
+            </div>
+            <div class="mb-3">
+                <label>Product Description</label>
+                <input type="text" ngModel name="productdescription" placeholder="Enter productdescription"
+                    class="form-control">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit New Data</button>
+        </form>
+    </div>
+</div>
+
+<!-- Api practice-->
+<div class="Api">
+    <h3>Practice of making API</h3>
+    <ul>
+        <li *ngFor="let demo of apiDemo">
+            {{demo.name}}
+            {{demo.email}}
+        </li>
+    </ul>
+</div>
+
+<form #userData="ngForm" (ngSubmit)="addDataApi(userData.value)">
+    <input type="text" name="name" ngModel placeholder="Enter your Name">
+    <br> <br>
+    <input type="text" name="email" ngModel placeholder="Enter your Email">
+    <br> <br>
+    <button>Add new details</button>
+</form> <br> <br>
+
+<!-- Template Driven Forms -->
+<h3>Template Driven Forms</h3>
+<div class="container mt-5">
+    <div class="form-area">
+        <form #templateform="ngForm" (submit)="onSubmit(templateform)">
+
+            <div class="mb-3">
+                <label>Name</label>
+                <input 
+                type="text" 
+                placeholder="Enter First Name" 
+                class="form-control" 
+                name="firstName" 
+                ngModel
+                #Fname="ngModel" 
+                required 
+                pattern="[a-zA-Z]+$"
+                [ngClass]="{'is-invalid' : Fname.invalid && Fname.touched}" minlength="5">
+                    
+                <div *ngIf="Fname.errors && Fname.errors['required']">
+                    <div class="alert alert-danger" *ngIf="Fname.invalid && Fname.touched">
+                        First Name is required and only alphabet
+                    </div>
+                </div>
+                <div *ngIf="Fname.errors && Fname.errors['minlength']">
+                    <div class="alert alert-danger" *ngIf="Fname.invalid && Fname.touched">
+                        First Name must be 5 character
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label>Last Name</label>
+                <input 
+                type="text" 
+                placeholder="Enter Last Name" 
+                class="form-control" 
+                name="lastName" 
+                ngModel
+                #Lname="ngModel" 
+                required [ngClass]="{'is-invalid' : Lname.invalid && Lname.touched}">
+                <div class="alert alert-danger" *ngIf="Lname.invalid && Lname.touched">
+                    Last Name is required
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label>Email</label>
+                <input 
+                type="text" 
+                placeholder="Enter Email" 
+                pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" 
+                class="form-control" 
+                name="email" 
+                ngModel
+                #email="ngModel" 
+                required 
+                [ngClass]="{'is-invalid' : email.invalid && email.touched}">
+                <div *ngIf="email.errors && email.errors['required']">
+                    <div class="alert alert-danger" *ngIf="email.invalid && email.touched">
+                        Email is required
+                    </div>
+                </div>
+                <div *ngIf="email.errors && email.errors['pattern']">
+                    <div class="alert alert-danger" *ngIf="email.invalid && email.touched">
+                        Invalid email address
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label>Password</label>
+                <input 
+                type="password" 
+                placeholder="Enter Password" 
+                class="form-control" 
+                name="password" 
+                ngModel
+                #password="ngModel" 
+                required 
+                minlength="8"
+                [ngClass]="{'is-invalid' : password.invalid && password.touched}">
+                <div class="alert alert-danger" *ngIf="password.invalid && password.touched">
+                    Password is required and minimum 8 character
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary" [disabled]="templateform.invalid">Submit</button>
+        </form>
+    </div>
+</div>
+
+<!-- Reactive from -->

@@ -129,3 +129,45 @@
 
 => What is change detection?
    The purpose of this mechanism is to make sure the underlying views are always in sync with their corresponding models. This core feature of Angular is what makes the framework tick and is partly the reason why Angular is a neat choice for developing modern web apps.
+
+=> What is service?
+   services in Angular let you define code or functionalities that are then accessible and reusable in many other components in your Angular project. Services help you with the abstraction of logic and data that is hosted independently but can be shared across other components.
+   Service is a class in which could be has function, data or properties and these data, properties or function we can share in multiple component using services.
+
+=> what is defference between get method and post method?
+   "GET" and "POST" are two different types of HTTP requests. They are used to communicate with a server to send
+   data. 
+   - GET Request:
+     - Purpose: The primary purpose of a GET request is to retrieve data from the server.
+
+     - Data in URL: Parameters are appended to the URL, usually visible in the browser's address bar.
+
+     - Caching: GET requests can be cached by browsers, and they are idempotent, meaning making the same request 
+       multiple times has the same effect as making it once.
+
+     - Security: Since data is included in the URL, it's more visible and might be less secure for sensitive 
+       information.
+
+     - Use Cases: Suitable for data retrieval operations where the parameters are not sensitive and the request 
+       doesn't modify server-side data.
+
+   - POST Request:
+     - Purpose: The primary purpose of a POST request is to submit data to be processed to a specified resource.
+
+     - Data in Request Body: Parameters are included in the request body, not in the URL. This allows for sending 
+       larger amounts of data.
+
+     - Caching: POST requests are not cached by default, and they are not idempotent, meaning making the same 
+       request multiple times can have different effects.
+
+     - Security: Since data is in the request body, it's not visible in the URL, making it a more secure option for 
+       sensitive information.
+
+     - Use Cases: Suitable for operations that modify server-side data, involve sensitive information, or require  
+       larger amounts of data to be sent.
+
+=> What is template driven form?
+  Template-driven forms in Angular are a way of creating forms using Angular templates and directives. These forms are primarily driven by the template, where you define the form structure and validation directly in the HTML. 
+
+
+     

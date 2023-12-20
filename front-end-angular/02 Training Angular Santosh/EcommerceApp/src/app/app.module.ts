@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { TrainingCmpComponent } from './training-cmp/training-cmp.component';
 import { FormsModule } from '@angular/forms';
 import { DemoPipePipe } from './Pipes/demo-pipe.pipe';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,6 +17,7 @@ import { DemoPipePipe } from './Pipes/demo-pipe.pipe';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
