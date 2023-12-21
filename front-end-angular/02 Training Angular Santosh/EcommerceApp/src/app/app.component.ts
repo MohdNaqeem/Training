@@ -1,9 +1,8 @@
-import { Component, OnInit, AfterViewInit, ViewChild } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { Room, RoomList } from './directive';
-import { TrainingCmpComponent } from './training-cmp/training-cmp.component';
 import { UserDataService } from './services/user-data.service';
-import { NgForm } from '@angular/forms';
-
+import { FormBuilder, FormControl, FormGroup, NgForm, Validators} from '@angular/forms';
+import { noSpace } from './Custom-Validetors/nospace.validetors';
 
 @Component({
   selector: 'app-root',
@@ -143,8 +142,9 @@ export class AppComponent implements OnInit {
 
   // Service : API
   apiData : any ;
-  apiDemo : any
-  constructor(private user:UserDataService){
+  apiDemo : any ;
+  fbform : any
+  constructor(private user:UserDataService, fb:FormBuilder){
     user.userData().subscribe((data)=>{
       this.apiData=data
     })
@@ -153,6 +153,30 @@ export class AppComponent implements OnInit {
     user.apiDemo().subscribe((data2)=>{
       this.apiDemo = data2
     })
+
+    // Reactive from using form builder
+    this.fbform = fb.group({
+      studentName : ['', [
+        Validators.required,
+        Validators.minLength(5),
+        noSpace.noSpaceValidations
+      ]],
+      studentEmail : ['',[
+        Validators.required,
+        Validators.email,
+        noSpace.noSpaceValidations
+      ]],
+      password : ['',[
+        Validators.required,
+        Validators.minLength(8),
+        noSpace.noSpaceValidations
+      ]],
+    })
+  }
+
+  // Reactive form builder 
+  get fc(){
+  return this.fbform.controls
   }
 
   // add new data using post method
@@ -176,5 +200,27 @@ export class AppComponent implements OnInit {
   //Template driven form
   onSubmit(templateform:NgForm){
     console.log(templateform.value)
+  }
+
+  // Reactive form
+  loginForm = new FormGroup({
+    user : new FormControl('', [Validators.required, Validators.minLength(5)]),
+    email : new FormControl('', [Validators.required, Validators.email]),
+    password : new FormControl('', [Validators.required,  Validators.minLength(8)])
+  })
+  loginUser(){
+    console.log(this.loginForm.value)
+  }
+
+  get getUser(){
+    return this.loginForm.get('user')
+  }
+  
+  get getEmail(){
+    return this.loginForm.get('email')
+  }
+
+  get getPassword(){
+    return this.loginForm.get('password')
   }
 }

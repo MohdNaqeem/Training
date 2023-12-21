@@ -133,7 +133,6 @@
 </div> <br> <br>
 
 <!-- Angular Service -->
-
 <div class="Api">
     <h3>How to call API</h3>
     <p>This data is coming from api/json server</p>
@@ -200,24 +199,17 @@
 </form> <br> <br>
 
 <!-- Template Driven Forms -->
-<h3>Template Driven Forms</h3>
 <div class="container mt-5">
+    <h3>Template Driven Forms</h3>
     <div class="form-area">
         <form #templateform="ngForm" (submit)="onSubmit(templateform)">
 
             <div class="mb-3">
                 <label>Name</label>
-                <input 
-                type="text" 
-                placeholder="Enter First Name" 
-                class="form-control" 
-                name="firstName" 
-                ngModel
-                #Fname="ngModel" 
-                required 
-                pattern="[a-zA-Z]+$"
-                [ngClass]="{'is-invalid' : Fname.invalid && Fname.touched}" minlength="5">
-                    
+                <input type="text" placeholder="Enter First Name" class="form-control" name="firstName" ngModel
+                    #Fname="ngModel" required pattern="[a-zA-Z]+$"
+                    [ngClass]="{'is-invalid' : Fname.invalid && Fname.touched}" minlength="5">
+
                 <div *ngIf="Fname.errors && Fname.errors['required']">
                     <div class="alert alert-danger" *ngIf="Fname.invalid && Fname.touched">
                         First Name is required and only alphabet
@@ -232,14 +224,8 @@
 
             <div class="mb-3">
                 <label>Last Name</label>
-                <input 
-                type="text" 
-                placeholder="Enter Last Name" 
-                class="form-control" 
-                name="lastName" 
-                ngModel
-                #Lname="ngModel" 
-                required [ngClass]="{'is-invalid' : Lname.invalid && Lname.touched}">
+                <input type="text" placeholder="Enter Last Name" class="form-control" name="lastName" ngModel
+                    #Lname="ngModel" required [ngClass]="{'is-invalid' : Lname.invalid && Lname.touched}">
                 <div class="alert alert-danger" *ngIf="Lname.invalid && Lname.touched">
                     Last Name is required
                 </div>
@@ -247,16 +233,9 @@
 
             <div class="mb-3">
                 <label>Email</label>
-                <input 
-                type="text" 
-                placeholder="Enter Email" 
-                pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" 
-                class="form-control" 
-                name="email" 
-                ngModel
-                #email="ngModel" 
-                required 
-                [ngClass]="{'is-invalid' : email.invalid && email.touched}">
+                <input type="text" placeholder="Enter Email" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
+                    class="form-control" name="email" ngModel #email="ngModel" required
+                    [ngClass]="{'is-invalid' : email.invalid && email.touched}">
                 <div *ngIf="email.errors && email.errors['required']">
                     <div class="alert alert-danger" *ngIf="email.invalid && email.touched">
                         Email is required
@@ -271,16 +250,9 @@
 
             <div class="mb-3">
                 <label>Password</label>
-                <input 
-                type="password" 
-                placeholder="Enter Password" 
-                class="form-control" 
-                name="password" 
-                ngModel
-                #password="ngModel" 
-                required 
-                minlength="8"
-                [ngClass]="{'is-invalid' : password.invalid && password.touched}">
+                <input type="password" placeholder="Enter Password" class="form-control" name="password" ngModel
+                    #password="ngModel" required minlength="8"
+                    [ngClass]="{'is-invalid' : password.invalid && password.touched}">
                 <div class="alert alert-danger" *ngIf="password.invalid && password.touched">
                     Password is required and minimum 8 character
                 </div>
@@ -291,3 +263,122 @@
 </div>
 
 <!-- Reactive from -->
+<div class="container mt-5">
+    <h3>Reactive form</h3>
+    <div class="form-area">
+        <form [formGroup]="loginForm" (ngSubmit)="loginUser()">
+            <div class="mb-3">
+                <label>User Name</label>
+                <input type="text" placeholder="Enter user Name" class="form-control" formControlName="user">
+                <div class="alert alert-danger" *ngIf="getUser && getUser.invalid && getUser.touched">
+                    User Name is required and minimum 5 character
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label>User Email</label>
+                <input type="text" placeholder="Enter user Email" class="form-control" formControlName="email">
+                <div class="alert alert-danger" *ngIf="getEmail && getEmail.invalid && getEmail.touched">
+                    Email is required and im email format
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label>User Password</label>
+                <input type="password" placeholder="Enter user Password" class="form-control"
+                    formControlName="password">
+                <div class="alert alert-danger" *ngIf="getPassword && getPassword.invalid && getPassword.touched">
+                    password is required
+                </div>
+            </div>
+
+            <button class="btn btn-primary" [disabled]="loginForm.invalid">Submit</button>
+        </form>
+    </div>
+</div>
+
+<!-- Reactive form using form builder and custom validators-->
+<div class="container mt-5">
+    <h3>Reactive form using form builder and add custom validators</h3>
+    <div class="form-area">
+        <form [formGroup]="fbform">
+
+            <div class="mb-3">
+                <label>Student Name</label>
+                <input type="text" placeholder="Enter Student Name" class="form-control" formControlName="studentName">
+
+                <div *ngIf="fc.studentName.errors && fc.studentName.errors['required']">
+                    <div class="alert alert-danger" *ngIf="fc.studentName.invalid && fc.studentName.touched">
+                        First Name is required and only alphabet
+                    </div>
+                </div>
+                <div *ngIf="fc.studentName.errors && fc.studentName.errors['minlength']">
+                    <div class="alert alert-danger" *ngIf="fc.studentName.invalid && fc.studentName.touched">
+                        First Name must be 5 character
+                    </div>
+                </div>
+                <div *ngIf="fc.studentName.errors && fc.studentName.errors['noSpaceValidations']">
+                    <div class="alert alert-danger" *ngIf="fc.studentName.invalid && fc.studentName.touched">
+                        student name cannot containe space
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="mb-3">
+                <label>Student Email</label>
+                <input type="text" placeholder="Enter Student Email" class="form-control"
+                    formControlName="studentEmail">
+
+                <div *ngIf="fc.studentEmail.errors && fc.studentEmail.errors['required']">
+                    <div class="alert alert-danger" *ngIf="fc.studentEmail.invalid && fc.studentEmail.touched">
+                        Email is required
+                    </div>
+                </div>
+                <div *ngIf="fc.studentEmail.errors && fc.studentEmail.errors['email']">
+                    <div class="alert alert-danger" *ngIf="fc.studentEmail.invalid && fc.studentEmail.touched">
+                        Invalid email address
+                    </div>
+                </div>
+                <div *ngIf="fc.studentEmail.errors && fc.studentEmail.errors['noSpaceValidations']">
+                    <div class="alert alert-danger" *ngIf="fc.studentEmail.invalid && fc.studentEmail.touched">
+                        student name cannot containe space
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="mb-3">
+                <label>Password</label>
+                <input type="password" placeholder="Enter user Password" class="form-control"
+                    formControlName="password">
+                <div *ngIf="fc.password.errors && fc.password.errors['required']">
+                    <div class="alert alert-danger" *ngIf="fc.password.invalid && fc.password.touched">
+                        Password is required
+                    </div>
+                </div>
+                <div *ngIf="fc.password.errors && fc.password.errors['minlength']">
+                    <div class="alert alert-danger" *ngIf="fc.password.invalid && fc.password.touched">
+                        Password must be atleast 8 character
+                    </div>
+                </div>
+                <div *ngIf="fc.password.errors && fc.password.errors['noSpaceValidations']">
+                    <div class="alert alert-danger" *ngIf="fc.password.invalid && fc.password.touched">
+                        student name cannot containe space
+                    </div>
+                </div>
+            </div>
+            <button class="btn btn-primary" [disabled]="fbform.invalid">Submit</button>
+        </form>
+    </div>
+</div>
+
+<!-- Routing and Navgation -->
+<div>
+    <h3>Routing and Navigation</h3>
+    <button  routerLink="/home" routerLinkActive="active">Home</button>
+    <button  routerLink="/user" routerLinkActive="active">User</button>
+    <button  routerLink="/train-cmp" routerLinkActive="active">Training</button>
+    <button  routerLink="/" routerLinkActive="active">front page</button>
+</div>
+<router-outlet></router-outlet>

@@ -167,7 +167,47 @@
        larger amounts of data to be sent.
 
 => What is template driven form?
-  Template-driven forms in Angular are a way of creating forms using Angular templates and directives. These forms are primarily driven by the template, where you define the form structure and validation directly in the HTML. 
+   Template-driven forms are a way of building forms in Angular using template-driven syntax. This approach relies on directives in the template to create and manipulate the underlying form model.
 
-
+   Syntax : 
+    
+   1 To use template-driven forms, we need to import the FormsModule from @angular/forms in our app.module.ts. 
      
+   2 NgModel Directive: The ngModel directive plays a crucial role in template-driven forms. It is used for two-way  
+     data binding, connecting the form controls in the template with the underlying form model. 
+
+   3 ngForm Directive: The ngForm directive is used to create a form in the template. It is responsible for tracking 
+     the form's state, validity, and managing form submissions.
+
+   4 Form Validation: Template-driven forms support both built-in and custom validators. You can add validation 
+     attributes to the form controls in the template.
+
+=> What is Reactive form in angular ?
+   Reactive forms in Angular are a mechanism for handling and managing forms in a more programmatic and reactive manner. The fundamental purpose of reactive forms is to give developers greater control and flexibility in managing the state and behavior of forms within Angular applications
+
+   syntax : 
+
+   1 To use reactive forms, we need to import the ReactiveFormsModule from @angular/forms in our app.module.ts.
+
+   2 FormGroup: A FormGroup is a collection of FormControl instances, representing a form. It helps in organizing 
+     and managing the state of multiple form controls.
+
+   3 FormControl: A FormControl represents an individual form control, such as an input field. It tracks the value 
+     and validation status of the control.
+
+   4 FormArray: A FormArray is used to manage an array of form controls within a FormGroup.
+
+   5 Form Validation: Validators can be added directly when creating form controls, and you can also implement 
+     custom validators.
+
+=> What is custom validation?
+   Custom validators in Angular are essential when you encounter validation scenarios that cannot be achieved using the built-in validators. Some common use cases for custom validators include.
+
+   1 Password Confirmation: we might want to ensure that two password input fields match each other.
+
+   2 Unique Username: Checking if a chosen username is unique in your application’s database.
+
+   3 Conditional Validation: Implementing complex validation rules based on the state of other form controls.
+
+=> What is Routing? 
+   As users perform application tasks, they need to move between the different views that you have defined. To handle the navigation from one view to the next, you use the Angular Router . The Router enables navigation by interpreting a browser URL as an instruction to change the view.

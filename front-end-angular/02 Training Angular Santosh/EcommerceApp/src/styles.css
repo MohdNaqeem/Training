@@ -6,3 +6,7 @@ h3{
 *{
     margin: 1px;
 }
+.active{
+    background-color: orange;
+    color: black;
+}
