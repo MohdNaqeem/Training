@@ -305,16 +305,17 @@
 
             <div class="mb-3">
                 <label>Student Name</label>
-                <input type="text" placeholder="Enter Student Name" class="form-control" formControlName="studentName">
+                <input type="text" placeholder="Enter Student Name" class="form-control" formControlName="studentName"
+                [ngClass]="{'is-invalid' : fc.studentName.invalid && fc.studentName.touched}">
 
                 <div *ngIf="fc.studentName.errors && fc.studentName.errors['required']">
                     <div class="alert alert-danger" *ngIf="fc.studentName.invalid && fc.studentName.touched">
-                        First Name is required and only alphabet
+                        student name is required and only alphabet
                     </div>
                 </div>
                 <div *ngIf="fc.studentName.errors && fc.studentName.errors['minlength']">
                     <div class="alert alert-danger" *ngIf="fc.studentName.invalid && fc.studentName.touched">
-                        First Name must be 5 character
+                        student name must be 5 character
                     </div>
                 </div>
                 <div *ngIf="fc.studentName.errors && fc.studentName.errors['noSpaceValidations']">
@@ -328,7 +329,8 @@
             <div class="mb-3">
                 <label>Student Email</label>
                 <input type="text" placeholder="Enter Student Email" class="form-control"
-                    formControlName="studentEmail">
+                    formControlName="studentEmail" 
+                     [ngClass]="{'is-invalid' : fc.studentEmail.invalid && fc.studentEmail.touched}">
 
                 <div *ngIf="fc.studentEmail.errors && fc.studentEmail.errors['required']">
                     <div class="alert alert-danger" *ngIf="fc.studentEmail.invalid && fc.studentEmail.touched">
@@ -342,7 +344,7 @@
                 </div>
                 <div *ngIf="fc.studentEmail.errors && fc.studentEmail.errors['noSpaceValidations']">
                     <div class="alert alert-danger" *ngIf="fc.studentEmail.invalid && fc.studentEmail.touched">
-                        student name cannot containe space
+                       email cannot containe space
                     </div>
                 </div>
 
@@ -351,7 +353,7 @@
             <div class="mb-3">
                 <label>Password</label>
                 <input type="password" placeholder="Enter user Password" class="form-control"
-                    formControlName="password">
+                    formControlName="password" [ngClass]="{'is-invalid' : fc.password.invalid && fc.password.touched}">
                 <div *ngIf="fc.password.errors && fc.password.errors['required']">
                     <div class="alert alert-danger" *ngIf="fc.password.invalid && fc.password.touched">
                         Password is required
@@ -364,7 +366,7 @@
                 </div>
                 <div *ngIf="fc.password.errors && fc.password.errors['noSpaceValidations']">
                     <div class="alert alert-danger" *ngIf="fc.password.invalid && fc.password.touched">
-                        student name cannot containe space
+                       password cannot containe space
                     </div>
                 </div>
             </div>
