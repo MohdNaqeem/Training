@@ -8,33 +8,59 @@
 </head>
 
 <body>
+    <h1> Remove Duplicate charcters using set object</h1>
     <script>
-        /* 
-        Notes
         
-        What is set object ? 
-        A JavaScript Set is a collection of unique values. Each value can only occur once in a Set.A Set 
-        can hold any value of any data type. whether primitive values or object references.
-        
-        */
-
-
         /* Remove Duplicate characters from array of element and find the count of an elements using set
            object */
 
         var arr = [55, 44, 55, 67, 67, 67, 67, 8, 8, 8, 8, 8, 65, 1, 2, 3, 3, 34, 5];
         var unique = [...new Set(arr)]
-        console.log(unique)
+        console.log("task 1" ,unique)
 
         // for practice 
         const demo = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 9, 8, 7, 6, 5, 4, 3, 3, 21]
         const res = [...new Set(demo)]
-        console.log(demo)
+        console.log("task 2" ,demo)
 
         // for practice
         const arrSet = [1, 2, 3, 4, 4, 1, 2, 2, 5, 6, 7, 8, 9, 0]
         const output = [...new Set(arrSet)]
-        console.log(output)
+        console.log("task 3" ,output)
+
+        // for practice 
+        const arrCharacter = [1,1,2,33,4,4,4,5,6,6,6,7,8,9,"9",9]
+        const uniqueCharcter = [... new Set(arrCharacter)]
+        console.log("task 4" ,uniqueCharcter)
+
+        // for rivise
+        const arrDuplicate = [1,1,2,2,3,34,4,5,6,7,7,8,8,9,9,9,9,9]
+        const result = [... new Set(arrDuplicate)]
+        console.log("task 5" ,result)
+
+        /* 
+        Notes
+        
+        What is set object ? 
+        A JavaScript Set is a collection of unique values. Each value can only store once in a Set.A Set 
+        can hold any value of any data type. whether primitive values or object references.
+
+        Explanation : 
+
+        in this logic we have created one array which is hold multiple value including duplicates value 
+        and we had to remove duplicate character using set object.
+
+        then we have created one more variable and inside this variable we are using set method which is
+        introduced in Ecmascript 6 the purpose of set obejct is it's store only unique value it's remove
+        all the duplicate charater.
+
+        (...) this triple dot basically we called this spread operators.
+        The spread operator (...) is used to convert the Set back into an array.
+        const result = [...new Set(arrDuplicate)] creates a new array named unique containing the unique 
+        elements from the original array.
+        
+        */
+
     </script>
 </body>
 

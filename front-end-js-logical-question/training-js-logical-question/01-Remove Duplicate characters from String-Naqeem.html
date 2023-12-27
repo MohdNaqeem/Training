@@ -4,17 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Remove Duplicate characters from String</title>
 </head>
 
 <body>
+    <h1>Remove Duplicate characters from String</h1>
+    <!-- <p>There are a lot of method to remove Duplicate characters from string we will se some method</p> -->
     <script>
-        /* 
-        split method
-        The split() method splits a string into an array of substrings. The split() method returns the 
-        new array.
-        */
-
         // Remove Duplicate characters from String
         function removeDuplicateCharacters() {
             var string = 'Momin Mohd Naqeem'
@@ -24,26 +20,6 @@
             return result;
         }
         console.log(removeDuplicateCharacters());
-
-        // Practice
-        function prcatice() {
-            var demo = "Momin Mohd Naqeem"
-            var res = demo.split('').filter((item, index, arr) => {
-                return arr.indexOf(item) == index;
-            }).join('')
-            return res
-        }
-        console.log(prcatice())
-
-        // for practice
-        function removeDuplicateCharactersTest() {
-            var array = "Momin Mohd Naqeem Raza Abubakar"
-            var output = array.split('').filter((item, index, arr) => {
-                return arr.indexOf(item) == index;
-            }).join('')
-            return output
-        }
-        console.log(removeDuplicateCharactersTest())
     </script>
 </body>
 
