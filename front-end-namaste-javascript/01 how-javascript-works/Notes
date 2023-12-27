@@ -6,7 +6,7 @@
    This is the place where all variables and functions are stored as key value pairs. eg-{key: value ||  n:2;} 
 
    2 - code component[Thread of execution]
-   This is the place where code is executed one line at a time
+   This is the place where code is executed one line at a time.
 
    * JavaScript is a synchronous single-threaded language
    Single threaded means JavaScript can execute once command at a time

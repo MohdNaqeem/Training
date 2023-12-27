@@ -4,7 +4,7 @@ h3{
     color: red;
 }
 *{
-    margin: 1px;
+    margin-left: 1px;
 }
 .active{
     background-color: orange;

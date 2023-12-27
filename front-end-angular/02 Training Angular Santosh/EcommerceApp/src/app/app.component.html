@@ -1,6 +1,6 @@
 <h1>Angular Training</h1>
 
-<!-- 1 -  Built-in Directives -->
+<!-- 1 Directives -->
 
 <!-- *ngIf Directives -->
 <div class="ngIf" *ngIf="rooms.availableRooms > 1">
@@ -53,6 +53,11 @@
     </div>
 </div> <br>
 
+<!-- Custom Directives -->
+<div class="customDirective">
+    <h3>Custom Directives</h3>
+    <h4 appDirectives>This is a blue color text this color is changed because of custom directives</h4>
+</div> <br>
 <!-- Pipes -->
 <div class="pipes">
     <h3>This is example of pipes</h3>
@@ -87,7 +92,7 @@
     <input type="text" [(ngModel)]="userName" (keyup.enter)="pressButton()" #username>
 </div> <br>
 
-<!-- Task -->
+<!-- Task 1-->
 <h3>task</h3>
 <div class="task1">
     <h1>Task 1</h1> <br>

@@ -9,6 +9,7 @@ import { DemoPipePipe } from './Pipes/demo-pipe.pipe';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './home/home.component';
 import { UserComponent } from './user/user.component';
+import { DirectivesDirective } from './customDirectives/directives.directive';
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,6 +17,7 @@ import { UserComponent } from './user/user.component';
     DemoPipePipe,
     HomeComponent,
     UserComponent,
+    DirectivesDirective,
   ],
   imports: [
     BrowserModule,

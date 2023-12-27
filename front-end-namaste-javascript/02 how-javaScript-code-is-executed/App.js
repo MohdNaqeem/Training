@@ -13,7 +13,7 @@ Notes :
   created in two phases.   
 
 - phase one is Memory creation phase in this phase js allocating whole program inside the global space.
-  - in case of variable it will allocate special value undefined but in case of function it will allocate as it 
+  - in case of variable it will allocate special value undefined but in the case of function it will allocate as it 
     is whole function.
 
 - in phase two code execution phase Js program is execute line by line in variable it will replace undefined 
