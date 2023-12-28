@@ -8,13 +8,69 @@
 </head>
 
 <body>
+    <h1>String reverse without reversing of individual words</h1>
     <script>
+        // this is in function
         function removeDuplicates() {
-            var string = "Momin Mohd Naqeem"
+            let string = "Momin Mohd Naqeem"
             let result = string.split('').reverse().join('').split(' ').reverse().join(' ')
             return result
         }
         console.log(removeDuplicates())
+
+        // this is as a variable
+        let variableString = "Momin Mohd Naqeem"
+        let variableTest = variableString.split('').reverse().join('').split(' ').reverse().join(' ')
+        console.log(variableTest)
+
+        // for practice 
+
+        function removeDuplicates2(){
+            let string2 = "Momin Mohd Naqeem"
+            let result2 = string2.split('').reverse().join('').split(' ').reverse().join(' ')
+            return result2
+        }
+        console.log(removeDuplicates2())
+
+
+        /*
+        Notes :
+
+        - split()
+          The split() method splits a string into an array of substrings.
+          The split() method returns the new array.
+          The split() method does not change the original string.
+          If (" ") is used as separator, the string is split between words.
+          If ("") is used as separator, the string is split between each word.
+        
+        - reverse()
+          The reverse() method reverses the order of the elements in an array.
+          The reverse() method overwrites the original array.
+
+        - join()  
+          The join() method returns an array as a string.
+          The join() method does not change the original array.
+          Any separator can be specified. The default is comma (,).
+
+        Explanation : 
+
+        In this logic we had to reverse string without reversing of individual words.
+
+        first we have created funtction and inside function we have variable and inside this variable we
+        have string and we had to reverse string without reversing of individual words.
+        
+        So, inside function we have created one more variable to put the result. and inside this variable
+        we use split method to convert string into an array. we are just using ('') not space so it will
+        split each word into an array. 
+
+        then we used reverse method which is reverse string into an array. after this we used join method
+        to join reversed array of string.
+
+        then again we used split method to separate the reversed string into an array of words.then again 
+        we used reverse method to reverse the order of the words in the array. then we used join(' ') to
+        join the reverse array as a space.
+
+        */
     </script>
 </body>
 

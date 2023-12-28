@@ -1,23 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>String reverse without using inbult function</title>
 </head>
+
 <body>
+    <h1>String reverse without using inbult function</h1>
     <script>
         function Reverse() {
-        var string = "Momin Mohd Naqeem";
-        var result = "";
-        for (var i = string.length - 1; i >= 0; i--) {
-            result = result + string[i]
+            var string = "Momin Mohd Naqeem";
+            var result = "";
+            for (var i = string.length - 1; i >= 0; i--) {
+                result = result + string[i]
+            }
+            return result
         }
-        return result
-    }
-    console.log(Reverse())
+        console.log(Reverse())
+
+        // for practice
+        function reverse2(){
+            var testString = "Momin Mohd Naqeem"
+            var result2 = "";
+            for(var i = testString.length -1; i>=0; i--){
+                result2 = result2 + testString[i]
+            }
+            return result2
+        }
+        console.log(reverse2())
+
+
+        /*
+        Explanation :
+        
+        we have to do reverse string without using inbult function.
+        */
 
     </script>
 </body>
+
 </html>

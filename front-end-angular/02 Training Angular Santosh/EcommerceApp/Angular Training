@@ -108,8 +108,7 @@
    ng serve 
 
 => What is Angular?
-   Angular is a popular open-source web application framework maintained by Google and a community of developers. It is written in TypeScript and allows developers to build dynamic, single-page web applications (SPAs) with rich user interfaces. It's build structured, scalable and single page web applications for 
-   client side.
+   Angular is a popular open-source web application framework maintained by Google and a community of developers. It is written in TypeScript and allows developers to build dynamic, single-page web applications (SPAs) with rich user interfaces. It's build structured, scalable and single page web applications for client side.
    
 => What is Single Page Application?
    In a Single Page Application (SPA), all of your application's functions exist in a single HTML page. As users access your application's features, the browser needs to render only the parts that matter to the user, instead of loading a new page. This pattern can significantly improve your application's user experience.
