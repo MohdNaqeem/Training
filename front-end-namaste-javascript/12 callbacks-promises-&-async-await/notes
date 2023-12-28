@@ -1,0 +1,11 @@
+=> What is synchronous?
+   synchronous means the code runs in a particular sequence of instructions given in the program. Each 
+   instruction waits for the provious instruction to complete the execution.
+
+=> What is asynchronous?
+   Due to synchronous programming, sometimes important instructions get blocked due to some previous 
+   instructions which cause delay in the UI. asynchronous code execution allows to execute next 
+   instructions immediately and doesn't block the flow.
+
+=> What is callback function?
+   a callback function is a function that is passed as an argument to another function and is executed   after the completion of some operation. The primary purpose of a callback is to specify what should   happen after a particular asynchronous task or operation is completed.
