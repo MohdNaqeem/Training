@@ -1,0 +1,25 @@
+=> What is synchronous?
+   synchronous means the code runs in a particular sequence of instructions given in the program. Each 
+   instruction waits for the provious instruction to complete the execution.
+
+=> What is asynchronous?
+   Due to synchronous programming, sometimes important instructions get blocked due to some previous 
+   instructions which cause delay in the UI. asynchronous code execution allows to execute next 
+   instructions immediately and doesn't block the flow.
+
+=> What is callback function?
+   a callback function is a function that is passed as an argument to another function and is executed   after the completion of some operation. The primary purpose of a callback is to specify what should   happen after a particular asynchronous task or operation is completed.
+
+=> What is callbeck hell?
+   Callback hell is a phenomenon where a Callback is called inside another Callback. It is the nesting of multiple Callbacks inside a function. If you look at the design of the code, it seems just like a pyramid. 
+
+=> What is promise?
+   Promise in javascript for eventual completion of task. It is an object in Js. It is a solution of callback hell.
+   Promise ia a object which has 3 states pending, fullfiled(resolve), rejected. resolve and reject are 
+   callbacks provided by JS itself.
+
+   A javascript promise object can be.
+   - Pending : the result is undefined.
+   - Resolved : the result is fulfilled.
+   - Rejected : the result is an error object.
+   
