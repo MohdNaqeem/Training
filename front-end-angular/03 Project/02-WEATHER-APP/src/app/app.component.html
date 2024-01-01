@@ -1,0 +1,62 @@
+<div class="container">
+  <div class="upper-data">
+    <img src="../assets/hot-img.webp">
+    <img src="../assets/cold-img.webp">
+
+    <div class="weather-data">
+      <div class="location">Mumbai</div>
+      <div class="temperature">{{14.40 | number : '1.0-0'}}°C</div>
+    </div>
+  </div>
+
+  <div class="lower-data">
+    <div class="more-infor-label">
+      More Information
+    </div>
+
+    <div class="more-infor-container">
+      <div class="info-block">
+        <div class="info-block-label">
+          <img src="../assets/tem-img.png">
+          <span>min</span>
+        </div>
+        <div class="info-block-value">
+          10°
+        </div>
+      </div>
+
+      <div class="info-block">
+        <div class="info-block-label">
+          <img src="../assets/tem-max.webp">
+          <span>max</span>
+        </div>
+        <div class="info-block-value">
+          20°
+        </div>
+      </div>
+
+      <div class="info-block">
+        <div class="info-block-label">
+          <img src="../assets/humidity-img.png">
+          <span>humidity</span>
+        </div>
+        <div class="info-block-value">
+          85%
+        </div>
+      </div>
+
+      <div class="info-block">
+        <div class="info-block-label">
+          <img src="../assets/wind-img.jpg">
+          <span>wind</span>
+        </div>
+        <div class="info-block-value">
+          11 km/h
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</div>
+<router-outlet></router-outlet>
