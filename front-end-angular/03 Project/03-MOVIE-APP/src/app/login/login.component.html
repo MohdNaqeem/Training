@@ -1,0 +1,21 @@
+<div class="login-container">
+    <img class="film" src="assets/Images/movie-bg.jpg">
+    <!-- <div class="logo">Page Logo</div> -->
+    <div class="desc">
+        Free Movie Download
+    </div>
+    <div class="login-form">
+        <div class="form-group">
+            <label for="uname">Username</label>
+            <input type="text" name="uname" class="form-control" [(ngModel)]="userName">
+        </div>
+        <div class="form-group">
+            <label for="psword">Password</label>
+            <input type="password" name="psword" class="form-control" [(ngModel)]="password">
+        </div>
+        <div class="btn-container">
+            <div class="error">{{errorMsg}}</div>
+            <button class="btn btn-dark" (click)="login()">Login</button>
+        </div>
+    </div>
+</div>
