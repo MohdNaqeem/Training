@@ -12,6 +12,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FeatureModule } from './feature/feature.module';
 import { BackToHomeComponent } from './back-to-home/back-to-home.component';
+import { GridModule } from '@progress/kendo-angular-grid';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {NgxPaginationModule} from 'ngx-pagination'
+
 
 @NgModule({
   declarations: [
@@ -29,7 +33,10 @@ import { BackToHomeComponent } from './back-to-home/back-to-home.component';
     FormsModule,
     HttpClientModule,
     NgbModule,
-    FeatureModule
+    FeatureModule,
+    GridModule,
+    BrowserAnimationsModule,
+    NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]

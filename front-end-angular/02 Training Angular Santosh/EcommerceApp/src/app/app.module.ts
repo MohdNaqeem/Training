@@ -10,6 +10,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './home/home.component';
 import { UserComponent } from './user/user.component';
 import { DirectivesDirective } from './customDirectives/directives.directive';
+import {NgxPaginationModule} from 'ngx-pagination'
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +25,8 @@ import { DirectivesDirective } from './customDirectives/directives.directive';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]

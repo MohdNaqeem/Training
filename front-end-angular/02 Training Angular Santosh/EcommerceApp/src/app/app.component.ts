@@ -22,7 +22,7 @@ export class AppComponent implements OnInit {
   };
 
   //*ngFor Directive
-  roomsList: RoomList[] = [
+  roomsList = [
     {
       roomType: '2BHK Room',
       status: 'Air Conditioner, Free Wifi, Tv, Bathroom, Kitchen,',
@@ -222,5 +222,92 @@ export class AppComponent implements OnInit {
 
   get getPassword(){
     return this.loginForm.get('password')
+  }
+
+  // rivise and practice previous topic and some new topic
+  title1 = "rivise and practice previous topic and some new topic"
+
+  // for binding
+  para = "This is interpolation binding"
+
+  // property binding
+  disable : boolean = true
+
+  // event binding
+  value = "Welcome to event binding"
+  event = "";
+
+  onClick(){
+    this.event = this.value
+  }
+
+  // directives - *ngIf Directives
+  NgIf = "this"
+
+  // ngFor directive
+  students = [
+    {
+      name : "Momin Mohd",
+      class : "Xth",
+      division : "A",
+      rollNo: 1,
+      teacherName:"Naqeem"
+    },
+    {
+      name : "Momin Raza",
+      class : "Xth",
+      division : "A",
+      rollNo: 2,
+      teacherName:"Naqeem"
+    },
+    {
+      name : "Momin Ahmad",
+      class : "Xth",
+      division : "A",
+      rollNo: 3,
+      teacherName:"Naqeem"
+    },
+    {
+      name : "Momin Asif",
+      class : "Xth",
+      division : "A",
+      rollNo: 4,
+      teacherName:"Naqeem"
+    },
+    {
+      name : "Momin Kaif",
+      class : "Xth",
+      division : "A",
+      rollNo: 5,
+      teacherName:"Naqeem"
+    },
+    {
+      name : "Momin Rehan",
+      class : "Xth",
+      division : "A",
+      rollNo: 6,
+      teacherName:"Naqeem"
+    }
+  ]
+
+  // add new data using change detection 
+  addData2(){
+    this.students.push({
+      name : "Momin Amir",
+      class : "Xth",
+      division : "A",
+      rollNo: 7,
+      teacherName:"Naqeem"
+    })
+  }
+
+  onDelete2(index:any){
+    this.students.splice(index,1)
+  }
+
+  // *ngSwitchCase
+  data2 : string | undefined 
+  click(status:any){
+    this.data2 = status
   }
 }

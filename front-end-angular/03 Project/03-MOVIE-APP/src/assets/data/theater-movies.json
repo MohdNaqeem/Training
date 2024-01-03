@@ -30,5 +30,93 @@
     "rating": 4.15,
     "reviews": [
     ]
+  },
+  {
+    "id": 15,
+    "name": "Free Guy",
+    "cover": "https://resizing.flixster.com/uNc3CW-Fa09jrPAkm8XZpNjhzYo=/180x257/v2/https://resizing.flixster.com/xwxxJB2xH5NdYHpX_VBGwBtT54I=/ems.ZW1zLXByZC1hc3NldHMvbW92aWVzL2U1NzRmM2YxLWJmZjctNDYzNS05Mjk4LTVmOGM4NGJiMTQwMS5qcGc=",
+    "rating": 4.15,
+    "reviews": [
+    ]
+  },
+  {
+    "id": 16,
+    "name": "Wierd",
+    "cover": "https://m.media-amazon.com/images/I/91QVOHEoxlL._SL500_.png",
+    "rating": 3.15,
+    "reviews": [
+    ]
+  },
+  {
+    "id": 17,
+    "name": "Vendetta",
+    "cover": "https://images.justwatch.com/poster/301899319/s718/il-mio-nome-e-vendetta.jpg",
+    "rating": 3.75,
+    "reviews": [
+    ]
+  },
+  {
+    "id": 18,
+    "name": "The king's man",
+    "cover": "https://media.list.ly/production/921912/4343482/4343482-the-king-s-man-2020-new-hollywood-movies-tamilrockers-toptenlyrics_600px.jpeg?ver=0615638280",
+    "rating": 4.25,
+    "reviews": [
+    ]
+  },
+  {
+    "id": 19,
+    "name": "X-men",
+    "cover": "https://cdn.marvel.com/content/1x/fox_x-mendaysoffuturepast_lob_crd_01.jpg",
+    "rating": 4.15,
+    "reviews": [
+    ]
+  },
+  {
+    "id": 20,
+    "name": "A beatiful mind",
+    "cover": "https://www.scrolldroll.com/wp-content/uploads/2020/01/A-Beautiful-Mind-Most-Inspirational-Hollywood-Movies.jpg",
+    "rating": 4.5,
+    "reviews": [
+    ]
+  },
+  {
+    "id": 21,
+    "name": "65",
+    "cover": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJQe7Ui4JoZik7mXXbdVHY61Omy7_u2CY76A&usqp=CAU",
+    "rating": 4.15,
+    "reviews": [
+    ]
+  },
+  {
+    "id": 22,
+    "name": "Dora",
+    "cover": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQf1-4RBve0Y-6GKwa9S4v6r6Wi8D0t9AJgw&usqp=CAU",
+    "rating": 3.5,
+    "reviews": [
+    ]
+  },
+  {
+    "id": 23,
+    "name": "Salaar",
+    "cover": "https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC/et00301886-adtpyusrqu-portrait.jpg",
+    "rating": 3.5,
+    "reviews": [
+    ]
+  },
+  {
+    "id": 24,
+    "name": "Lion ark",
+    "cover": "https://www.hollywoodreporter.com/wp-content/uploads/2013/11/lion_ark_poster_a_p.jpg",
+    "rating": 4.1,
+    "reviews": [
+    ]
+  },
+  {
+    "id": 25,
+    "name": "The jungle book",
+    "cover": "https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC/et00040648-bmrtpjvlzw-portrait.jpg",
+    "rating": 2.15,
+    "reviews": [
+    ]
   }
 ]

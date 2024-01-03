@@ -139,7 +139,7 @@
    Property binding in Angular helps you set values for properties of HTML elements or directives. Use 
    property binding to do things such as toggle button features, set paths programmatically, and share 
    values between components.
-   where we have to change the value of data and disabled then in this case we have to use property binding
+   where we have to change the value of data and disabled then in this case we use property binding
    Sntax : [propertyName]=VariableandFunctionName
 
 => What is event binding
@@ -255,7 +255,7 @@
 
      - Data in URL: Parameters are appended to the URL, usually visible in the browser's address bar.
 
-     - Caching: GET requests can be cached by browsers, and they are idempotent, meaning making the same request 
+     - Caching: GET requests can be cached by browsers, and they are idempotent, meaning making the same  request 
        multiple times has the same effect as making it once.
 
      - Security: Since data is included in the URL, it's more visible and might be less secure for sensitive 
@@ -324,3 +324,11 @@
 
 => What is Routing? 
    As users perform application tasks, they need to move between the different views that you have defined. To handle the navigation from one view to the next, you use the Angular Router . The Router enables navigation by interpreting a browser URL as an instruction to change the view.
+
+=> What is Dependency Injection?
+   In angular dependency injection can be a class or an object which we can access or we can inject inside a component and serives wherever we want to inject we can inject.
+   Dependency Injection, or DI, is a design pattern and mechanism for creating and delivering some parts of an application to other parts of an application that require them.
+   There are three types of provide in DI.
+   - Class based providers.
+   - value Providers
+   - Factory

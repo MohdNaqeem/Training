@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 
@@ -6,7 +7,7 @@ import { Router } from '@angular/router';
 })
 export class AuthService {
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private http:HttpClient) { }
 
   login(uname:string,psword:string){
     if(uname === 'Movie' && psword === '1234'){
@@ -22,5 +23,9 @@ export class AuthService {
 
   back(){
     this.router.navigate(['home'])
+  }
+
+  getData(){
+    return this.http.get('')
   }
 }

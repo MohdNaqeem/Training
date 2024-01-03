@@ -65,8 +65,8 @@ h4{
 
 .rating-value{
     position: absolute;
-    top: 12px;
-    right: 0px;
+    top: 13px;
+    left: 110px;
     font-weight: bold;
 }
 
@@ -101,5 +101,31 @@ h4{
     color: #ff9900;
     cursor: pointer;
     margin-top: 30px;
+    cursor: pointer;
+}
+
+.trending-pagination{
+    position: absolute;
+    top: 520px;
+    right: 55%;
+}
+
+.theater-pagination{
+    position: absolute;
+    top: 980px;
+    right: 55%;
+}
+
+.theater-movies{
+    margin-top: 60px;
+}
+
+.popular-pegination{
+    position: absolute;
+    top:980px;
+
+}
+
+.cover{
     cursor: pointer;
 }

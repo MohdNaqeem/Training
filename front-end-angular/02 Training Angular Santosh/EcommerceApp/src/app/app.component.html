@@ -311,7 +311,7 @@
             <div class="mb-3">
                 <label>Student Name</label>
                 <input type="text" placeholder="Enter Student Name" class="form-control" formControlName="studentName"
-                [ngClass]="{'is-invalid' : fc.studentName.invalid && fc.studentName.touched}">
+                    [ngClass]="{'is-invalid' : fc.studentName.invalid && fc.studentName.touched}">
 
                 <div *ngIf="fc.studentName.errors && fc.studentName.errors['required']">
                     <div class="alert alert-danger" *ngIf="fc.studentName.invalid && fc.studentName.touched">
@@ -333,9 +333,8 @@
 
             <div class="mb-3">
                 <label>Student Email</label>
-                <input type="text" placeholder="Enter Student Email" class="form-control"
-                    formControlName="studentEmail" 
-                     [ngClass]="{'is-invalid' : fc.studentEmail.invalid && fc.studentEmail.touched}">
+                <input type="text" placeholder="Enter Student Email" class="form-control" formControlName="studentEmail"
+                    [ngClass]="{'is-invalid' : fc.studentEmail.invalid && fc.studentEmail.touched}">
 
                 <div *ngIf="fc.studentEmail.errors && fc.studentEmail.errors['required']">
                     <div class="alert alert-danger" *ngIf="fc.studentEmail.invalid && fc.studentEmail.touched">
@@ -349,7 +348,7 @@
                 </div>
                 <div *ngIf="fc.studentEmail.errors && fc.studentEmail.errors['noSpaceValidations']">
                     <div class="alert alert-danger" *ngIf="fc.studentEmail.invalid && fc.studentEmail.touched">
-                       email cannot containe space
+                        email cannot containe space
                     </div>
                 </div>
 
@@ -357,8 +356,8 @@
 
             <div class="mb-3">
                 <label>Password</label>
-                <input type="password" placeholder="Enter user Password" class="form-control"
-                    formControlName="password" [ngClass]="{'is-invalid' : fc.password.invalid && fc.password.touched}">
+                <input type="password" placeholder="Enter user Password" class="form-control" formControlName="password"
+                    [ngClass]="{'is-invalid' : fc.password.invalid && fc.password.touched}">
                 <div *ngIf="fc.password.errors && fc.password.errors['required']">
                     <div class="alert alert-danger" *ngIf="fc.password.invalid && fc.password.touched">
                         Password is required
@@ -371,7 +370,7 @@
                 </div>
                 <div *ngIf="fc.password.errors && fc.password.errors['noSpaceValidations']">
                     <div class="alert alert-danger" *ngIf="fc.password.invalid && fc.password.touched">
-                       password cannot containe space
+                        password cannot containe space
                     </div>
                 </div>
             </div>
@@ -383,9 +382,85 @@
 <!-- Routing and Navgation -->
 <div>
     <h3>Routing and Navigation</h3>
-    <button  routerLink="/home" routerLinkActive="active">Home</button>
-    <button  routerLink="/user" routerLinkActive="active">User</button>
-    <button  routerLink="/train-cmp" routerLinkActive="active">Training</button>
-    <button  routerLink="/" routerLinkActive="active">front page</button>
+    <button routerLink="/home" routerLinkActive="active">Home</button>
+    <button routerLink="/user" routerLinkActive="active">User</button>
+    <button routerLink="/train-cmp" routerLinkActive="active">Training</button>
+    <button routerLink="/" routerLinkActive="active">front page</button>
+</div> <br>
+
+<!-- Rivise and practice all the previous topin and some new topic -->
+
+<!-- interpolation binding -->
+<div class="interpolation-binding">
+    <h3>{{title1}}</h3>
+    <p>{{para}}</p>
+</div> <br>
+
+<!-- property binding -->
+<div class="property-binding">
+    <h3>This is property binding</h3>
+    <input type="text" name="user" [disabled]="disable">
+</div><br>
+
+<!-- Event bindind -->
+<div class="E-binding">
+    <h3>This is event binding</h3>
+    <button (click)="onClick()">Click</button>
+    {{event}}
+</div> <br>
+
+<!-- Directives -->
+<h3>Directives</h3> <br>
+<div class="ng-if">
+    <h3>This is *ngIf directive</h3>
+    <div *ngIf="NgIf === 'this'">
+        if condition is true then it will be show otherwise it won't show
+    </div>
+</div> <br>
+
+<!-- *ngFor directive -->
+<div class="ng-for2">
+    <h3>This is ngFor</h3>
+    <table class="table2" *ngIf="students.length > 0;">
+        <tr>
+            <th>Sr.No</th>
+            <th>Name</th>
+            <th>Class</th>
+            <th>division</th>
+            <th>Roll.No</th>
+            <th>Teacher Name</th>
+            <th>Action</th>
+        </tr>
+        <tr [ngClass]="e ? 'even' : 'odd' " *ngFor="let student of students let e = even; let o = odd; let i = index">
+            <td>{{i}}</td>
+            <td>{{student.name}}</td>
+            <td>{{student.class}}</td>
+            <td>{{student.division}}</td>
+            <td>{{student.rollNo}}</td>
+            <td>{{student.teacherName}}</td>
+            <td><button (click)="onDelete2(i)">Delete</button></td>
+        </tr>
+    </table> <br>
+    <!-- Add data using change detection -->
+    <button (click)="addData2()">Add New Data</button>
+</div> <br> <br>
+
+
+<h3>This is switch case</h3>
+
+<div>
+    <button (click)="click('step 1')">step 1</button>
+    <button (click)="click('step 2')">step 2</button>
+    <button (click)="click('step 3')">step 3</button>
 </div>
+<div [ngSwitch]="data2">
+    <div *ngSwitchCase="'step 1'">step 1 form</div>
+    <div *ngSwitchCase="'step 2'">step 2 form</div>
+    <div *ngSwitchCase="'step 3'">step 3 form</div>
+    <div *ngSwitchDefault=>default switch</div>
+</div>
+
+
+
+
 <router-outlet></router-outlet>
