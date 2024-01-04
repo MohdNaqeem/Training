@@ -111,16 +111,19 @@
    Angular is a popular open-source web application framework maintained by Google and a community of developers. It is written in TypeScript and allows developers to build dynamic, single-page web applications (SPAs) with rich user interfaces. It's build structured, scalable and single page web applications for client side.
    
 => What is Single Page Application?
-   In a Single Page Application (SPA), all of your application's functions exist in a single HTML page. As users access your application's features, the browser needs to render only the parts that matter to the user, instead of loading a new page. This pattern can significantly improve your application's user experience.
+   In a Single Page Application (SPA), all of your application's functions exist in a single HTML page. As users access your application's features, the browser needs to render only the parts that matter to the user, instead of loading a new page. This pattern can significantly improve your application's user experience. 
 
 => What is Angular CLI?
-   The Angular CLI is a command-line interface tool that you use to initialize, develop, scaffold, and maintain Angular applications directly from a command shell.
+   The Angular CLI is a command-line interface tool that we use to initialize, develop, scaffold, and maintain Angular applications directly from a command shell.
 
 => What is binding?
    Data binding in Angular is a mechanism that synchronizes the data between the model and the view. There are two types: one-way binding (interpolation, property binding) and two-way binding (using ngModel).
 
 => One way data binding?
-   One-way data binding in Angular is a way to bind data from the component to the view (DOM) or vice versa - from view to the component. It is used to display information to the end-user which automatically stays synchronized with each change of the underlying data. 
+   One-way data binding in Angular is a way to bind data from the component to the view and from the view to the component. It is used to display information to the end-user which automatically stays synchronized with each change of the underlying data. 
+
+=> Two way data binding?
+   Two-way data binding is a feature in Angular that allows automatic synchronization of data between the component and the view. It combines both property binding and event binding to make it easy to keep the data in the component and the corresponding UI element in sync. In Angular, the syntax for two-way data binding is [(ngModel)].
    
 => There are three syntax of one way binding 
    Interpolation

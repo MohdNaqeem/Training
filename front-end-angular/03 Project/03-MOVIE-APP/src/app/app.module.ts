@@ -15,6 +15,8 @@ import { BackToHomeComponent } from './back-to-home/back-to-home.component';
 import { GridModule } from '@progress/kendo-angular-grid';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {NgxPaginationModule} from 'ngx-pagination'
+import { NgxImgZoomModule } from 'ngx-img-zoom';
+import { NgxImageZoomModule } from 'ngx-image-zoom';
 
 
 @NgModule({
@@ -36,7 +38,9 @@ import {NgxPaginationModule} from 'ngx-pagination'
     FeatureModule,
     GridModule,
     BrowserAnimationsModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    NgxImageZoomModule,
+    NgxImgZoomModule
   ],
   providers: [],
   bootstrap: [AppComponent]

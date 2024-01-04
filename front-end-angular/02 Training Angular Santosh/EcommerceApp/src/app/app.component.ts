@@ -3,7 +3,6 @@ import { Room, RoomList } from './directive';
 import { UserDataService } from './services/user-data.service';
 import { FormBuilder, FormControl, FormGroup, NgForm, Validators} from '@angular/forms';
 import { noSpace } from './Custom-Validetors/nospace.validetors';
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -241,6 +240,13 @@ export class AppComponent implements OnInit {
     this.event = this.value
   }
 
+  // Two way data binding
+  userName2 = ""
+  
+  enter(){
+    console.log(this.userName2)
+  }
+
   // directives - *ngIf Directives
   NgIf = "this"
 
@@ -309,5 +315,20 @@ export class AppComponent implements OnInit {
   data2 : string | undefined 
   click(status:any){
     this.data2 = status
+  }
+
+  // Task 3 practice 
+  studentName : string = ""
+  studentEmail : string = ""
+  studentAdd : string = ""
+  studentObj : any = []
+
+  studentDetails(){
+    this.studentObj.push({
+      "name":this.studentName,
+      "email":this.studentEmail,
+      "Add":this.studentEmail,
+    })
+    console.log(this.studentObj)
   }
 }

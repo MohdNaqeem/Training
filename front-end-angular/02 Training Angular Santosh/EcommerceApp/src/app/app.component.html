@@ -390,6 +390,7 @@
 
 <!-- Rivise and practice all the previous topin and some new topic -->
 
+<!-- one way data binding -->
 <!-- interpolation binding -->
 <div class="interpolation-binding">
     <h3>{{title1}}</h3>
@@ -407,6 +408,12 @@
     <h3>This is event binding</h3>
     <button (click)="onClick()">Click</button>
     {{event}}
+</div> <br>
+
+<!-- two way data binding -->
+<div class="two-way">
+ <h3>Two way data binding</h3> 
+ <input type="text" [(ngModel)]="userName2" (keyup.enter)="enter()">
 </div> <br>
 
 <!-- Directives -->
@@ -458,9 +465,33 @@
     <div *ngSwitchCase="'step 2'">step 2 form</div>
     <div *ngSwitchCase="'step 3'">step 3 form</div>
     <div *ngSwitchDefault=>default switch</div>
+</div> <br>
+
+<!-- Practice task -->
+<div class="task3">
+    <h3>task 3</h3>
+    <input type="text" placeholder="studentName" [(ngModel)]="studentName"><br><br>
+    <input type="text" placeholder="studentEmail" [(ngModel)]="studentEmail"><br><br>
+    <textarea type="text" cols="30" rows="10" placeholder="studentAdd" [(ngModel)]="studentAdd"></textarea><br><br>
+    <button (click)="studentDetails()">Save student details into table</button>
 </div>
 
-
+<div class="task3">
+    <table [width]="500">
+        <tr>
+            <th>Sr.no</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Address</th>
+        </tr>
+        <tr *ngFor="let student of studentObj; let index = index">
+            <td>{{index + 1}}</td>
+            <td>{{student.name | uppercase}}</td>
+            <td>{{student.email | titlecase}}</td>
+            <td>{{student.Add | lowercase}}</td>
+        </tr>
+    </table>
+</div> <br> <br>
 
 
 <router-outlet></router-outlet>
