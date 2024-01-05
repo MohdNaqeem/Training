@@ -28,4 +28,8 @@ export class AuthService {
   getData(){
     return this.http.get('')
   }
+  
+  getLogin(){
+    return this.http.get('http://localhost:3000/user')
+  }
 }
