@@ -331,4 +331,6 @@ export class AppComponent implements OnInit {
     })
     console.log(this.studentObj)
   }
+
+  // Template driven form
 }

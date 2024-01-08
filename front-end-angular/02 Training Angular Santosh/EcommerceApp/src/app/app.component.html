@@ -412,8 +412,8 @@
 
 <!-- two way data binding -->
 <div class="two-way">
- <h3>Two way data binding</h3> 
- <input type="text" [(ngModel)]="userName2" (keyup.enter)="enter()">
+    <h3>Two way data binding</h3>
+    <input type="text" [(ngModel)]="userName2" (keyup.enter)="enter()">
 </div> <br>
 
 <!-- Directives -->
@@ -493,9 +493,35 @@
     </table>
 </div> <br> <br>
 
-<!-- fake rest api with json serve -->
-<div class="json">
-    <h3>Work with fake rest api json serve</h3>
+<!-- Template driven form -->
+
+<h3>Template driven form</h3>
+
+<div class="container mt-5">
+    <div class="form-area">
+        <form>
+            <div class="mb-3">
+                <label>Full Name</label>
+                <input type="text" placeholder="full Name" class="form-control">
+            </div>
+        
+            <div class="mb-3">
+                <label>Email</label>
+                <input type="email" placeholder="enter your email" class="form-control">
+            </div>
+        
+            <div class="mb-3">
+                <label>Password</label>
+                <input type="password" placeholder="enter your password" class="form-control">
+            </div>
+        
+            <div class="mb-3">
+            <textarea cols="30" rows="10" class="form-control">Address</textarea>
+            </div>
+        
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+        </div>
 </div>
 
 <router-outlet></router-outlet>
