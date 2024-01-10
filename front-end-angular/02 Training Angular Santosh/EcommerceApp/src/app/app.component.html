@@ -499,24 +499,24 @@
 
 <div class="container mt-5">
     <div class="form-area">
-        <form>
+        <form #form="ngForm" (submit)="onSubmit2(form)">
             <div class="mb-3">
                 <label>Full Name</label>
-                <input type="text" placeholder="full Name" class="form-control">
+                <input type="text" placeholder="full Name" class="form-control" ngModel name="fullName">
             </div>
         
             <div class="mb-3">
                 <label>Email</label>
-                <input type="email" placeholder="enter your email" class="form-control">
+                <input type="email" placeholder="enter your email" class="form-control" ngModel name="email">
             </div>
         
             <div class="mb-3">
                 <label>Password</label>
-                <input type="password" placeholder="enter your password" class="form-control">
+                <input type="password" placeholder="enter your password" class="form-control" ngModel name="password">
             </div>
         
             <div class="mb-3">
-            <textarea cols="30" rows="10" class="form-control">Address</textarea>
+            <textarea cols="30" rows="10" class="form-control" ngModel name="address">Address</textarea>
             </div>
         
             <button type="submit" class="btn btn-primary">Submit</button>

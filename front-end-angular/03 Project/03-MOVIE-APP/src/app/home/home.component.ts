@@ -9,11 +9,15 @@ import { AuthService } from '../services/auth.service';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
-  constructor(private http: HttpClient, private router:Router, private auth:AuthService) {}
+  constructor(
+    private http: HttpClient,
+    private router: Router,
+    private auth: AuthService
+  ) {}
 
   trendingMovies: any;
-  theatherMovies : any;
-  popularMovies: any
+  theatherMovies: any;
+  popularMovies: any;
 
   ngOnInit(): void {
     this.getTrendingMovies();
@@ -47,7 +51,7 @@ export class HomeComponent implements OnInit {
       });
   }
 
-  goToMovie(type:string, id:string){
-    this.router.navigate(['movie', type, id])
+  goToMovie(type: string, id: string) {
+    this.router.navigate(['movie', type, id]);
   }
 }

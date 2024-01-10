@@ -1,0 +1,26 @@
+.card{
+    background-color: #fff;
+    padding: 80px;
+    border-radius: 4px;
+    box-shadow: 0 2px 3px #C8D8D8;
+    display: inline-block;
+    margin: 0 auto;
+    top: 50px;
+    left: 29%;
+}
+.btn{
+    position: absolute;
+    left: 45%;
+    top: 85%;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 10px;
+}
+.logo-img{
+    border-radius: 200px; 
+    height: 200px; 
+    width: 200px; 
+    background-color:#F8FAF5 ; 
+    margin: 0 auto;
+    padding: 9px;
+}

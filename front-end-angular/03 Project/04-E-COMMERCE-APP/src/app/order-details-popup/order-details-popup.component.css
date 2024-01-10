@@ -1,0 +1,6 @@
+.btn:active {
+    color: black;
+    background-color: white;
+    border: 1px solid black;
+    font-weight: 600;
+}

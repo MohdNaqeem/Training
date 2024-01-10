@@ -35,11 +35,9 @@ h4, h6{
     border-radius: .25rem;
 }
 
-.center .btn{
-    font-size: 14px !important;
-    margin-top: 20px !important;
-    margin-bottom:15px;
-    font-weight: 400;
-    padding: 12px 72px;
-    border-radius: 3px !important;
+.btn:active {
+    color: black;
+    background-color: white;
+    border: 1px solid black;
+    font-weight: 600;
 }

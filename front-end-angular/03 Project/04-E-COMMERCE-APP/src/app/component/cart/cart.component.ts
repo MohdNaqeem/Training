@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject, Input } from '@angular/core';
 import { CartService } from 'src/app/service/cart.service';
+import { NgbActiveModal, NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { OrderDetailsPopupComponent } from 'src/app/order-details-popup/order-details-popup.component';
 
 @Component({
   selector: 'app-cart',
@@ -8,7 +10,7 @@ import { CartService } from 'src/app/service/cart.service';
 })
 export class CartComponent implements OnInit {
 
-  constructor(private cartService:CartService){}
+  constructor(private cartService:CartService, private modalService: NgbModal){}
 
   public products : any = []
   public grandTotal! : number;
@@ -28,4 +30,11 @@ export class CartComponent implements OnInit {
     this.cartService.removeAllCart()
   }
 
+  // 
+  public orderForm = false
+  
+  openModal() {
+    const modalRef = this.modalService.open(OrderDetailsPopupComponent);
+  }
+  
 }

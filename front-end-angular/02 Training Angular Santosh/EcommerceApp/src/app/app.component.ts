@@ -333,4 +333,7 @@ export class AppComponent implements OnInit {
   }
 
   // Template driven form
+  onSubmit2(form:NgForm){
+    console.log(form)
+  }
 }
