@@ -8,15 +8,14 @@ import { CartService } from '../service/cart.service';
   styleUrls: ['./order-placed.component.css'],
 })
 export class OrderPlacedComponent implements OnInit {
-  constructor(private router: Router, private cartService: CartService) {}
+  constructor( private cartService: CartService) {}
 
-  public products: any = [];
   public grandTotal!: number;
 
+  // This is add grand total in order placed form
   ngOnInit(): void {
-    this.cartService.getProducts().subscribe((res) => {
-      this.products = res;
       this.grandTotal = this.cartService.getTotalPrice();
-    });
+      this.cartService.removeAllCart()
+      console.log("Hello")
   }
 }

@@ -216,10 +216,8 @@
 => What is Life cycle hooks?
    Lifecycle hooks are a set of methods in Angular that are executed at specific moments during the lifecycle of a component. These methods provide a way to tap into the Angular component lifecycle and perform custom logic or operations at specific points in time.
    - Angular components doesn't use all the components at once. It only uses the one or more which are required.
-   - Whenever angular needs to use a component, it creates a new instance of that component and start using it in DOM
-     once the  uses is done it destroy this instance and removed from DOM
-   - During this process (create instance to destroy) there are several stages that angular covers and this is 
-     called as component life cycle or life cycle hooks.
+   - Whenever angular needs to use a component, it creates a new instance of that component and start using it in DOM once the uses is done it destroy this instance and removed from DOM
+   - During this process (create instance to destroy) there are several stages that angular covers and this is called as component life cycle or life cycle hooks.
 
 => Types of life cycle hooks
    ngOnChanges
@@ -232,10 +230,18 @@
    ngOnDestroy
 
 => ngOnchanges
-   onChanges lifecycle hook is called when any data-bound property of a directive changes. You use it by defining an ngOnChanges() method to handle the changes. It is usually called first before ngOnInit and then subsequently after any input property changes.
+   ngOnChanges lifecycle hook is a method that gets called whenever the input properties of a component are changed. It is part of the Angular component lifecycle hooks, and it is specifically designed to handle changes to input properties.
+
+   - Syntax ngOnChanges(changes: SimpleChanges): void { // Handle changes here }
+
+   - changes
+     The changes parameter is an object of type SimpleChanges that provides information about each changed property.
+
+   - SimpleChanges
+     The SimpleChanges object contains information about the changed properties. It is a key-value pair where the key is the name of the property, and the value is an instance of SimpleChange which includes the previous and current values of the property.
 
 => ngOnInit
-   Initialize the directive or component after Angular first displays the data-bound properties and sets the directive or component's input properties. It called only ones after ngOnchanges.
+   ngOnInit is a lifecycle hook that is part of the lifecycle sequence of a component. It is called after Angular has initialized all the data-bound properties of a directive. It is called once, after the component has been initialized. It is a good place to perform component initialization logic, such as initializing data, making HTTP requests, or setting up subscriptions. 
 
 => Constructor uses :
    - Inject any service 
@@ -244,8 +250,8 @@
 
 => ngOnInit uses : 
    - Perform the component specific operations like:
-     - Make call to API for page load
-     - Any logic that you need to perform at very first as the component gets instantiated.
+   - Make call to API for page load
+   - Any logic that you need to perform at very first as the component gets instantiated.
 
 => What is change detection?
    The purpose of this mechanism is to make sure the underlying views are always in sync with their corresponding models. This core feature of Angular is what makes the framework tick and is partly the reason why Angular is a neat choice for developing modern web apps.

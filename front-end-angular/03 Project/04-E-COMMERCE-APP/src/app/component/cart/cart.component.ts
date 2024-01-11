@@ -15,6 +15,7 @@ export class CartComponent implements OnInit {
   public products : any = []
   public grandTotal! : number;
 
+  // This logic for add items into cart after click on add to cart button
   ngOnInit(): void {
     this.cartService.getProducts().subscribe((res)=>{
       this.products = res;
@@ -22,17 +23,17 @@ export class CartComponent implements OnInit {
     })
   }
 
+  // This logic for remove item which we want
   removeItem(item:any){
     this.cartService.removeCartItem(item)
   }
 
+  // This logic for emtpty cart
   emptyCart(){
     this.cartService.removeAllCart()
   }
-
-  // 
-  public orderForm = false
   
+  //This is for modal after click on check out button
   openModal() {
     const modalRef = this.modalService.open(OrderDetailsPopupComponent);
   }

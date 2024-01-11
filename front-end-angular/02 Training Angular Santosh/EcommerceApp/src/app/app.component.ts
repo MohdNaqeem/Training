@@ -1,4 +1,4 @@
-import { Component, OnInit} from '@angular/core';
+import { Component, OnChanges, OnInit, SimpleChanges} from '@angular/core';
 import { Room, RoomList } from './directive';
 import { UserDataService } from './services/user-data.service';
 import { FormBuilder, FormControl, FormGroup, NgForm, Validators} from '@angular/forms';
@@ -105,6 +105,7 @@ export class AppComponent implements OnInit {
 
   // OnInit
   ngOnInit(): void {
+    console.log("This is app onInit")
   }
 
   // Event binding
@@ -171,7 +172,10 @@ export class AppComponent implements OnInit {
         noSpace.noSpaceValidations
       ]],
     })
+
+    console.log("This is app constrctor")
   }
+  
 
   // Reactive form builder 
   get fc(){
@@ -336,4 +340,12 @@ export class AppComponent implements OnInit {
   onSubmit2(form:NgForm){
     console.log(form)
   }
+
+  // ngOnchange
+  public count : number = 0
+
+  onChangeclick(){
+    this.count++
+  }
+  
 }

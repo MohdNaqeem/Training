@@ -39,5 +39,8 @@ h4, h6{
     color: black;
     background-color: white;
     border: 1px solid black;
-    font-weight: 600;
+}
+
+.shop-btn{
+    margin-bottom: 9px;
 }

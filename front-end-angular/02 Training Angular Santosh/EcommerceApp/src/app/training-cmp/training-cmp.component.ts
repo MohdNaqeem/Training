@@ -11,4 +11,5 @@ export class TrainingCmpComponent implements OnChanges{
   console.warn("Data is changed from parent data after click on button " + this.data)
 }
 @Input() parent:any
+
 }
