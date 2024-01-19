@@ -1,0 +1,844 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "image":"https://m.media-amazon.com/images/I/51AjohATwIL._SX300_SY300_QL70_FMwebp_.jpg",
+      "title": "Mobile Phone",
+      "description": "Samsung Galaxy M14 5G (Smoky Teal,6GB,128GB)|50MP Triple Cam|Segment's Only 6000 mAh 5G SP|5nm Processor|2 Gen. OS Upgrade & 4 Year Security Update|12GB RAM with RAM Plus|Android 13|Without Charge",
+      "price": 11999,
+      "category": "electronics"
+    },
+    {
+      "id": 2,
+      "image":"https://m.media-amazon.com/images/I/91ItZJh1FDL._SX679_.jpg",
+      "title": "Mobile Phone",
+      "description": "Samsung Galaxy M34 5G (Prism Silver,6GB,128GB)|120Hz sAMOLED Display|50MP Triple No Shake Cam|6000 mAh Battery|4 Gen OS Upgrade & 5 Year Security Update|12GB RAM with RAM+|Android 13|Without Charge",
+      "price": 15999,
+      "category": "electronics"
+    },
+    {
+      "id": 3,
+      "image":"https://m.media-amazon.com/images/I/41ZlnmlOM-L._SX300_SY300_QL70_FMwebp_.jpg",
+      "title": "Mobile Phone",
+      "description": "Redmi Note 13 5G (Arctic White, 6GB RAM, 128GB Storage) | MTK Dimensity 6080 5G | 7.6mm, Slimmest Note Ever",
+      "price": 17999,
+      "category": "electronics"
+    },
+    {
+      "id": 4,
+      "image":"https://m.media-amazon.com/images/I/41yNDUAnEaL._SX300_SY300_QL70_FMwebp_.jpg",
+      "title": "Smart-Watch",
+      "description": "'beatXP Marv Raze 1.96 HD' Display, Advanced Bluetooth Calling Smart Watch, Smart AI Voice Assistant, 60 Hz Refresh Rate, Health, SpO2 & Stress Monitoring, Fast Charging ",
+      "price": 1099,
+      "category": "electronics"
+    },
+    {
+      "id": 5,
+      "image":"https://m.media-amazon.com/images/I/41eTR9-WvDL._SX300_SY300_QL70_FMwebp_.jpg",
+      "title": "Smart-Watch",
+      "description": "beatXP Flare Pro 1.39” HD Display Bluetooth Calling Smart Watch, 100+ Sports Modes, Heart Rate Monitoring, SpO2, AI Voice Assistant, IP68 - Silver",
+      "price": 999,
+      "category": "electronics"
+    },
+    {
+      "id": 6,
+      "image":"https://m.media-amazon.com/images/I/419C2kRxvKL._SX300_SY300_QL70_FMwebp_.jpg",
+      "title": "Smart-Watch",
+      "description": "beatXP Vega 1.43 (3.6 cm) Super AMOLED Display, One-Tap Bluetooth Calling Smart Watch, 1000 Nits Brightness, Fast Charging, 24 * 7 Health Monitoring (Electric Black)",
+      "price": 1599,
+      "category": "electronics"
+    },
+    {
+      "id": 7,
+      "image":"https://m.media-amazon.com/images/I/51XWUBbfe7L._SX679_.jpg",
+      "title": "Men's Jacket",
+      "description": "LEOTUDE Men's Loopknit Full Sleeve Regular Fit Solid Bomber Jacket (Color Black)",
+      "price": 399,
+      "category": "fashion"
+    },
+    {
+      "id": 8,
+      "image":"https://m.media-amazon.com/images/I/61ai5LJMmjL._SY741_.jpg",
+      "title": "Men's Jacket",
+      "description": "Lymio men jackets || bomber jacket for men || Lightweight Outwear Sportswear Bomber Jacket (J-01-03)",
+      "price": 698,
+      "category": "fashion"
+    },
+    {
+      "id": 9,
+      "image":"https://m.media-amazon.com/images/I/61jc-2huEBL._SX679_.jpg",
+      "title": "Men's Jacket",
+      "description": "Red Tape Casual Bomber Jacket for Men | Stylish, Cozy and Comfortable",
+      "price": 2943,
+      "category": "fashion"
+    },
+    {
+      "id": 10,
+      "image":"https://m.media-amazon.com/images/I/61mF0Mz7P3L._SY741_.jpg",
+      "title": "Men's Jeans",
+      "description": "Ben Martin Men's Relaxed Fit Jeans",
+      "price": 599,
+      "category": "fashion"
+    },
+    {
+      "id": 11,
+      "image":"https://m.media-amazon.com/images/I/51GlXnrWvOL._SX679_.jpg",
+      "title": "Men's Jeans",
+      "description": "Alpha Array Men Comfort Slim Fit Jeans",
+      "price": 1799,
+      "category": "fashion"
+    },
+    {
+      "id": 12,
+      "image":"https://m.media-amazon.com/images/I/61jerbFqXIL._SY695_.jpg",
+      "title": "Men's Shoes",
+      "description": "Campus Men's First Running Shoes",
+      "price": 1119,
+      "category": "fashion"
+    },
+    {
+      "id": 13,
+      "image":"https://m.media-amazon.com/images/I/61M665Ni+qL._SY625_.jpg",
+      "title": "Men's Shoes",
+      "description": "Puma Mens Fierce RunnerRunning Shoe",
+      "price": 1973,
+      "category": "fashion"
+    },
+    {
+      "id": 14,
+      "image":"https://m.media-amazon.com/images/I/81I+5H1SYwL._SX569_.jpg",
+      "title": "Women's Jacket",
+      "description": "Amazon Brand - Symbol Women's Quilted Jacket",
+      "price": 799,
+      "category": "fashion"
+    },
+    {
+      "id": 15,
+      "image":"https://m.media-amazon.com/images/I/419ifHvwUWL.jpg",
+      "title": "Women's Jacket",
+      "description": "Stylish Long Sleeves Winter Wear Jacket, Solid Zipper Jacket For Women",
+      "price": 999,
+      "category": "fashion"
+    },
+    {
+      "id": 16,
+      "image":"https://m.media-amazon.com/images/I/616EqgYKpNL._SY679_.jpg",
+      "title": "Women's Watch",
+      "description": "Giordano Eleganza Collection Round Analog Watch for Women, Diamond-Set with Metal Strap Ladies Water Resistant Wrist Watch - A2083",
+      "price": 2300,
+      "category": "fashion"
+    },
+    {
+      "id": 17,
+      "image":"https://m.media-amazon.com/images/I/71VYQardFXL._SX679_.jpg",
+      "title": "Women's Dress",
+      "description": "BIBA Women Dress",
+      "price": 1799,
+      "category": "fashion"
+    },
+    {
+      "id": 18,
+      "image":"https://m.media-amazon.com/images/I/71v7cBZQgeL._SY741_.jpg",
+      "title": "Women's Dress",
+      "description": "GRECIILOOKS Women Dress",
+      "price": 799,
+      "category": "fashion"
+    },
+    {
+      "id": 19,
+      "image":"https://m.media-amazon.com/images/I/51ywVquUKbL._SY695_.jpg",
+      "title": "Women's Sandal",
+      "description": "Bata Womens Angela Sandal Heels, (6615825)",
+      "price": 849,
+      "category": "fashion"
+    },
+    {
+      "id": 20,
+      "image":"https://m.media-amazon.com/images/I/61YHvq9TzjL._SY695_.jpg",
+      "title": "Women's Sandal",
+      "description": "Marc Loire Women's One Toe Ethnic Slip-On Flat Chappals, Embellished & Traditional Footwear",
+      "price": 1900,
+      "category": "fashion"
+    },
+    {
+      "id": 21,
+      "image":"https://m.media-amazon.com/images/I/71veNIc+zyL._SY575_.jpg",
+      "title": "Women's Jewellery",
+      "description": "typicode",
+      "price": 2300,
+      "category": "jewellery"
+    },
+    {
+      "id": 22,
+      "image":"https://m.media-amazon.com/images/I/91UqZN3cG+L._SY575_.jpg",
+      "title": "Women's Jewellery",
+      "description": "Adyashree Emporium Ruby & Emerald, pearl based mango design Gold plated south Indian Wedding Traditional temple jewellery set. Latest fashion full Combo for Girls & Women",
+      "price": 1900,
+      "category": "jewellery"
+    },
+    {
+      "id": 23,
+      "image":"https://m.media-amazon.com/images/I/71lbM+HVCrL._SY575_.jpg",
+      "title": "Women's Jewellery",
+      "description": "ZENEME Rhodium Plated Silver Toned White American Diamond Studded Necklace With Earring Jewellery Set For Woment and Girl",
+      "price": 621,
+      "category": "jewellery"
+    },
+    {
+      "id": 24,
+      "image":"https://m.media-amazon.com/images/I/71aomI3Tj0L._SY575_.jpg",
+      "title": "Women's Jewellery",
+      "description": "typPeora 18K Gold Plated Jodha Akbar Choker Necklace Bridal Ethnic Indian Jewellery Set Womenicode",
+      "price": 2000,
+      "category": "jewellery"
+    },
+    {
+      "id": 25,
+      "image":"https://m.media-amazon.com/images/I/61V4Z6WqAVL._SY575_.jpg",
+      "title": "Women's Jewellery",
+      "description": "Yellow Chimes Necklace Set for Women And Girls Traditional Jewellery Set for Women Gold-Plated Temple Necklace Set Stone-Studded Necklace Set For Women & Girls",
+      "price": 2300,
+      "category": "jewellery"
+    },
+    {
+      "id": 26,
+      "image":"https://m.media-amazon.com/images/I/610Z+FMk3jL._SY575_.jpg",
+      "title": "Women's Jewellery",
+      "description": "BFC- Long Pearl Chain Gold ear to Hair Accessories Sahara Chain For Earrings For Women And Girls",
+      "price": 457,
+      "category": "jewellery"
+    },
+    {
+      "id": 27,
+      "image":"https://m.media-amazon.com/images/I/51JxEmoBwkL._SY575_.jpg",
+      "title": "Women's Jewellery",
+      "description": "WHP 22kt Gold Drop Gold Necklace For Women, BIS Hallmark Necklace Set For Women Pure Gold, Bridal Jewellery Set For Wedding, Gold Choker, Traditional Golden Sets, Stylish Design",
+      "price": 72889,
+      "category": "jewellery"
+    },
+    {
+      "id": 28,
+      "image":"https://m.media-amazon.com/images/I/416yDYbBnbL._SX300_SY300_QL70_FMwebp_.jpg",
+      "title": "Travel Tech Gadgets",
+      "description": "tizum EVA Universal Electronic Travel Tech Gadgets & Accessories Organizer Multipurpose Protective Pouch for Power Bank, Hard Drives, USB Cables/Wires, Pen Drives, Earphones, Portable, 10x6, Grey",
+      "price": 749,
+      "category": "electronics"
+    },
+    {
+      "id": 29,
+      "image":"https://m.media-amazon.com/images/I/31wacBawB3L._SY445_SX342_QL70_FMwebp_.jpg",
+      "title": "Mobile Phone",
+      "description": "Samsung Galaxy M34 5G (Prism Silver,6GB,128GB)|120Hz sAMOLED Display|50MP Triple No Shake Cam|6000 mAh Battery|4 Gen OS Upgrade & 5 Year Security Update|12GB RAM with RAM+|Android 13|Without Charge",
+      "price": 15999,
+      "category": "electronics"
+    },
+    {
+      "id": 30,
+      "image":"https://m.media-amazon.com/images/I/41QssaE9gfL._SX300_SY300_QL70_FMwebp_.jpg",
+      "title": "Mobile Phone",
+      "description": "Redmi Note 13 5G (Arctic White, 6GB RAM, 128GB Storage) | MTK Dimensity 6080 5G | 7.6mm, Slimmest Note Ever",
+      "price": 17999,
+      "category": "electronics"
+    },
+    {
+      "id": 31,
+      "image":"https://m.media-amazon.com/images/I/414+xRBltFL._SY300_SX300_.jpg",
+      "title": "Mobile Phone",
+      "description": "'beatXP Marv Raze 1.96 HD' Display, Advanced Bluetooth Calling Smart Watch, Smart AI Voice Assistant, 60 Hz Refresh Rate, Health, SpO2 & Stress Monitoring, Fast Charging ",
+      "price": 1099,
+      "category": "electronics"
+    },
+    {
+      "id": 32,
+      "image":"https://m.media-amazon.com/images/I/41p5+sHnRvL._SY300_SX300_.jpg",
+      "title": "Mobile Phone",
+      "description": "beatXP Flare Pro 1.39” HD Display Bluetooth Calling Smart Watch, 100+ Sports Modes, Heart Rate Monitoring, SpO2, AI Voice Assistant, IP68 - Silver",
+      "price": 999,
+      "category": "electronics"
+    },
+    {
+      "id": 33,
+      "image":"https://m.media-amazon.com/images/I/51aB5TRkOWL._SX300_SY300_QL70_FMwebp_.jpg",
+      "title": "Smart-Watch",
+      "description": "beatXP Vega 1.43 (3.6 cm) Super AMOLED Display, One-Tap Bluetooth Calling Smart Watch, 1000 Nits Brightness, Fast Charging, 24 * 7 Health Monitoring (Electric Black)",
+      "price": 1599,
+      "category": "electronics"
+    },
+    {
+      "id": 34,
+      "image":"https://m.media-amazon.com/images/I/6192gCcgY7L._SX679_.jpg",
+      "title": "Men's sunglasses",
+      "description": "LEOTUDE Men's Loopknit Full Sleeve Regular Fit Solid Bomber Jacket (Color Black)",
+      "price": 399,
+      "category": "fashion"
+    },
+    {
+      "id": 35,
+      "image":"https://m.media-amazon.com/images/I/51BaqAfAlML._SX679_.jpg",
+      "title": "Men's sunglasses",
+      "description": "Lymio men jackets || bomber jacket for men || Lightweight Outwear Sportswear Bomber Jacket (J-01-03)",
+      "price": 698,
+      "category": "fashion"
+    },
+    {
+      "id": 36,
+      "image":"https://m.media-amazon.com/images/I/61jc-2huEBL._SX679_.jpg",
+      "title": "Men's Jacket",
+      "description": "Red Tape Casual Bomber Jacket for Men | Stylish, Cozy and Comfortable",
+      "price": 2943,
+      "category": "fashion"
+    },
+    {
+      "id": 37,
+      "image":"https://m.media-amazon.com/images/I/61aXKMWU0lL._SX679_.jpg",
+      "title": "Men's sunglasses",
+      "description": "Ben Martin Men's Relaxed Fit Jeans",
+      "price": 599,
+      "category": "fashion"
+    },
+    {
+      "id": 38,
+      "image":"https://m.media-amazon.com/images/I/51wwVl2r-WL._SX679_.jpg",
+      "title": "Men's sunglasses",
+      "description": "Alpha Array Men Comfort Slim Fit Jeans",
+      "price": 1799,
+      "category": "fashion"
+    },
+    {
+      "id": 39,
+      "image":"https://m.media-amazon.com/images/I/71ZxF5JmCnL._SY625_.jpg",
+      "title": "Men's Shoes",
+      "description": "Campus Men's First Running Shoes",
+      "price": 1119,
+      "category": "fashion"
+    },
+    {
+      "id": 40,
+      "image":"https://m.media-amazon.com/images/I/61ZI245TnzL._SY625_.jpg",
+      "title": "Men's Shoes",
+      "description": "Puma Mens Fierce RunnerRunning Shoe",
+      "price": 1973,
+      "category": "fashion"
+    },
+    {
+      "id": 41,
+      "image":"https://m.media-amazon.com/images/I/51GN9Qkp54L._SY625_.jpg",
+      "title": "Women's sneakers",
+      "description": "Amazon Brand - Symbol Women's Quilted Jacket",
+      "price": 799,
+      "category": "fashion"
+    },
+    {
+      "id": 42,
+      "image":"https://m.media-amazon.com/images/I/51kZRxvxg0L._SY695_.jpg",
+      "title": "Women's sneakers",
+      "description": "Stylish Long Sleeves Winter Wear Jacket, Solid Zipper Jacket For Women",
+      "price": 999,
+      "category": "fashion"
+    },
+    {
+      "id": 43,
+      "image":"https://m.media-amazon.com/images/I/61qlAsE0fQL._SY625_.jpg",
+      "title": "Women's sneakers",
+      "description": "typicode",
+      "price": 2300,
+      "category": "fashion"
+    },
+    {
+      "id": 44,
+      "image":"https://m.media-amazon.com/images/I/81Vu7kTUpIL._SX569_.jpg",
+      "title": "Women's Dress",
+      "description": "BIBA Women Dress",
+      "price": 1799,
+      "category": "fashion"
+    },
+    {
+      "id": 45,
+      "image":"https://m.media-amazon.com/images/I/81hjBu4OHIL._SX569_.jpg",
+      "title": "Women's Dress",
+      "description": "GRECIILOOKS Women Dress",
+      "price": 799,
+      "category": "fashion"
+    },
+    {
+      "id": 46,
+      "image":"https://m.media-amazon.com/images/I/51ywVquUKbL._SY695_.jpg",
+      "title": "Women's Dress",
+      "description": "Bata Womens Angela Sandal Heels, (6615825)",
+      "price": 849,
+      "category": "fashion"
+    },
+    {
+      "id": 47,
+      "image":"https://m.media-amazon.com/images/I/71KhqiqBFmL._SY679_.jpg",
+      "title": "Women's Watch",
+      "description": "Marc Loire Women's One Toe Ethnic Slip-On Flat Chappals, Embellished & Traditional Footwear",
+      "price": 1900,
+      "category": "fashion"
+    },
+    {
+      "id": 48,
+      "image":"https://m.media-amazon.com/images/I/71oAmNWP-oL._SY679_.jpg",
+      "title": "Women's Watch",
+      "description": "TIMEX Analog Women's Watch",
+      "price": 2300,
+      "category": "fashion"
+    },
+    {
+      "id": 49,
+      "image":"https://m.media-amazon.com/images/I/41uNFOIEjJL._SY395_SX395_.jpg",
+      "title": "Women's Jewellery",
+      "description": "Adyashree Emporium Ruby & Emerald, pearl based mango design Gold plated south Indian Wedding Traditional temple jewellery set. Latest fashion full Combo for Girls & Women",
+      "price": 1900,
+      "category": "jewellery"
+    },
+    {
+      "id": 50,
+      "image":"https://m.media-amazon.com/images/I/41e05W3-cmL._SY300_SX300_QL70_FMwebp_.jpg",
+      "title": "Women's Jewellery",
+      "description": "ZENEME Rhodium Plated Silver Toned White American Diamond Studded Necklace With Earring Jewellery Set For Woment and Girl",
+      "price": 621,
+      "category": "jewellery"
+    },
+    {
+      "id": 51,
+      "image":"https://m.media-amazon.com/images/I/610Z+FMk3jL._SY575_.jpg",
+      "title": "Women's Jewellery",
+      "description": "typPeora 18K Gold Plated Jodha Akbar Choker Necklace Bridal Ethnic Indian Jewellery Set Womenicode",
+      "price": 2000,
+      "category": "jewellery"
+    },
+    {
+      "id": 52,
+      "image":"https://m.media-amazon.com/images/I/61V4Z6WqAVL._SY575_.jpg",
+      "title": "Women's Jewellery",
+      "description": "Yellow Chimes Necklace Set for Women And Girls Traditional Jewellery Set for Women Gold-Plated Temple Necklace Set Stone-Studded Necklace Set For Women & Girls",
+      "price": 2300,
+      "category": "jewellery"
+    },
+    {
+      "id": 53,
+      "image":"https://m.media-amazon.com/images/I/81CrfbYj6mL._SY625_.jpg",
+      "title": "Women's Jewellery",
+      "description": "Women Straw Crossbody Purse with 4 Pairs Rattan Earrings for Women Handmade Woven Shoulder Bag with Tassels Boho Straw Bag Beach Purse for Women Grils Costume",
+      "price": 457,
+      "category": "jewellery"
+    },
+    {
+      "id": 54,
+      "image":"https://m.media-amazon.com/images/I/71UXTVgM7bL._SY575_.jpg",
+      "title": "Women's Jewellery",
+      "description": "WHP 22kt Gold Drop Gold Necklace For Women, BIS Hallmark Necklace Set For Women Pure Gold, Bridal Jewellery Set For Wedding, Gold Choker, Traditional Golden Sets, Stylish Design",
+      "price": 2889,
+      "category": "jewellery"
+    },
+    {
+      "id": 54,
+      "image":"https://m.media-amazon.com/images/I/41Qwdh3SIjL._SX300_SY300_QL70_FMwebp_.jpg",
+      "title": "COSORI Air Fryer",
+      "description": "COSORI Air Fryer for home 4.7 Liter, 9-in-1 Kitchen Oven Appliances, 30 Recipes Cookbook, Digital Tempered Glass Display, Max 230℃ Setting, Quiet, 4 Portions, 1500W, L501 Grey",
+      "price": 7391,
+      "category": "appliances"
+    },
+    {
+      "id": 55,
+      "image":"https://m.media-amazon.com/images/I/41+oy999w7L._SY300_SX300_.jpg",
+      "title": "Orion Mixer",
+      "description": "Prestige 500 Watts Orion Mixer Grinder with 3 Stainless Steel Jars |2 years warranty| Red & White",
+      "price": 1799,
+      "category": "appliances"
+    },
+    {
+      "id": 56,
+      "image":"https://m.media-amazon.com/images/I/41Wts4lvGsL._SX300_SY300_QL70_FMwebp_.jpg",
+      "title": "Digital Air Fryer",
+      "description": "Pigeon Healthifry Digital Air Fryer, 360° High Speed Air Circulation Technology 1200 W with Non-Stick 4.2 L Basket - Green",
+      "price": 2999,
+      "category": "appliances"
+    },
+    {
+      "id": 57,
+      "image":"https://m.media-amazon.com/images/I/41Nd5JirD-L._SX300_SY300_QL70_FMwebp_.jpg",
+      "title": " Sandwich Maker",
+      "description": "Prestige 800W Sandwich Maker (PGMFD 01)| Black | Heat Resistant Bakelite Body |Non-Stick Coating | Power Indicators | Oil Free Toasting",
+      "price": 1049,
+      "category": "appliances"
+    },
+    {
+      "id": 58,
+      "image":"https://m.media-amazon.com/images/I/41UZ3shiHlL._SX569_.jpg",
+      "title": "Pro Juicer, 750W",
+      "description": "Bostton Vistara Black Pro Juicer, 750W with 2 Year Warranty | Kichen and Home Appliance",
+      "price": 1699,
+      "category": "appliances"
+    },
+    {
+      "id": 59,
+      "image":"https://m.media-amazon.com/images/I/410veGT6mrL._SX300_SY300_QL70_FMwebp_.jpg",
+      "title": "Super Egg Boiler ",
+      "description": "KENT 16069 Super Egg Boiler 400W | Boils upto 6 Eggs At a Time | 3 Boiling Modes | Stainless Steel Body and Heating Plate | Automatic Turn-Off",
+      "price": 1055,
+      "category": "appliances"
+    },
+    {
+      "id": 60,
+      "image":"https://m.media-amazon.com/images/I/41nY461LwsL._SX300_SY300_QL70_FMwebp_.jpg",
+      "title": "Oven Toaster",
+      "description": "AGARO Marvel 9 Liters Oven Toaster Griller,Cake Baking Otg (Black),800 Watts",
+      "price": 1699,
+      "category": "appliances"
+    },
+    {
+      "id": 61,
+      "image":"https://m.media-amazon.com/images/I/41HOLnS970L._SY300_SX300_QL70_FMwebp_.jpg",
+      "title": "Mixer Grinder",
+      "description": "Cookwell Bullet Mixer Grinder 600 Watts (3 Jars, 2 Blades, Silver)",
+      "price": 1999,
+      "category": "appliances"
+    },
+    {
+      "id": 62,
+      "image":"https://m.media-amazon.com/images/I/41O2wOXjjhL._SX300_SY300_QL70_FMwebp_.jpg",
+      "title": "nduction Cooktop",
+      "description": "Prestige IRIS ECO 1200 W Induction Cooktop with automatic voltage regulator |Indian Menu option|Power Saver|Timer with User Pre-Set|1 year warranty|Black",
+      "price": 1399,
+      "category": "appliances"
+    },
+    {
+      "id": 63,
+      "image":"https://m.media-amazon.com/images/I/41VbcnFGs3L._SY445_SX342_QL70_FMwebp_.jpg",
+      "title": "Washing Machine",
+      "description": "Godrej 6 Kg 5 Star Digi-inverter Fully-Automatic Front Load Washing Machine (2024 Model, WFEON HYS 6010 5 IJBT FLGR, With Steam Wash & 1000 RPM Spin Speed, Flint Grey)",
+      "price": 22790,
+      "category": "appliances"
+    },
+    {
+      "id": 64,
+      "image":"https://m.media-amazon.com/images/I/31g28R49rAL._SX342_SY445_QL70_FMwebp_.jpg",
+      "title": "Automatic Top Load Washing",
+      "description": "Panasonic 6 Kg 5 Star Fully-Automatic Top Load Washing Machine ( NA-F60LF1HRB, Grey, Durable Metal Body, 8 Wash Program, Aquabeat wash technology, One touch smart wash, 2022 model)",
+      "price": 13490,
+      "category": "appliances"
+    },
+    {
+      "id":65,
+      "image":"https://m.media-amazon.com/images/I/31t+bghYZjL._SX342_SY445_.jpg",
+      "title": "0.8 ton AC",
+      "description": "Daikin 0.8 Ton 3 Star, Fixed Speed Split AC (Copper, PM 2.5 Filter, 2022 Model, FTL28U, White)",
+      "price": 24990,
+      "category": "appliances"
+    },
+    {
+      "id": 66,
+      "image":"https://m.media-amazon.com/images/I/41HOLnS970L._SY300_SX300_QL70_FMwebp_.jpg",
+      "title": "Mixer Grinder",
+      "description": "Cookwell Bullet Mixer Grinder 600 Watts (3 Jars, 2 Blades, Silver)",
+      "price": 1999,
+      "category": "appliances"
+    },
+    {
+      "id": 67,
+      "image":"https://m.media-amazon.com/images/I/21aTwX7j1DL._SY445_SX342_QL70_FMwebp_.jpg",
+      "title": "1 ton AC",
+      "description": "Godrej 1 Ton 3 Star Inverter Split AC (Copper, 2022 model, 5-in-1 convertible, Nano-Coated anti-viral filter AC 1T SIC 12TTC3-WWA, White)",
+      "price": 1399,
+      "category": "appliances"
+    },
+    {
+      "id": 68,
+      "image":"https://m.media-amazon.com/images/I/31LPsVBqzKL._SY445_SX342_QL70_FMwebp_.jpg",
+      "title": "Double Door Refrigerator",
+      "description": "LG 242 L 2 Star Frost-Free Smart Inverter Double Door Refrigerator (2023 Model, GL-N292DPZY, Shiny Steel, Smart Connect & Multi Air Flow)",
+      "price": 23990,
+      "category": "appliances"
+    },
+    {
+      "id": 69,
+      "image":"https://m.media-amazon.com/images/I/31yo+elw3qL._SY445_SX342_.jpg",
+      "title": "Display Frost Free Double Door",
+      "description": "Samsung 236 L, 3 Star, Convertible, Digital Inverter, with Display Frost Free Double Door Refrigerator (RT28C3733S8/HL, Silver, Elegant Inox, 2023 Model)",
+      "price": 26290,
+      "category": "appliances"
+    },
+    {
+      "id": 70,
+      "image":"https://m.media-amazon.com/images/I/51ValqXEKSL._SX300_SY300_QL70_FMwebp_.jpg",
+      "title": "Oats Cereal",
+      "description": "Quaker Oats Muesli 700g, Fruit & Nut flavour, Breakfast Oats Cereal",
+      "price": 299,
+      "category": "grocery"
+    },
+    {
+      "id": 71,
+      "image":"https://m.media-amazon.com/images/I/313xK-7-JVL._SX300_SY300_QL70_FMwebp_.jpg",
+      "title": "Nuts",
+      "description": "Nuts About You Raisin, 500 g | 100% Natural | Premium| Kishmish | Saugi",
+      "price": 399,
+      "category": "grocery"
+    },
+    {
+      "id": 72,
+      "image":"https://m.media-amazon.com/images/I/51Kghh1CZeL._SX679_.jpg",
+      "title": "Ketchup",
+      "description": "Del Monte Tomato Ketchup - Classic Blend, 900g",
+      "price": 99,
+      "category": "grocery"
+    },
+    {
+      "id": 73,
+      "image":"https://m.media-amazon.com/images/I/41Ix2RgO5iL._SX300_SY300_QL70_FMwebp_.jpg",
+      "title": "Tata tea",
+      "description": "Tata Tea Chakra Gold Dust Tea | Strong Tea With Long Lasting Taste |Black Tea | 500 Grams",
+      "price": 199,
+      "category": "grocery"
+    },
+    {
+      "id": 74,
+      "image":"https://m.media-amazon.com/images/I/61VJTCzq9oL._SX679_.jpg",
+      "title": "Bournvita",
+      "description": "Cadbury Bournvita Chocolate Nutrition Drink, 2 kg",
+      "price": 399,
+      "category": "grocery"
+    },
+    {
+      "id": 75,
+      "image":"https://m.media-amazon.com/images/I/51MGBl1IwlL._SX300_SY300_QL70_FMwebp_.jpg",
+      "title": "Atta",
+      "description": "Aashirvaad Superior MP Atta, 5kg Pack",
+      "price": 599,
+      "category": "grocery"
+    },
+    {
+      "id": 76,
+      "image":"https://m.media-amazon.com/images/I/51TX98bI7sL._SX300_SY300_QL70_FMwebp_.jpg",
+      "title": "Honey",
+      "description": "DiSano Pure Honey 500 g (pack of 1)",
+      "price": 599,
+      "category": "grocery"
+    },
+    {
+      "id": 77,
+      "image":"https://m.media-amazon.com/images/I/415-NZtitVL._SX300_SY300_QL70_FMwebp_.jpg",
+      "title": "Rice",
+      "description": "Charminar Everyday Rice 5Kg | Daily use basmati rice",
+      "price": 468,
+      "category": "grocery"
+    },
+    {
+      "id": 77,
+      "image":"https://m.media-amazon.com/images/I/51CitXNgakL._SX300_SY300_QL70_FMwebp_.jpg",
+      "title": "Cadbury",
+      "description": "Sunfeast Dark Fantasy Yumfills, 242g/253g, Rich Chocolate Pie Cake",
+      "price": 299,
+      "category": "grocery"
+    },
+    {
+      "id": 78,
+      "image":"https://m.media-amazon.com/images/I/51-QZlFnrKL._SX300_SY300_QL70_FMwebp_.jpg",
+      "title": "Maggi",
+      "description": "Sunfeast YiPPee! Magic Masala, Instant Noodles 720g/810g/840g (Pack of 12) ( weight may vary )",
+      "price": 99,
+      "category": "grocery"
+    },
+    {
+      "id": 79,
+      "image":"https://m.media-amazon.com/images/I/412KASYXFfL._SX300_SY300_QL70_FMwebp_.jpg",
+      "title": "Fortune Oil",
+      "description": "Fortune Sunlite Refined Sunflower Oil, 5L Jar",
+      "price": 999,
+      "category": "grocery"
+    },
+    {
+      "id": 80,
+      "image":"https://m.media-amazon.com/images/I/51f4HVnR4eL._SX425_.jpg",
+      "title": "Lipstick",
+      "description": "Maybelline New York Matte Lipstick, Intense Colour, Moisturised Lips, Color Sensational Creamy Matte, 695 Divine Wine, 3.9g",
+      "price": 180,
+      "category": "beauty"
+    },
+    {
+      "id": 81,
+      "image":"https://m.media-amazon.com/images/I/31CI5oaP54L._SX300_SY300_QL70_FMwebp_.jpg",
+      "title": "Cream Foundation ",
+      "description": "Lakme Absolute Skin Natural Mousse Golden Light 04, SPF8 Natural Finish Matte Cream Foundation -Long Lasting Weightless Full Coverage Face Makeup, 25g",
+      "price": 199,
+      "category": "beauty"
+    },
+    {
+      "id": 82,
+      "image":"https://m.media-amazon.com/images/I/21uU9bzhX2L._SX300_SY300_QL70_FMwebp_.jpg",
+      "title": "Lakme Lip",
+      "description": "Lakme 9TO5 Primer + Matte Lip Color MP7 Blushing Nude, 3.6 g",
+      "price": 299,
+      "category": "beauty"
+    },
+    {
+      "id": 83,
+      "image":"https://m.media-amazon.com/images/I/31T7iPQ0cKL._SX300_SY300_QL70_FMwebp_.jpg",
+      "title": "De Parfum",
+      "description": "Bella Vita Luxury Woman Eau De Parfum Gift Set 4x20 ml for Women with Date, Senorita, Glam, Rose Perfume|Floral, Fruity Long Lasting EDP Fragrance Scent",
+      "price": 399,
+      "category": "beauty"
+    },
+    {
+      "id": 84,
+      "image":"https://m.media-amazon.com/images/I/51IgR2yRK2L._SX425_.jpg",
+      "title": "Light Face Makeup",
+      "description": "LAKMÉ 9 To 5 Cc Cream Mini, 01 - Beige, Light Face Makeup With Natural Coverage, Spf 30 - Tinted Moisturizer To Brighten Skin, Conceal Dark Spots, 9 G",
+      "price": 249,
+      "category": "beauty"
+    },
+    {
+      "id": 85,
+      "image":"https://m.media-amazon.com/images/I/31H3RGxnFHL._SX300_SY300_QL70_FMwebp_.jpg",
+      "title": "Lakme Eyeconic",
+      "description": "Lakme Eyeconic Insta Cool Kajal, Black, Cooling Kohl Liner With Cucumber, Twist Up Pencil - Waterproof, Smudge Proof & Long Lasting Eye Makeup, Glossy, 0.35 G",
+      "price": 99,
+      "category": "beauty"
+    },
+    {
+      "id": 86,
+      "image":"https://m.media-amazon.com/images/I/31qnaL8OpjL._SX300_SY300_QL70_FMwebp_.jpg",
+      "title": "Lumi Cream",
+      "description": "Lakme Lumi Cream - Face cream with Moisturizer + Highlighter, enriched with Niacinamide & Hyaluronic Acid - Dewy Rose, 30g",
+      "price": 189,
+      "category": "beauty"
+    },
+    {
+      "id": 87,
+      "image":"https://m.media-amazon.com/images/I/31sBAHJFupL._SX300_SY300_QL70_FMwebp_.jpg",
+      "title": "Eyeliner",
+      "description": "Maybelline New York The Colossal Bold Eyeliner, The Archies Limited Edition, Black, 3ml",
+      "price": 199,
+      "category": "beauty"
+    },
+    {
+      "id": 88,
+      "image":"https://m.media-amazon.com/images/I/41QgR4Tv+eL._SY300_SX300_.jpg",
+      "title": "Brightening Day Cream",
+      "description": "Lakme Absolute Perfect Radiance Brightening Day Cream 50 g, SPF 30, Daily Illuminating Face Moisturizer for Glowing Skin - With Glycerin & Niacinamide",
+      "price": 599,
+      "category": "beauty"
+    },
+    {
+      "id": 89,
+      "image":"https://m.media-amazon.com/images/I/31QwGCvQ3+L._SY300_SX300_.jpg",
+      "title": "Lipstick ",
+      "description": "RENEE Fab 5 Nude 5 in 1 Lipstick 7.5gm - Five Shades in One -long Lasting, Matte Finish - Non Drying Formula With Intense Color Payoff - Compact & Easy to Use",
+      "price": 199,
+      "category": "beauty"
+    },
+    {
+      "id": 90,
+      "image":"https://m.media-amazon.com/images/I/31+Ixpq80RL._SY300_SX300_.jpg",
+      "title": "Poreless Compact Powder",
+      "description": "Maybelline New York Fit Me Matte + Poreless Compact Powder, 16H Oil Control with SPF 32, Matte Finish Compact Powder, 115 Ivory, 6g",
+      "price": 249,
+      "category": "beauty"
+    },
+    {
+      "id": 91,
+      "image":"https://m.media-amazon.com/images/I/418R0n+ZTsL._SX342_SY445_.jpg",
+      "title": "Makeup Kit for Women",
+      "description": "Just Herbs Makeup Kit for Women with Kohl Kajal, 3 in 1 Primer, Liquid Lipstick, Serum Foundation, Saptajal Toner and Lip & Cheeck Tint (Gift Set)",
+      "price": 649,
+      "category": "beauty"
+    },
+    {
+      "id": 92,
+      "image":"https://m.media-amazon.com/images/I/41WqVFzbQ5L._SY300_SX300_QL70_FMwebp_.jpg",
+      "title": "Biotique Saffron",
+      "description": "Biotique Saffron Dew Youthful Moisturizer | Protects Skin Cells | Prevents Ageing and Retains Youthful Glow | 100% Botanical Extracts | Suitable for All Skin Types | 50g",
+      "price": 379,
+      "category": "beauty"
+    },
+    {
+      "id": 93,
+      "image":"https://m.media-amazon.com/images/I/513bgp4hbfL._SX300_SY300_QL70_FMwebp_.jpg",
+      "title": "Fridge Storage Boxes",
+      "description": "hago Fridge Storage Boxes Freezer Storage Containers, Container for Kitchen Storage Set, Storage in Kitchen, Vegetable Storage, Draining Crisper Refrigerator Food Box (1)",
+      "price": 289,
+      "category": "kitchen"
+    },
+    {
+      "id": 94,
+      "image":"https://m.media-amazon.com/images/I/31R+zHQ1K8L._SY300_SX300_.jpg",
+      "title": "Steel Potato Crusher",
+      "description": "GANESH Stainless Steel Potato Crusher Vegetable Smasher Pav Bhaji Masher with Handle for Effortless Kitchen Uses (Pack of 1, Assorted)",
+      "price": 79,
+      "category": "kitchen"
+    },
+    {
+      "id": 95,
+      "image":"https://m.media-amazon.com/images/I/31vqJ-4tQcL._SX300_SY300_QL70_FMwebp_.jpg",
+      "title": " Cutting Board",
+      "description": "Kuber Industries Cutting Board|Wooden Slicing & Kitchen Chopping Board with Steel Hook for Hanging Fruits,Vegetables (Brown)",
+      "price": 179,
+      "category": "kitchen"
+    },
+    {
+      "id": 96,
+      "image":"https://m.media-amazon.com/images/I/41YiLfo76VL._SX300_SY300_QL70_FMwebp_.jpg",
+      "title": "Vegetable Chopper",
+      "description": "Butterfly Premium Vegetable Chopper 900 Ml, Blue",
+      "price": 279,
+      "category": "kitchen"
+    },
+    {
+      "id": 97,
+      "image":"https://m.media-amazon.com/images/I/41XZnqCRCpL._SX300_SY300_QL70_FMwebp_.jpg",
+      "title": "Dispenser Bottle for Kitchen",
+      "description": "STAR WORK-Glass Oil Dispenser Bottle for Kitchen | Stainless Steel Leak-Proof Cork | Transparent Oil Pourer and Holder 500ml (Combo Pack of 2)",
+      "price": 379,
+      "category": "kitchen"
+    },
+    {
+      "id": 98,
+      "image":"https://m.media-amazon.com/images/I/214RUzGuVrL._SX300_SY300_QL70_FMwebp_.jpg",
+      "title": "Vegetable Knife",
+      "description": "Kai Hocho Premium Santoku Kitchen/Vegetable Knife, 6.77 Inch Blade, Black, Carbon_Steel",
+      "price": 399,
+      "category": "kitchen"
+    },
+    {
+      "id": 99,
+      "image":"https://m.media-amazon.com/images/I/412yttlxWlL._SY300_SX300_QL70_FMwebp_.jpg",
+      "title": "Vegetable Slicer",
+      "description": "Ganesh Plastic Vegetable Slicer Cutter, Black",
+      "price": 79,
+      "category": "kitchen"
+    },
+    {
+      "id": 100,
+      "image":"https://m.media-amazon.com/images/I/41t2wYQF2aL._SX300_SY300_QL70_FMwebp_.jpg",
+      "title": "Food Chopper",
+      "description": "E-COSMOS Food Chopper 900ml, Steel Large Manual Hand-Press Vegetable Chopper Mixer Cutter to Cut Onion, Salad, Tomato, Potato (Pack of 1) 900ml",
+      "price": 179,
+      "category": "kitchen"
+    },
+    {
+      "id": 101,
+      "image":"https://m.media-amazon.com/images/I/51E2TzEoM6L._SX300_SY300_QL70_FMwebp_.jpg",
+      "title": " Bucket Spin Mop",
+      "description": "Scotch-Brite 2-in-1 Bucket Spin Mop (Green, 2 Refills), 4 Pcs",
+      "price": 1079,
+      "category": "kitchen"
+    },
+    {
+      "id": 102,
+      "image":"https://m.media-amazon.com/images/I/51AeRBmizXL._SX522_.jpg",
+      "title": "Kitchen Trolley",
+      "description": "Rasvesh Metal Kitchen Trolley Kitchen Organizer Items&Kitchen Accessories Items For Kitchen Rack Square Design For Fruits&Vegetable Onion Storage Kitchen Trolley With Wheels (Black) (5 Layer)",
+      "price": 3679,
+      "category": "kitchen"
+    },
+    {
+      "id": 103,
+      "image":"https://m.media-amazon.com/images/I/51IKN+YI8lL._SY300_SX300_.jpg",
+      "title": "Towel Racks for Bathroom",
+      "description": "Towel Racks for Bathroom Stainless Steel Folding Stand, Holder, Hanger, Rack with Shelf, Towel Bar for Bathroom Accessories (24 Inches) Silver",
+      "price": 999,
+      "category": "kitchen"
+    }
+  ]
+}

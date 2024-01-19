@@ -8,12 +8,14 @@
     background-clip: border-box;
     border: 1px solid rgb(0,0,0,0.2);
     border-radius: .25rem;
+    cursor: pointer;
 }
 
 .item img{
     width: 120px;
     height: 90px;
     margin-top: 5px;
+    background: linear-gradient( #7aa0d8, #3742e0);
 }
 .item{
     margin: 0px 15px;
@@ -70,8 +72,4 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-}
-
-.item img{
-    background-color: white;
 }

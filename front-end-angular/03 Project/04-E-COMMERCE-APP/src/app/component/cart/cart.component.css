@@ -44,3 +44,8 @@ h4, h6{
 .shop-btn{
     margin-bottom: 9px;
 }
+
+.card-title{
+    text-align: center;
+    color: blue;
+}

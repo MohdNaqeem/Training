@@ -12,6 +12,7 @@ export class ProductsComponent implements OnInit {
   public productList : any
   public filterCategory : any
   searchKey:string =''
+  page : any 
 
   constructor(private api:ApiService, private cartService:CartService){}
 
@@ -48,6 +49,4 @@ export class ProductsComponent implements OnInit {
       }
     })
   }
-
-  
 }

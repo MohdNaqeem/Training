@@ -9,36 +9,59 @@
 <div class="modal-body">
     <form [formGroup]="myOrderForm">
         <div class="mt-3">
-            <label for="exampleInputEmail1">Enter Full Name</label>
-            <input type="email" formControlName="fullName" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                placeholder="eg. jhon smith">
+            <label>Enter Full Name</label>
+            <input type="text" formControlName="fullName" class="form-control" placeholder="Enter your fullName">
+            <!-- Form validation -->
+            <div class="alert alert-danger" *ngIf="fullname?.touched && fullname?.invalid ">
+                <div *ngIf="fullname?.errors?.['required']">The name is required</div>
+                <div *ngIf="fullname?.errors?.['minlength']">The name must be atleast 3 letters long</div>
+            </div>
+        </div>
+      
+
+        <div class="mt-3">
+            <label>Email address</label>
+            <input type="email" formControlName="email" class="form-control" placeholder="Enter your email">
+            <!-- Form validation -->
+            <div class="alert alert-danger" *ngIf="Email?.touched && Email?.invalid ">
+                <div *ngIf="Email?.errors?.['required']">The email is required</div>
+                <div *ngIf="Email?.errors?.['email']">Invalid email, please enter valid email</div>
+            </div>
         </div>
 
         <div class="mt-3">
-            <label for="exampleInputEmail1">Email address</label>
-            <input type="email" formControlName="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                placeholder="eg. abc@gmail.com">
-        </div>
-
-        <div class="mt-3">
-            <label for="exampleInputPassword1">Password</label>
-            <input type="password" formControlName="password" class="form-control" id="exampleInputPassword1" placeholder="eg. 1234">
+            <label>Password</label>
+            <input type="password" formControlName="password" class="form-control" placeholder="Enter your password">
+            <!-- Form validation -->
+            <div class="alert alert-danger" *ngIf="passWord?.touched && passWord?.invalid ">
+                <div *ngIf="passWord?.errors?.['required']">The password is required</div>
+                <div *ngIf="passWord?.errors?.['minlength']">The password must be atleast 8 letters long</div>
+            </div>
         </div>
 
         <div class="mt-3">
             <label>Address</label>
-            <textarea cols="60" formControlName="address" rows="6" placeholder="eg. Mumbai-street"></textarea>
+            <textarea cols="60" formControlName="address" rows="6" placeholder="Enter your address"></textarea>
+             <!-- Form validation -->
+             <div class="alert alert-danger" *ngIf="Address?.touched && Address?.invalid ">
+                <div *ngIf="Address?.errors?.['required']">The Address is required</div>
+            </div>
         </div>
 
         <div class="mt-3">
             <label>Mobile No</label>
-            <input type="number" formControlName="mobileNo" class="form-control" id="exampleInputPassword1" placeholder="eg. 98438XXXXX">
+            <input type="number" formControlName="mobileNo" class="form-control" placeholder="Enter your mobile no">
+            <!-- Form validation -->
+            <div class="alert alert-danger" *ngIf="MobileNo?.touched && MobileNo?.invalid ">
+                <div *ngIf="MobileNo?.errors?.['required']">The mobile no is required</div>
+                <div *ngIf="MobileNo?.errors?.['minlength']">number must be 10 letters long</div>
+            </div>
         </div>
-        
     </form>
 </div>
 
 <div class="modal-footer">
-    <button type="button" routerLink="/order-placed" (click)="onSubmit()" [disabled]="myOrderForm.invalid" class="btn btn-success">Order</button>
+    <button type="button" routerLink="/order-placed" (click)="onSubmit()" [disabled]="myOrderForm.invalid"
+        class="btn btn-success">Order</button>
     <button type="button" class="btn btn-danger" (click)="activeModal.close('Close click')">Cancel</button>
 </div>

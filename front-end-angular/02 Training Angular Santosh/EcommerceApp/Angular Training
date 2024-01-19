@@ -253,6 +253,11 @@
    - Make call to API for page load
    - Any logic that you need to perform at very first as the component gets instantiated.
 
+=> ngDochceck
+   ngDoCheck is a lifecycle hook in Angular that is part of the Change Detection mechanism. Lifecycle hooks in Angular allow you to tap into specific moments in the component's lifecycle, enabling you to perform actions or operations at those points.
+
+   The ngDoCheck hook is called by Angular's change detection mechanism whenever it checks the component's view for changes. It is invoked after the default change detection has run and allows you to implement custom change detection logic.
+
 => What is change detection?
    The purpose of this mechanism is to make sure the underlying views are always in sync with their corresponding models. This core feature of Angular is what makes the framework tick and is partly the reason why Angular is a neat choice for developing modern web apps.
 

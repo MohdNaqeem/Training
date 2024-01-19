@@ -12,7 +12,14 @@ import { FormsModule, ReactiveFormsModule  } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { OrderDetailsPopupComponent } from './order-details-popup/order-details-popup.component';
 import { OrderPlacedComponent } from './order-placed/order-placed.component';
-
+import { NgxPaginationModule } from 'ngx-pagination';
+import { LoginPageComponent } from './component/login-page/login-page.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { SignUpPageComponent } from './component/sign-up-page/sign-up-page.component';
+import { CarouselComponent } from './component/carousel/carousel.component';
+import { DiscountCardComponent } from './component/discount-card/discount-card.component';
+import { FooterComponent } from './component/footer/footer.component';
+import { UserAccessesComponent } from './component/user-accesses/user-accesses.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +29,13 @@ import { OrderPlacedComponent } from './order-placed/order-placed.component';
     ProductsComponent,
     FilterPipe,
     OrderDetailsPopupComponent,
-    OrderPlacedComponent
+    OrderPlacedComponent,
+    LoginPageComponent,
+    SignUpPageComponent,
+    CarouselComponent,
+    DiscountCardComponent,
+    FooterComponent,
+    UserAccessesComponent
   ],
   imports: [
     BrowserModule,
@@ -30,8 +43,9 @@ import { OrderPlacedComponent } from './order-placed/order-placed.component';
     HttpClientModule,
     FormsModule,
     BrowserAnimationsModule,
-    ReactiveFormsModule
-
+    ReactiveFormsModule,
+    NgxPaginationModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -10,3 +10,13 @@
     right: 43%;
     color: blue;
 }
+
+.login-page{
+    color: white;
+    text-decoration: none;
+    position: relative;
+    left: 150px;
+    font-weight: 500;
+    font-size: 17px;
+    cursor: pointer;
+}

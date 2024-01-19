@@ -1,0 +1,24 @@
+.card-img{
+    width: 98%;
+    height: auto;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.bank-text{
+    margin-left: 10px;
+    position: relative;
+    top: 10px;
+}
+
+.saving1-img{
+    position: relative;
+    left: 27%;
+    top: 16px;
+}
+
+.saving2-img{
+    position: absolute;
+    top: 221vh;
+    right: 62vh;
+}

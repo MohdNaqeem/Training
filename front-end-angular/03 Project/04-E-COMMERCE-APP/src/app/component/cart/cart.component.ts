@@ -26,6 +26,7 @@ export class CartComponent implements OnInit {
   // This logic for remove item which we want
   removeItem(item:any){
     this.cartService.removeCartItem(item)
+    console.log(item)
   }
 
   // This logic for emtpty cart
