@@ -1,0 +1,256 @@
+=> Command of download angular and run it on browser
+   npm install @angular/cli@15
+   ng new ProjectName
+   cd ProjectName
+   ng serve 
+
+=> What is Angular?
+   Angular is a popular open-source web application framework maintained by Google and a community of developers. It is written in TypeScript and allows developers to build dynamic, single-page web applications (SPAs) with rich user interfaces. It's build structured, scalable and single page web applications for client side.
+   
+=> What is Single Page Application?
+   In a Single Page Application (SPA), all of your application's functions exist in a single HTML page. As users access your application's features, the browser needs to render only the parts that matter to the user, instead of loading a new page. This pattern can significantly improve your application's user experience. 
+
+=> What is Angular CLI?
+   The Angular CLI is a command-line interface tool that we use to initialize, develop, scaffold, and maintain Angular applications directly from a command shell.
+
+=> What is template syntax?
+   The template-syntax elements tell Angular how to render the HTML to the screen, using program logic and data.
+
+=> What is binding?
+   Data binding in Angular is a mechanism that synchronizes the data between the model and the view. There are two types: one-way binding (interpolation, property binding) and two-way binding (using ngModel).
+
+=> One way data binding?
+   One-way data binding in Angular is a way to bind data from the component to the view and from the view to the component. It is used to display information to the end-user which automatically stays synchronized with each change of the underlying data. 
+
+=> Two way data binding?
+   Two-way data binding is a feature in Angular that allows automatic synchronization of data between the component and the view. It combines both property binding and event binding to make it easy to keep the data in the component and the corresponding UI element in sync. In Angular, the syntax for two-way data binding is [(ngModel)].
+   
+=> There are three syntax of one way binding 
+   Interpolation
+   Property binding
+   Event binding
+
+=> What is interpolation and binding.
+   In Angular, Interpolation is a way to transfer the data from a TypeScript code to an HTML template 
+   (view), i.e. it is a method by which we can put an expression in between some text and get the value 
+   of that expression. Interpolation basically binds the text with the expression value. 
+   interpolation just work in the case of number, numeric value and string it doesn't work in the 
+   case of boolean.
+   Syntax : propertyName={{VariableandFuntionName}} , {{VariableandFuntionName}}
+
+=> What is property binding
+   Property binding in Angular helps you set values for properties of HTML elements or directives. Use 
+   property binding to do things such as toggle button features, set paths programmatically, and share 
+   values between components.
+   where we have to change the value of data and disabled then in this case we use property binding
+   Sntax : [propertyName]=VariableandFunctionName
+
+=> What is event binding
+   Event binding lets you listen for and respond to user actions such as keystrokes, mouse movements, 
+   clicks, and touches.
+
+=> What is Template variable?
+   Template variable can be use to refer to a html element and all of it's DOM property. we create a
+   reference variables by using # symbol and varibale name.
+
+=> What is directives.
+   Directive are use to change the behavior and appearance of DOM element. Directive can implement all
+   life cycle hooks methods. they can't have template.
+
+=> Types of directive:
+   Component directive
+   Structural directive
+   Attribute directive
+
+=> What is component directive?
+   The most significant directives in Angular are called components. It is a component directive that highlights elements in the DOM. This type of directive has a template or template URLs.
+
+=> What is structural directives?
+   Structural directives are directives which change the DOM layout by adding and removing DOM elements. Angular provides a set of built-in structural directives (such as NgIf , NgForOf , NgSwitch and others) which are commonly used in all Angular projects. For more information see Built-in directives.
+
+=> What is Attribute directives?
+   Attribute directives change the appearance or behavior of an element, component, or another directive.
+
+=> What is Custom directive?
+   We can create our custom directive from scratch.
+
+=> Built Directives
+   *ngIf
+   *ngFor
+   *ngSwitch  
+   *ngClass
+   *ngStyle
+
+=> ngIf
+   The ngIf directive removes or recreates a portion of the DOM tree based on an {expression}. If the expression assigned to ngIf evaluates to a false value then the element is removed from the DOM, otherwise a clone of the element is reinserted into the DOM.
+
+=> ngFor
+   ngFor is a structural directive used for rendering a set of elements or repeating a template for each item in a collection. The ngFor directive is commonly used to iterate over arrays or lists and generate HTML elements dynamically based on the data in the collection.
+
+=> ngSwitch
+   The ngSwitch directive is used for conditional rendering in Angular templates, providing a way to switch between multiple cases based on the value of an expression.
+
+=> ngClass
+   The ng-class directive dynamically binds one or more CSS classes to an HTML element. The value of the ng-class directive can be a string, an object, or an array. If it is a string, it should contain one or more, space-separated class names.
+
+=> ngstyle
+   The ng-style directive specifies the style attribute for the HTML element. The value of the ng-style attribute must be an object, or an expression returning an object. The object consists of CSS properties and values, in key value pairs. 
+
+=> What is pipes ?
+   Angular Pipes allows its users to change the format in which data is being displayed on the screen. For instance, consider the date format. Dates can be represented in multiple ways, and the user can decide which one to use with the help of Angular Pipes.
+
+   DatePipe      {{ currentDate | date:'medium' }}
+   UpperCasePipe {{ textToTransform | uppercase }}
+   LowerCasePipe {{ textToTransform | lowercase }}
+   CurrencyPipe  {{ price | currency:'USD':true }} 
+   DecimalPipe   {{ someNumber | number:'2.2-2' }}
+   PercentPipe   {{ percentageValue | percent:'2.2-2' }} 
+   SlicePipe     {{ array | slice:1:5 }}
+   AsyncPipe     {{ asyncData | async }}
+   JsonPipe      {{ jsonData | json }}
+
+=> How to add bootstrap in our project ?
+   first we have to install bootstrap using command in terminal "npm install bootstrap".
+   then we have to inject this link "node_modules/bootstrap/dist/css/bootstrap.min.css" in our "angular.json in styles".
+   after this we have to inject this link @import "~bootstrap/dist/css/bootstrap.css"; in our global css.
+   
+=> What is Life cycle hooks?
+   Lifecycle hooks are a set of methods in Angular that are executed at specific moments during the lifecycle of a component. These methods provide a way to tap into the Angular component lifecycle and perform custom logic or operations at specific points in time.
+   - Angular components doesn't use all the components at once. It only uses the one or more which are required.
+   - Whenever angular needs to use a component, it creates a new instance of that component and start using it in DOM once the uses is done it destroy this instance and removed from DOM
+   - During this process (create instance to destroy) there are several stages that angular covers and this is called as component life cycle or life cycle hooks.
+
+=> Types of life cycle hooks
+   ngOnChanges
+   ngOnInit
+   ngDoCheck
+   ngAfterContentInit
+   ngAfterContentChecked
+   ngAfterViewInit
+   ngAfterViewChecked
+   ngOnDestroy
+
+=> ngOnchanges
+   ngOnChanges lifecycle hook is a method that gets called whenever the input properties of a component are changed. It is part of the Angular component lifecycle hooks, and it is specifically designed to handle changes to input properties.
+
+   - Syntax ngOnChanges(changes: SimpleChanges): void { // Handle changes here }
+
+   - changes
+     The changes parameter is an object of type SimpleChanges that provides information about each changed property.
+
+   - SimpleChanges
+     The SimpleChanges object contains information about the changed properties. It is a key-value pair where the key is the name of the property, and the value is an instance of SimpleChange which includes the previous and current values of the property.
+
+=> ngOnInit
+   ngOnInit is a lifecycle hook that is part of the lifecycle sequence of a component. It is called after Angular has initialized all the data-bound properties of a directive. It is called once, after the component has been initialized. It is a good place to perform component initialization logic, such as initializing data, making HTTP requests, or setting up subscriptions. 
+
+=> Constructor uses :
+   - Inject any service 
+   - Initialize the feilds
+   - Do not perform any logic here.
+
+=> ngOnInit uses : 
+   - Perform the component specific operations like:
+   - Make call to API for page load
+   - Any logic that you need to perform at very first as the component gets instantiated.
+
+=> ngDochceck
+   ngDoCheck is a lifecycle hook in Angular that is part of the Change Detection mechanism. Lifecycle hooks in Angular allow you to tap into specific moments in the component's lifecycle, enabling you to perform actions or operations at those points.
+
+   The ngDoCheck hook is called by Angular's change detection mechanism whenever it checks the component's view for changes. It is invoked after the default change detection has run and allows you to implement custom change detection logic.
+
+=> What is change detection?
+   The purpose of this mechanism is to make sure the underlying views are always in sync with their corresponding models. This core feature of Angular is what makes the framework tick and is partly the reason why Angular is a neat choice for developing modern web apps.
+
+=> What is service?
+   services in Angular let you define code or functionalities that are then accessible and reusable in many other components in your Angular project. Services help you with the abstraction of logic and data that is hosted independently but can be shared across other components.
+   Service is a class in which could be has function, data or properties and these data, properties or function we can share in multiple component using services.
+
+=> what is defference between get method and post method?
+   "GET" and "POST" are two different types of HTTP requests. They are used to communicate with a server to send
+   data. 
+   - GET Request:
+     - Purpose: The primary purpose of a GET request is to retrieve data from the server.
+
+     - Data in URL: Parameters are appended to the URL, usually visible in the browser's address bar.
+
+     - Caching: GET requests can be cached by browsers, and they are idempotent, meaning making the same  request 
+       multiple times has the same effect as making it once.
+
+     - Security: Since data is included in the URL, it's more visible and might be less secure for sensitive 
+       information.
+
+     - Use Cases: Suitable for data retrieval operations where the parameters are not sensitive and the request 
+       doesn't modify server-side data.
+
+   - POST Request:
+     - Purpose: The primary purpose of a POST request is to submit data to be processed to a specified resource.
+
+     - Data in Request Body: Parameters are included in the request body, not in the URL. This allows for sending 
+       larger amounts of data.
+
+     - Caching: POST requests are not cached by default, and they are not idempotent, meaning making the same 
+       request multiple times can have different effects.
+
+     - Security: Since data is in the request body, it's not visible in the URL, making it a more secure option for 
+       sensitive information.
+
+     - Use Cases: Suitable for operations that modify server-side data, involve sensitive information, or require  
+       larger amounts of data to be sent.
+
+=> What is template driven form?
+   Template-driven forms are a way of building forms in Angular using template-driven syntax. This approach relies on directives in the template to create and manipulate the underlying form model.
+
+   Syntax : 
+    
+   1 To use template-driven forms, we need to import the FormsModule from @angular/forms in our app.module.ts. 
+     
+   2 NgModel Directive: The ngModel directive plays a crucial role in template-driven forms. It is used for two-way  
+     data binding, connecting the form controls in the template with the underlying form model. 
+
+   3 ngForm Directive: The ngForm directive is used to create a form in the template. It is responsible for tracking 
+     the form's state, validity, and managing form submissions.
+
+   4 Form Validation: Template-driven forms support both built-in and custom validators. You can add validation 
+     attributes to the form controls in the template.
+
+=> What is Reactive form in angular ?
+   Reactive forms in Angular are a mechanism for handling and managing forms in a more programmatic and reactive manner. The fundamental purpose of reactive forms is to give developers greater control and flexibility in managing the state and behavior of forms within Angular applications
+
+   syntax : 
+
+   1 To use reactive forms, we need to import the ReactiveFormsModule from @angular/forms in our app.module.ts.
+
+   2 FormGroup: A FormGroup is a collection of FormControl instances, representing a form. It helps in organizing 
+     and managing the state of multiple form controls.
+
+   3 FormControl: A FormControl represents an individual form control, such as an input field. It tracks the value 
+     and validation status of the control.
+
+   4 FormArray: A FormArray is used to manage an array of form controls within a FormGroup.
+
+   5 Form Validation: Validators can be added directly when creating form controls, and you can also implement 
+     custom validators.
+
+=> What is custom validation?
+   Custom validators in Angular are essential when you encounter validation scenarios that cannot be achieved using the built-in validators. Some common use cases for custom validators include.
+
+   1 Password Confirmation: we might want to ensure that two password input fields match each other.
+
+   2 Unique Username: Checking if a chosen username is unique in your application’s database.
+
+   3 Conditional Validation: Implementing complex validation rules based on the state of other form controls.
+
+=> What is Routing? 
+   As users perform application tasks, they need to move between the different views that you have defined. To handle the navigation from one view to the next, you use the Angular Router . The Router enables navigation by interpreting a browser URL as an instruction to change the view.
+
+=> What is Dependency Injection?
+   In angular dependency injection can be a class or an object which we can access or we can inject inside a component and serives wherever we want to inject we can inject.
+   Dependency Injection, or DI, is a design pattern and mechanism for creating and delivering some parts of an application to other parts of an application that require them.
+   There are three types of provide in DI.
+   - Class based providers.
+   - value Providers
+   - Factory
+
+=> What is interface?
+   Observables are a technique for event handling, asynchronous programming, and handling multiple values emitted over time. The observer pattern is a software design pattern in which an object, called the subject, maintains a list of its dependents, called observers, and notifies them automatically of state changes.

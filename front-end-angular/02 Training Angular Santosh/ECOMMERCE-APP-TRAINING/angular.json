@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Crud-Json": {
+    "ECOMMERCE-APP-TRAINING": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/crud-json",
+            "outputPath": "dist/ecommerce-app-training",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -25,9 +25,6 @@
               "src/assets"
             ],
             "styles": [
-              {
-                "input": "node_modules/@progress/kendo-theme-default/dist/all.css"
-              },
               "src/styles.css"
             ],
             "scripts": []
@@ -63,10 +60,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "Crud-Json:build:production"
+              "browserTarget": "ECOMMERCE-APP-TRAINING:build:production"
             },
             "development": {
-              "browserTarget": "Crud-Json:build:development"
+              "browserTarget": "ECOMMERCE-APP-TRAINING:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -74,7 +71,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "Crud-Json:build"
+            "browserTarget": "ECOMMERCE-APP-TRAINING:build"
           }
         },
         "test": {
@@ -90,9 +87,6 @@
               "src/assets"
             ],
             "styles": [
-              {
-                "input": "node_modules/@progress/kendo-theme-default/dist/all.css"
-              },
               "src/styles.css"
             ],
             "scripts": []
@@ -102,6 +96,6 @@
     }
   },
   "cli": {
-    "analytics": false
+    "analytics": "af874609-1848-41e4-ba5c-d64492e81c75"
   }
 }

@@ -208,6 +208,10 @@
    AsyncPipe     {{ asyncData | async }}
    JsonPipe      {{ jsonData | json }}
 
+=> What is pure pipe?
+   A pure pipe is that pipe which gets called whenever there is a pure change on that input value. by default
+   every pipe is pure pipe
+
 => How to add bootstrap in our project ?
    first we have to install bootstrap using command in terminal "npm install bootstrap".
    then we have to inject this link "node_modules/bootstrap/dist/css/bootstrap.min.css" in our "angular.json in styles".

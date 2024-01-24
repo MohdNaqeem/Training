@@ -9,8 +9,7 @@
     <kendo-grid-column field="producturl" title="Image">
         <ng-template kendoGridCellTemplate let-dataItem>
             <ngx-img-zoom [zoomImageSrc]="dataItem.producturl" [previewImageSrc]="dataItem.producturl"
-                [imgStyle]="'width:80px; height:90px;'"
-                [resultStyle]="'width:150px; height:200px;'"
+                [imgStyle]="'width:80px; height:90px;'" [resultStyle]="'width:150px; height:200px;'"
                 [containerStyle]="">
             </ngx-img-zoom>
         </ng-template>

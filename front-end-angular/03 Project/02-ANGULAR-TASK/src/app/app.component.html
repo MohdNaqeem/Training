@@ -1,19 +1,2 @@
-
-<div class="drop-area" (drop)="onDrop($event)" (dragover)="onDragOver($event)" (dragleave)="onDragLeave($event)">
-  <h4><strong>Drag and drop files here</strong></h4>
-  <h4 class="py-3"><strong>OR</strong></h4>
-  <input style="display: none" type="file" id="file" (change)="onFileChange($event)" />
-  <label for="file"><span class="textLink">Browse Excel</span></label>
-  <p>{{imgValue}}</p>
-  <p>Upload Excel file in .xls or .xlsx format, ensuring it's under 30MB in size.</p>
-  <div *ngFor="let file of files; let i = index" class="file-item">
-    {{ file.name }}
-    <button (click)="removeFile(i)">Remove</button>
-  </div>
-  <div *ngIf="files.length > 0" class="uploaded-files">
-    <p>Uploaded Files:</p>
-    <div *ngFor="let file of files" class="uploaded-file-name">
-      {{ file.name }}
-    </div>
-  </div>
-</div>
+<!-- <app-dynamic-form></app-dynamic-form> -->
+<app-dynamic-comp></app-dynamic-comp>
