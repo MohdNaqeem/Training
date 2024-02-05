@@ -131,7 +131,8 @@
    ngOnDestroy
 
 => ngOnchanges
-   ngOnChanges lifecycle hook is a method that gets called whenever the input properties of a component are changed. It is part of the Angular component lifecycle hooks, and it is specifically designed to handle changes to input properties.
+   ngOnChanges lifecycle hook is a method that gets called whenever the input properties of a component are changed. it is specifically designed to handle changes to input properties. ngonchange will only work when you have input value and your input value will
+   get a new value.
 
    - Syntax ngOnChanges(changes: SimpleChanges): void { // Handle changes here }
 
@@ -155,12 +156,18 @@
    - Any logic that you need to perform at very first as the component gets instantiated.
 
 => ngDochceck
-   ngDoCheck is a lifecycle hook in Angular that is part of the Change Detection mechanism. Lifecycle hooks in Angular allow you to tap into specific moments in the component's lifecycle, enabling you to perform actions or operations at those points.
-
    The ngDoCheck hook is called by Angular's change detection mechanism whenever it checks the component's view for changes. It is invoked after the default change detection has run and allows you to implement custom change detection logic.
 
+=> ngAfterViewInit?
+   ngAfterViewInit is a lifecycle hook in Angular that is called after a component's view, and its child views, has been fully initialized. it provides a way for developers to perform actions or logic after the view has been initialized.
+
+   ngAfterViewInit is often used when you need to interact with the view or its child components. For example, if you want to manipulate the DOM directly after the view has been created, you can place that logic in the ngAfterViewInit hook.
+
+=> What is viewchild?
+   ViewChild is a decorator that is used to get a reference to a child component or an element within a parent component. It allows the parent component to access and interact with the properties, methods, and events of the child component or element.
+
 => What is change detection?
-   The purpose of this mechanism is to make sure the underlying views are always in sync with their corresponding models. This core feature of Angular is what makes the framework tick and is partly the reason why Angular is a neat choice for developing modern web apps.
+   Change detection is the process through which Angular checks to see whether your application state has changed, and if any DOM needs to be updated. At a high level, Angular walks your components from top to bottom, looking for changes
 
 => What is service?
    services in Angular let you define code or functionalities that are then accessible and reusable in many other components in your Angular project. Services help you with the abstraction of logic and data that is hosted independently but can be shared across other components.

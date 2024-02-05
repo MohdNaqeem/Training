@@ -3,19 +3,16 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { DynamicFormComponent } from './dynamic-form/dynamic-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { KeyspipePipe } from './keyspipe.pipe';
-import { DynamicCompComponent } from './dynamic-comp/dynamic-comp.component';
 import { HttpClientModule } from '@angular/common/http';
+import { TaskComponent } from './task/task.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    DynamicFormComponent,
-    KeyspipePipe,
-    DynamicCompComponent
+    TaskComponent,
+
   ],
   imports: [
     BrowserModule,
