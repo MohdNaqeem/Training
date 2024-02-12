@@ -1,0 +1,27 @@
+/* circle-image.component.css */
+.circle-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .circle {
+    position: relative;
+    width: 60px; /* Adjust the width of the circle */
+    height: 60px; /* Adjust the height of the circle */
+    margin: 10px;
+  }
+  
+  .circle-img {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .circle-number {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    color: white;
+  }
+  

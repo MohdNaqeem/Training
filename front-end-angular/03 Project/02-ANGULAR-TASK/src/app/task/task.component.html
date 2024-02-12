@@ -1,1 +1,8 @@
-<div #myElement></div>
+<!-- circle-image.component.html -->
+<div class="circle-container">
+    <div class="circle" *ngFor="let item of dummyData">
+      <img src="assets/circle-img.png" class="circle-img">
+      <span class="circle-number">{{ item }}</span>
+    </div>
+  </div>
+  

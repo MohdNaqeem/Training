@@ -1,15 +1,12 @@
-import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Component, Input } from '@angular/core';
+
 @Component({
   selector: 'app-task',
   templateUrl: './task.component.html',
   styleUrls: ['./task.component.css']
 })
-export class TaskComponent implements AfterViewInit {
-  @ViewChild('myElement') myElement: ElementRef | undefined;
+export class TaskComponent {
+  dummyData: number[] = Array.from({ length: 10 }, (_, i) => i + 1); // Dummy data with numbers from 1 to 10
 
-  ngAfterViewInit() {
-    // Now, you can access and manipulate the DOM element
-    this.myElement!.nativeElement.innerHTML = 'View initialized!';
-  }
+  constructor() { }
 }

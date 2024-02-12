@@ -525,8 +525,33 @@
 
 <div class="hook">
     <h3>Life cycle hooks</h3>
-    <app-user [data]="count"></app-user>
     <button (click)="onChangeclick()">Click</button>
+</div>
+
+<!-- lazy Loading example -->
+<div class="lazy-loading">
+    <h3>Lazy Loading</h3>
+    <h4>Admin Links</h4>
+    <ul>
+        <li>
+            <a routerLink="admin/login">User</a>
+        </li>
+        <li>
+            <a routerLink="admin/list">List</a>
+        </li>
+    </ul>
+
+    <br> <br>
+    <h4>User Links</h4>
+    <ul>
+        <li>
+            <a routerLink="User/login-2">Login</a>
+        </li>
+        <li>
+            <a routerLink="User/list-2">List</a>
+        </li>
+    </ul>
+
 </div>
 
 <router-outlet></router-outlet>

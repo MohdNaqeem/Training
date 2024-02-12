@@ -1,0 +1,20 @@
+/*
+=> What is scope?
+   Scope mean where we can access a specific variable and function in our code that is scope. javascript has
+   main types of scope.
+   
+   Global Scope:
+   Variables declared outside of any function, or declared with the var keyword at the top level of a script, 
+   have global scope. Global variables can be accessed and modified from anywhere within the script, including 
+   inside functions.
+
+   Local Scope:
+   Variables declared inside a function have local scope and are only accessible within that function.
+   Each function creates its own scope, and variables declared within it are not visible outside of that 
+   function.
+
+
+
+
+*/  
+  

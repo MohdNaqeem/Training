@@ -261,3 +261,6 @@
 
 => What is interface?
    Observables are a technique for event handling, asynchronous programming, and handling multiple values emitted over time. The observer pattern is a software design pattern in which an object, called the subject, maintains a list of its dependents, called observers, and notifies them automatically of state changes.
+
+=> Lazy loading?
+   Instead of loading all the modules and components in an application it allows only selected module and components to load thus reducing the loading time. Lazy loading feature loads components, modules, and other files of Angular application only when required. This concept is used in complex and larger applications. Lazy loading concept makes an application very fast and uses less memory.
