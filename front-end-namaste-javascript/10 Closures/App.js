@@ -1,8 +1,8 @@
-function closures() {
+function x() {
   var a = 7;
-  function xyz() {
+  function y() {
     console.log(a);
   }
-  xyz();
+  y();
 }
-closures();
+x();
