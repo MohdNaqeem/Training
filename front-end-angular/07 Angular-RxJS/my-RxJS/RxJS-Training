@@ -1,0 +1,98 @@
+=> what is rxjs?
+   RxJS is a library for composing asynchronous and event based programs by using observable
+   sequences.
+
+=> what is observable?
+   Observables are a powerful feature used extensively in reactive programming to handle asynchronous operations and data streams. Observables provide a way to subscribe to and receive notifications when new data or events are emitted, enabling you to react to changes in real-time.
+
+   # Example 01 
+
+   - Observable :
+       - Its a data stream 
+           - user comes and places an order
+             - order status will change over time // here continously changing
+                 - order status = Order placed
+                 - order status = Order received
+                 - order status = Order processing
+                 - order status = Order submitted
+                 - order status = Order completed
+            - needs to be informed to multiple apps
+
+    - Subscriber :
+       - It will listen to observable for data changes/updates
+        - My app is Dashboard
+         - orderStatus = latest value always - since we have subscribed it.
+
+   # Example 02
+
+      - Youtube channel - CodeSikho tutor
+         Observable
+           - Data is added every single day // I keep uploading video on daily 
+           - Any changes that happen to my channel 
+           - content // which I post 
+               - video 
+               - community message
+
+        subscribed  
+           - you have subscribed my channel 
+           - you get notifications everytime I post a video // there is change in data
+
+        RxJS Operators
+           - Filter // some of you open my video some of you don't open this is called filter.
+           - map // subscribing data and reading all things.
+
+=> Subscribe an observable
+   next: This function is called when the Observable emits a new value. It receives the emitted value as an argument. This is where you typically handle the data emitted by the Observable.
+
+   error: This function is called when the Observable encounters an error. It receives the error object as an argument. This is where you handle error cases, such as failed HTTP requests or other types of errors.
+   ones error function will emits so after this no data will print even complete function also won't call
+
+   complete: This function is called when the Observable completes its emissions and has no more values to emit. It does not receive any arguments. This is where you can perform cleanup or finalization tasks.
+   ones complete function will call after it data won't print whether the data is coming or not.
+         
+=> RxJS Operators 
+   Operators are very important part of RxJS. RxJS library provides a lot of useful operators which help us write clean code and reduce a lot of effort in writting custom logic which leads to many bugs actually.
+
+     - operators are pure functions
+       - A function will also return same value when passed with same input value.
+       - Has no side effects
+
+=> of() operator
+   The of operator takes any number of values as arguments and returns an observable that emits those values in order, one after the other, and then completes. It's essentially a way to convert a list of values into an observable sequence
+
+     - where tu use it ?
+        whenever we want to pass a variable which has to be observable instead of array or string use 
+        of() operator.
+
+=> from() operator
+   The from operator in RxJS is used to create an observable sequence from an array, an iterable, a Promise, an Observable-like object, or a set of values. It emits each item of the source iterable or array, one by one, and then completes.
+
+=> Difference between  of() and from()
+
+   - of
+    > it used to create an observable that emits a sequence of values provided as arguments.
+    > It can accept a variable number of arguments, each of which represents a value to be emitted by the observable.
+    > of emits the provided values synchronously and completes immediately after emitting all the values.
+    > It's commonly used when you have a fixed set of values that you want to emit as part of the observable  sequence.
+
+   - from
+    > it used create an observable from an array, an iterable, a Promise, an Observable-like object, or a set of values. 
+    > It takes the source data structure (array, iterable, etc.) and emits its elements one by one in the observable sequence.
+    > from can be used with arrays, iterables, Promises, Observable-like objects, etc., to convert them into observable sequences.
+    > It's commonly used when you have existing data structures (like arrays or iterables) and you want to work with them as observables.
+
+=> fromEvent()
+   fromEvent operator is used to create an observable that emits events from a DOM element. It allows you to convert DOM events (like mouse clicks, keyboard inputs, etc.) or EventEmitter events into observable streams.
+
+   - Features:
+     Purpose: Creates an observable from events triggered on a DOM element or Node.js EventEmitter.
+     Usage: It takes two arguments:
+     1. The DOM element or EventEmitter object.
+     2. The name of the event you want to listen to (e.g., 'click', 'keyup', 'input', etc.).
+
+=> map operator
+   The map operator is used to transform the items emitted by an observable into another format. It applies a given projection function to each item emitted by the source observable and emits the result.
+
+   - Features:
+     Purpose: Transforms the items emitted by an observable into another format.
+     Usage: It takes a projection function as an argument, which is applied to each item emitted by the source observable
