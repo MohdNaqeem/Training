@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove Duplicate characters from String</title>
+</head>
+
+<body>
+    <h1>Remove Duplicate characters from String</h1>
+    <!-- <p>There are a lot of method to remove Duplicate characters from string we will se some method</p> -->
+    <script>
+        // Remove Duplicate characters from String
+        function removeDuplicateCharacters() {
+            var string = 'Momin Mohd Naqeem'
+            let result = string.split('').filter((item, index, arr) => {
+                return arr.indexOf(item) == index;
+            }).join('');
+            return result;
+        }
+        console.log(removeDuplicateCharacters());
+//-----------------------------------------------------------------------------------------------
+        var demo2 = [1,2,3,2,1,2,3,3,3,11,1,2,3,3,"demo","demo","demo2"]
+        function findDuplicate(array){
+            return array.filter((item,index,arr) => array.indexOf(item) == index)
+        }
+        console.log(findDuplicate(demo2))
+    </script>
+</body>
+
+</html>

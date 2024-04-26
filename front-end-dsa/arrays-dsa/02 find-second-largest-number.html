@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>find second largest number</title>
+</head>
+<body>
+    <h3>find second largest number</h3>
+    <script>
+        // # 1 Approach
+        function secondLargest(arr){
+            const uniqueArr = Array.from(new Set(arr))
+            uniqueArr.sort((a,b)=>{
+                return b - a
+            })
+
+            if (uniqueArr.length >= 2){
+                return uniqueArr[1]
+            }else{
+                return -1
+            }
+        }
+        console.log(secondLargest([1,2,3,4,5,6,8,9,7,9]))
+    </script>
+</body>
+</html>

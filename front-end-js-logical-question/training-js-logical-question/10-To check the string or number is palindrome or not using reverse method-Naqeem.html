@@ -2,23 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To check the string or number is palindrome or not using reverse method</title>
+    <title>Palindrome</title>
 </head>
 <body>
+    <h3>Palindrome</h3>
     <script>
-        function checkPalindrome() {
-            let demo = "madam";
-            let result = demo.toString().split('').reverse().join('')
-            if (demo == result){
+        // A string is a palindrome if it is read the same from forward or backward.
+        // For example, "madam" is a palindrome.'
+        function isPalindrome(){
+            let number = 121
+            let res = number.toString().split('').reverse().join('')
+            if (number == res){
                 console.log("Palindrome")
             }else{
-                console.log("Not a palindrome")
+                console.log("Not Palindrome")
             }
-    
         }
-        checkPalindrome()
+        isPalindrome()
+
+
+        // explanation
         
     </script>
 </body>

@@ -19,7 +19,7 @@
    whenever an execution context is created a lexical scope is also created, lexical enviroment
    is the local memory along with the lexical enviroment of it's parent.
 
-
+ 
    Example of lexical scope:
 
    function parent(){
