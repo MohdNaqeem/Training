@@ -23,15 +23,8 @@
     let variableTest = variableString.split('').reverse().join('').split(' ').reverse().join(' ')
     console.log(variableTest)
 
-    // for practice 
-
-    function removeDuplicates2() {
-      let string2 = "Momin Mohd Naqeem"
-      let result2 = string2.split('').reverse().join('').split(' ').reverse().join(' ')
-      return result2
-    }
-    console.log(removeDuplicates2())
     //-------------------------------------------------------------------------------------------------
+    // Approach 2
     function reverseString(str, substr) {
       return str.split(substr).reverse().join(substr)
     }

@@ -8,12 +8,15 @@
 </head>
 
 <body>
+    <h1>Anagram</h1>
     <script>
         function checkStringsAnagram() {
             var a = "Naqeem";
-            var b = "naqeme"
+            var b = "naqeme";
             let str1 = a.toLowerCase().split('').sort().join('');
             let str2 = b.toLowerCase().split('').sort().join('');
+            // console.log(str1)
+            // console.log(str2)
             if (str1 === str2) {
                 console.log("True");
             }
@@ -22,6 +25,19 @@
             }
         }
         checkStringsAnagram()
+        //-------------------------------------------------------------
+        function chechksAnagram(){
+            var test = "Momin";
+            var test2 = "Nomim";
+            var res1 = test.toLowerCase().split('').sort().join('');
+            var res2 = test2.toLowerCase().split('').sort().join('')
+            if(res1 === res2){
+                console.log("True strings are Anagram")
+            }else{
+                console.log("False strings are not Anagram")
+            }
+        }
+        chechksAnagram()
     </script>
 </body>
 

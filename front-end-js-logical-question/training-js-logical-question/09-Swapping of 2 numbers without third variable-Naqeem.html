@@ -9,6 +9,7 @@
 </head>
 
 <body>
+    <h3>Swapping Variable</h3>
     <script>
         let d = 4;
         let e = 6;
@@ -18,6 +19,16 @@
         d = d - e;
         console.log(d)
         console.log(e)
+        //-------------------------------------------------------------------------------
+        let test = "7"
+        let test2 = "10"
+        console.log("first",test)
+        console.log("second",test2)
+        test =  parseInt(test) + parseInt(test2)
+        test2 = test - parseInt( test2)
+        test = test - test2
+        console.log("ater swapping first",test)
+        console.log("ater swapping second",test2)
     </script>
 </body>
 

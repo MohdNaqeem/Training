@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>Practice</h3>
+    <!-- 
+01-Remove Duplicate characters from String
+02-Remove Duplicate characters from array of element and find the count of an elements using set object
+03-Remove Duplicate characters from array of element using filter
+04 String reverse without reversing of individual words
+05-String reverse with reversing of individual words
+06-String reverse without using inbult function
+07-Anagram
+08-Swapping of 2 numbers with third variable
+09-Swapping of 2 numbers without third variable
+10-To check the string or number is palindrome or not using reverse method
+11-check the string or number is palindrome or not using diving length by 2
+12-To find longest word from a string using functions
+13-To find longest word from a string using (for of)
+14-Find the maximum and minimum element in an array. 
+-->
+    <script>
+        // function removeDuplicateCharacters(){
+        //    var str = "Momin Mohd Naqeem";
+        //    var res = str.split('').filter((item,index,arr)=>{
+        //    return arr.indexOf(item) == index
+        //    }).join('')
+        //    return res
+        // }
+        // console.log(removeDuplicateCharacters())
+
+        // function demo(){
+        //     var str2 = "Momin Mohd Naqeem"
+        //     var res2 = str2.split('').filter((item,index,arr)=>{
+        //         return arr.indexOf(item) == index
+        //     }).join('')
+        //     return res2
+        // }
+        // console.log(demo())
+
+        // var arr = [1,2,1,2,3,4,3,1,3,4,"Hello", "World", "Hello"]
+        // var res = [... new Set(arr)]
+        // console.log(res)
+        // console.log(res.length)
+
+        // function removeDuplicateCharacters(array){
+        //     var demo = [1,2,3,3,2,1,2,3,3,4,5,5,6,7]
+        //     var res = demo.filter((item,index,arr)=>{
+        //         return arr.indexOf(item)==index
+        //     })
+        //     return res
+        // }
+        // console.log(removeDuplicateCharacters())
+
+        // var demo = [1,2,3,4,5,3,21,1]
+        // var res2 = demo.filter((item,index,arr)=>{
+        //    return arr.indexOf(item) == index
+        // })
+        // console.log(res2)
+
+        // var demo = "Momin Mohd Naqeem"
+        // var res = demo.split('').reverse().join('').split(' ').reverse().join(' ')
+        // console.log(res)
+
+        // var str = "Momin Mohd Naqeem"
+        // var res = str.split('').reverse().join('')
+        // console.log(res)
+
+        // function revers(){
+        //     var str = "Momin Mohd Naqeem"
+        //     var res = ""
+        //     for(var i = str.length -1; i>=0; i--){
+        //         res = res + str[i]
+        //     }
+        //     return res
+        // }
+        // console.log(revers())
+
+        // function demo() {
+        //     var str = "Momin"
+        //     var str2 = "NOMIM"
+        //     var res = str.toLowerCase().split('').sort().join('')
+        //     var res2 = str2.toLowerCase().split('').sort().join('')
+        //     if (res == res2) {
+        //         console.log("Is is anagram string")
+        //     } else {
+        //         console.log("Not Anagram")
+        //     }
+        // }
+        // demo()
+
+        // var a = 20
+        // var b = 30
+        // var c = a
+        // console.log("First",a)
+        // console.log("Second",b)
+        // a = b 
+        // b = c
+        // console.log("first",a)
+        // console.log("Second",b)
+
+        // var a = 20;
+        // var b = 30;
+        // a = a + b;
+        // b = a - b;
+        // a = a - b;
+        // console.log(a)
+        // console.log(b)
+
+        function palindrome() {
+            var str = 121;
+            var res = str.toString().split('').reverse().join('')
+            if (str == res){
+                console.log("It is palindrome")
+            }else{
+                console.log("Not palindrome")
+            }
+        }
+        palindrome()
+    </script>
+</body>
+
+</html>

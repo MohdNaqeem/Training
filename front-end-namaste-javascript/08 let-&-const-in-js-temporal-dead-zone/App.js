@@ -12,8 +12,8 @@ var c = 20
 Notes : 
 
 => Are let and const hoisted?
-   let and const are hoisted but its memory is allocated at other place than window(global) which cannot 
-   be accessed before initialisation.
+   let and const are hoisted but its memory is allocated at other place than window(global) 
+   which cannot be accessed before initialisation.
 
 => Difference between var, let and const
    - level of strictness

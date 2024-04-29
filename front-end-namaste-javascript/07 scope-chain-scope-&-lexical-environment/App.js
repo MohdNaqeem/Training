@@ -4,5 +4,5 @@ function a() {
   }
   c();
 }
-var b = 10;
+let b = 10;
 a();

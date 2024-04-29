@@ -13,12 +13,11 @@
    function. Each function creates its own scope, and variables declared within it are not 
    visible outside of that function.
 
-   what is lexical?
+   what is lexical scope?
    Lexical scope is the ability for a function scope to access variables from the parent scope. 
    We call the child function to be lexically bound by that of the parent function. 
    whenever an execution context is created a lexical scope is also created, lexical enviroment
    is the local memory along with the lexical enviroment of it's parent.
-
  
    Example of lexical scope:
 

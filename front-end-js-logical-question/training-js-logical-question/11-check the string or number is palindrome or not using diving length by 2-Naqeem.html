@@ -10,41 +10,33 @@
 
 <body>
     <script>
-        function checkPalindrome() {
-            const demo = "dad";
-            let leng = demo.length
-            for (i = 0; i < leng / 2; i++) {
-                if (demo[i] !== demo[leng - 1 - i]) {
-                    console.log("It is not palindrome")
-                }
-                else {
-                    console.log("palindrome string")
-                }
+        // function checkPalindrome() {
+        //     const demo = "dad";
+        //     let leng = demo.length
+        //     for (i = 0; i < leng / 2; i++) {
+        //         if (demo[i] !== demo[leng - 1 - i]) {
+        //             console.log("It is not palindrome")
+        //         }
+        //         else {
+        //             console.log("palindrome string")
+        //         }
+        //     }
+        // }
+        // checkPalindrome();
+       
+        // For Practice
+       function checkPalindrome2(){
+        const test = "dad";
+        const res = test.length;
+        for(i = 0; i < res/2 ;i++){
+            if(test[i] !== test[res - 1 - i]){
+                console.log("Not Palindrome")
+            }else{
+                console.log("Palindrome")
             }
         }
-        checkPalindrome();
-
-        //    function checkPalindromes(){
-        //    const string = "1234321"
-        //    let len = string.length;
-        //    for (i=0; i<len/2;i++){
-        //      if (string[i]!==string[len-1-i]){
-        //          console.log("Not Palindrome")
-        //      }
-        //      else{
-        //          console.log(" Palindrome")
-        //     }
-        //    }
-        // }
-        // checkPalindromes()
-        
-        function findLongestWord() {
-            var str = "Priya is a goog girl and having hardworking skill"
-            var longestWord = str.split(' ').sort((a, b) => { return b.length - a.length }); //in desc order //from greater to smallest word
-            console.log(longestWord[0]);
-            console.log(longestWord[0].length);
-        }
-        findLongestWord();
+       }
+       checkPalindrome2()
     </script>
 </body>
 
