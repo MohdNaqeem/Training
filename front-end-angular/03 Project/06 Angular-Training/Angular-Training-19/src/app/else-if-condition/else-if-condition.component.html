@@ -1,0 +1,28 @@
+<h1>else-if-condition works</h1>
+<!-- <button (click)="getRed()">Red Button</button>
+<button (click)="getBlue()">Blue Button</button>
+<button (click)="getGreen()">Green Button</button>
+<button (click)="getGray()">Gray Button</button> -->
+
+<button (click)="getColor('1')">Red</button>
+<button (click)="getColor('2')">blue</button>
+<button (click)="getColor('3')">Green</button>
+<button (click)="getColor('4')">Gray</button>
+
+@if(getNumber == '1'){
+<div class="container1"></div>
+}
+
+@else if (getNumber == '2') {
+<div class="container2"></div>
+}
+
+@else if (getNumber == "3") {
+<div class="container3"></div>
+}
+
+@else {
+<div class="container4"></div>
+}
+<hr>
+

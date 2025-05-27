@@ -1,0 +1,18 @@
+<h1>Event handling</h1>
+
+<div>
+  <button (click)="getValue($event)">click me</button>
+</div>
+<br /><br />
+<div>
+  <button (mouseenter)="getValue($event)">Mouse enter</button>
+</div>
+<br /><br />
+<div>
+    <button (mouseleave)="getValue($event)">Mouse leave</button>
+  </div>
+  <br /><br />
+
+  <div>
+    <input type="text" placeholder="type" (input)="getValue($event)">
+  </div> <hr>

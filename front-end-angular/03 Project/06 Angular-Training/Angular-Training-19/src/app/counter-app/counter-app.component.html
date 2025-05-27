@@ -1,0 +1,17 @@
+<h1>Make counter </h1>
+
+<div style="text-align: center;">
+    <h2 class="count">{{count}}</h2>
+    <div>
+        <!-- for seprate function -->
+        <!-- <button class="btn bg-red" (click)="handledecrement()">Decrement</button>
+        <button class="btn bg-black" (click)="reset()">Reset</button>
+        <button class="btn bg-green" (click)="handleIncrement()">Increment</button> -->
+
+        <button class="btn bg-red" (click)="handleCounter('minus')">Decrement</button>
+        <button class="btn bg-black" (click)="handleCounter('')">Reset</button>
+        <button class="btn bg-green" (click)="handleCounter('plus')">Increment</button>
+
+
+    </div>
+</div> <hr>

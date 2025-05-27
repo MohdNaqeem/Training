@@ -1,0 +1,30 @@
+<h1>if else condition</h1>
+
+@if(display){
+<div>
+    <p>This container will show if condition would true</p>
+    <div class="container"></div>
+</div>
+}
+<button (click)="hide()">Hide div</button>
+<button (click)="showDiv()">Show div</button>
+<button (click)="toggle()">Toggle</button> <hr>
+
+@if(x>10){
+<div>
+    <p>This container will show if condition would true</p>
+    <div class="container2"></div>
+</div>
+}
+<button (click)="hideContainer(2)">Hide it</button> <hr>
+
+@if(toggleDiv){
+    <div style="background-color: red; padding: 60px; height: 60px; color: #fff; width: 60px;">
+    </div>
+}
+@else {
+    <div style="background-color: gold; padding: 60px; height: 60px; color: #fff; width: 60px;"></div>
+}
+
+<button (click)="toggleTwo()">{{toggleDiv?'show gold div' : 'show red div'}}</button> <hr>
+

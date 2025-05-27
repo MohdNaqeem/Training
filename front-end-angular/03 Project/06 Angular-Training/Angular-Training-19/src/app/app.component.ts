@@ -1,0 +1,33 @@
+import { Component } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
+import { TrainingDefineDatatypeComponent } from "./training-define-datatype/training-define-datatype.component";
+import { CounterAppComponent } from "./counter-app/counter-app.component";
+import { EventTrainingComponent } from "./event-training/event-training.component";
+import { GetInputComponent } from "./get-input/get-input.component";
+import { ConditionTrainingComponent } from "./condition-training/condition-training.component";
+import { ElseIfConditionComponent } from "./else-if-condition/else-if-condition.component";
+import { SwitchConditionComponent } from "./switch-condition/switch-condition.component";
+import { ForLoopComponent } from "./for-loop/for-loop.component";
+import { SignalsComponent } from "./signals/signals.component";
+
+@Component({
+  selector: 'app-root',
+  standalone: true,
+  imports: [TrainingDefineDatatypeComponent, CounterAppComponent, EventTrainingComponent, GetInputComponent, ConditionTrainingComponent, ElseIfConditionComponent, SwitchConditionComponent, ForLoopComponent, SignalsComponent],
+  templateUrl: './app.component.html',
+  styleUrl: './app.component.css'
+})
+export class AppComponent {
+  title = 'Angular-Training';
+  name = "Angular-Training-19"
+  demo:number = 30
+
+  HandleClicked(){
+    console.log('Function callled')
+  }
+
+
+
+
+  
+}
