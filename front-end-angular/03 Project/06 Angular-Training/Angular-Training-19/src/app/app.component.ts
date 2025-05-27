@@ -8,12 +8,16 @@ import { ConditionTrainingComponent } from "./condition-training/condition-train
 import { ElseIfConditionComponent } from "./else-if-condition/else-if-condition.component";
 import { SwitchConditionComponent } from "./switch-condition/switch-condition.component";
 import { ForLoopComponent } from "./for-loop/for-loop.component";
-import { SignalsComponent } from "./signals/signals.component";
+import { SignalsComponent } from "./signal/signals.component";
+import { SignalTypeComponent } from "./signal-type/signal-type.component";
+import { ComputedSignalComponent } from "./computed-signal/computed-signal.component";
+import { EffectSignalComponent } from "./effect-signal/effect-signal.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [TrainingDefineDatatypeComponent, CounterAppComponent, EventTrainingComponent, GetInputComponent, ConditionTrainingComponent, ElseIfConditionComponent, SwitchConditionComponent, ForLoopComponent, SignalsComponent],
+  imports: [TrainingDefineDatatypeComponent, CounterAppComponent, EventTrainingComponent, GetInputComponent, ConditionTrainingComponent,
+    ElseIfConditionComponent, SwitchConditionComponent, ForLoopComponent, SignalsComponent, SignalTypeComponent, ComputedSignalComponent, EffectSignalComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

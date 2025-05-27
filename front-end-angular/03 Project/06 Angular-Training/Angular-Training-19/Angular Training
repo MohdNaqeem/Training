@@ -254,3 +254,17 @@
 
 => What is interface?
    Observables are a technique for event handling, asynchronous programming, and handling multiple values emitted over time. The observer pattern is a software design pattern in which an object, called the subject, maintains a list of its dependents, called observers, and notifies them automatically of state changes.
+
+=> what is signal ?
+   In Angular, a signal is a reactive variable that holds a value and notifies subscribers automatically when the value changes. It’s a core feature of Angular's new reactivity model introduced in Angular 16.
+
+=> Type of Signal ?
+   there are two types of signal.
+   - WritableSignal 
+     A writable signal holds a value that can be changed (written to) using .set(), .update(), or .mutate().
+
+   - computed 
+     A computed signal is a read-only, derived value that automatically updates when its dependent signals change.
+
+=> what is effect ?
+   An effect is not a signal itself but is used to run side effects (e.g., logging, API calls) whenever one or more signals change.

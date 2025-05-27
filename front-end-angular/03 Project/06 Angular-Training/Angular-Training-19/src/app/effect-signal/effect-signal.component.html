@@ -1,0 +1,27 @@
+<h1>effect-signal works</h1>
+
+@if(displayHeading){
+<h2 style="color: red;">Hello</h2>
+}
+@else{
+condition doesn't matched
+}
+
+<button (click)="toggleDisplay()">get displayHeading</button>
+
+<h3>{{number()}}</h3>
+<button (click)="updateNumber()">update Number</button>
+<hr>
+
+<h2 style="color: red;">Effect use</h2>
+<h2>{{count()}}</h2>
+
+<button (click)="incCount()">Increment</button>
+<button (click)="decCount()">Decrement</button>
+
+@if(displayCount){
+<h2 style="color: red;">condition worked. (after 3 seconde it will gone)</h2>
+}
+@else{
+<h2>condition doesn't matched</h2>
+}
