@@ -1,0 +1,27 @@
+<h1>loop-contextual-variables works</h1>
+@for (user of users; track user;
+let i = $index;
+let f = $first;
+let l = $last;
+let c = $count;)
+{
+
+<!-- @if(f || l){
+<h3 style="background-color: red; color: #fff;">User {{i+1}} : Name : {{user}}</h3>
+ if condition will true then this condition will print 
+}@else {
+<h3>User {{i+1}} : Name : {{user}}</h3>
+} -->
+
+@if($odd){
+<h3 style="background-color: brown; color: #fff;">Odd user Name : {{user}}</h3>
+}@else{
+<h3 style="background-color: burlywood;">Even user : Name {{user}}</h3>
+}
+<!-- <h3>Total array of count {{c}}</h3> -->
+}
+
+@empty() {
+    <h3>No Record Found</h3>
+    <!-- if array would empty then it will print  -->
+}
