@@ -13,12 +13,14 @@ import { SignalTypeComponent } from "./signal-type/signal-type.component";
 import { ComputedSignalComponent } from "./computed-signal/computed-signal.component";
 import { EffectSignalComponent } from "./effect-signal/effect-signal.component";
 import { LoopContextualVariablesComponent } from "./loop-contextual-variables/loop-contextual-variables.component";
+import { TwoWayBindingComponent } from "./two-way-binding/two-way-binding.component";
+import { TodoListComponent } from "./todo-list/todo-list.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [TrainingDefineDatatypeComponent, CounterAppComponent, EventTrainingComponent, GetInputComponent, ConditionTrainingComponent,
-    ElseIfConditionComponent, SwitchConditionComponent, ForLoopComponent, SignalsComponent, SignalTypeComponent, ComputedSignalComponent, EffectSignalComponent, LoopContextualVariablesComponent],
+    ElseIfConditionComponent, SwitchConditionComponent, ForLoopComponent, SignalsComponent, SignalTypeComponent, ComputedSignalComponent, EffectSignalComponent, LoopContextualVariablesComponent, TwoWayBindingComponent, TodoListComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

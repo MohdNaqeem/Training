@@ -1,0 +1,15 @@
+<h1>todo-list works</h1>
+
+<div class="input-bar">
+    <input class="input" type="text" placeholder="Enter your task" [(ngModel)]="task" (keydown.enter)="addTask()">
+    <button class="btn" (click)="addTask()">Add task</button>
+</div>
+<!-- <button (click)="addTask()">Add task</button> -->
+
+@for (task of taskList ; track task.id) {
+<ul class="container-list">
+    <li>{{task.id}}</li>
+    <li>{{task.taskName}}</li>
+    <li><button class="dlt-btn" (click)="deleteTask(task.id)">Delete</button></li>
+</ul>
+}
