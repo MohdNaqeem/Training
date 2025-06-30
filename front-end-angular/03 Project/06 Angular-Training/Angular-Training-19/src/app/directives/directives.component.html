@@ -1,1 +1,22 @@
 <h1>directives works</h1>
+
+<h3>ngFor</h3>
+<ul *ngFor="let x of students">
+    <li>{{x}}</li>
+</ul>
+
+<ol *ngFor="let x of studentsData">
+    <li>{{x.name}}</li>
+    <li>{{x.age}}</li>
+    <li>{{x.email}}</li>
+</ol>
+
+<h1>ngIf</h1>
+
+<div *ngIf="condition; else elseBlock">
+    <a href="#">Login</a>
+</div>
+
+<ng-template #elseBlock>
+    <a href="#">Logout</a>
+</ng-template>
