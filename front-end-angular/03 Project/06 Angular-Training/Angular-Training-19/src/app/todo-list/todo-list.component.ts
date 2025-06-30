@@ -14,6 +14,7 @@ export class TodoListComponent {
 
   addTask(){
     this.taskList.push({id:this.taskList.length+1,taskName:this.task})
+    this.task = ''
   }
 
   deleteTask(taskId:number){

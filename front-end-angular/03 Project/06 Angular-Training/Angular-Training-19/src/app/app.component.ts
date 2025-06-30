@@ -15,12 +15,14 @@ import { EffectSignalComponent } from "./effect-signal/effect-signal.component";
 import { LoopContextualVariablesComponent } from "./loop-contextual-variables/loop-contextual-variables.component";
 import { TwoWayBindingComponent } from "./two-way-binding/two-way-binding.component";
 import { TodoListComponent } from "./todo-list/todo-list.component";
+import { DynamicStyleComponent } from "./dynamic-style/dynamic-style.component";
+import { DirectivesComponent } from "./directives/directives.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [TrainingDefineDatatypeComponent, CounterAppComponent, EventTrainingComponent, GetInputComponent, ConditionTrainingComponent,
-    ElseIfConditionComponent, SwitchConditionComponent, ForLoopComponent, SignalsComponent, SignalTypeComponent, ComputedSignalComponent, EffectSignalComponent, LoopContextualVariablesComponent, TwoWayBindingComponent, TodoListComponent],
+    ElseIfConditionComponent, SwitchConditionComponent, ForLoopComponent, SignalsComponent, SignalTypeComponent, ComputedSignalComponent, EffectSignalComponent, LoopContextualVariablesComponent, TwoWayBindingComponent, TodoListComponent, DynamicStyleComponent, DirectivesComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
