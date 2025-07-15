@@ -1,14 +1,15 @@
-import { NgFor, NgIf } from '@angular/common';
+import { NgFor, NgIf, NgSwitch, NgSwitchCase, NgSwitchDefault } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-directives',
   standalone: true,
-  imports: [NgFor, NgIf],
+  imports: [NgFor, NgIf, NgSwitch,NgSwitchCase, NgSwitchDefault],
   templateUrl: './directives.component.html',
   styleUrl: './directives.component.css',
 })
 export class DirectivesComponent {
+  // ngFor
   students = ['Momin', 'Naqeem', 'Raza', 'Mohammad'];
 
   studentsData = [
@@ -39,5 +40,14 @@ export class DirectivesComponent {
     },
   ];
 
+  // ngIf
   condition = false
+
+  // ngSwitch
+  color = 'White'
+
+  chnageColor(color:string){
+    this.color = color
+  }
+  
 }

@@ -20,3 +20,20 @@
 <ng-template #elseBlock>
     <a href="#">Logout</a>
 </ng-template>
+
+<h1>ngswtich</h1>
+
+<button (click)="chnageColor('Red')">Red</button>
+<button (click)="chnageColor('Blue')">blue</button>
+<button (click)="chnageColor('Yellow')">Yellow</button>
+<button (click)="chnageColor('Pink')">pink</button>
+<button (click)="chnageColor('Green')">Green</button>
+
+<div [ngSwitch]="color">
+    <h2 style="background-color: red;" *ngSwitchCase="'Red'">Red Color</h2>
+    <h2 style="background-color: blue;" *ngSwitchCase="'Blue'">Blue Color</h2>
+    <h2 style="background-color: yellow;" *ngSwitchCase="'Yellow'">Yellow Color</h2>
+    <h2 style="background-color: pink;" *ngSwitchCase="'Pink'">Pink Color</h2>
+    <h2 style="background-color: green;" *ngSwitchCase="'Green'">Green Color</h2>
+    <h2 *ngSwitchDefault>No Color matched</h2>
+</div>
