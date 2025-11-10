@@ -1,0 +1,93 @@
+// => Operators are for Mathematical and Logical Computations:
+
+//     The Assignment Operator = assigns values
+//     The Addition Operator + adds values
+//     The Multiplication Operator * multiplies values
+//     The Comparison Operator > compares values
+// ---------------------------------------------------------------------------------------------------------------------
+// => Types of JavaScript Operators:
+//    There are different types of JavaScript operators:
+
+//     Arithmetic Operators 
+//     Assignment Operators
+//     Comparison Operators
+//     Logical Operators
+//     And more ...
+// ---------------------------------------------------------------------------------------------------------------------
+// => Arithmethic Operators:
+//    Arithmetic Operators are used to perform arithmetic on numbers:
+
+//    Operator	     Description
+//       +	          Addition
+//       -	          Subtraction
+//       *	          Multiplication
+//       **	      Exponentiation
+//       /	          Division
+//       %	          Modulus (Division Remainder)
+//       ++	      Increment
+//       --	      Decrement
+
+//     Example: 
+//     let a = 3;
+//     let x = (100 + 50) * a; // 150 output
+// ---------------------------------------------------------------------------------------------------------------------
+// => JavaScript Assignment Operators:
+//    Assignment operators assign values to JavaScript variables.
+
+//    The Addition Assignment Operator (+=) adds a value to a variable.
+//    Example:
+//    let x = 10;
+//    x += 5; // output 15 
+
+//    Operator	                 Example	                       Same As
+//      =	                      x = y	                             x = y
+//      +=	                      x += y	                         x = x + y
+//      -=	                      x -= y	                         x = x - y
+//      *=	                      x *= y	                         x = x * y
+//      /=	                      x /= y	                         x = x / y
+//      %=	                      x %= y	                         x = x % y
+//      **=	                  x **= y	                         x = x ** y
+
+// ---------------------------------------------------------------------------------------------------------------------
+
+// => Comparison Operators:
+//    Comparison operators are used to compare two values. Comparison operators always return true or false.
+
+//    Example: 
+//    let x = 5;
+//    let result = x > 8; // output false (five is not greater than 8)
+
+//    Operator   	  Description	                       Example
+//     ==	           equal to	                            x == 5
+//     ===	           equal value and equal type	        x === 5
+//     !=	           not equal	                        x != 5
+//     !==	           not equal value or not equal type	x !== 5
+//     >	           greater than	                        x > 5
+//     <	           less than	                        x < 5
+//     >=	           greater than or equal to	            x >= 5
+//     <=	           less than or equal to	            x <= 5
+
+// ---------------------------------------------------------------------------------------------------------------------
+
+// => Logical Operators:
+
+//    Operator	      Description
+//     &&	          logical and
+//     ||	          logical or
+//     !	          logical not
+
+---------------------------------------------------------------------------------------------------------------------
+// => Ternary Operators:
+      The ternary operator is a shortcut for writing simple if-else conditions.
+      It is used to check a condition and return a value based on whether the condition is true or false.
+
+      Example: 
+      let age = 18;
+      let message = age >= 18 ? "You are an Adult" : "You are a Minor"; // Output: "You are an Adult" (because condition is true)
+
+      Part of Ternary	          Meaning
+       condition	               The expression to test (returns true/false)
+       ?	                       Separator for true part
+       value_if_true	           Returned when condition is true
+       :	                       Separator between true and false
+       value_if_false	           Returned when condition is false
