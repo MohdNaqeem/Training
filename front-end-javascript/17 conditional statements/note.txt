@@ -1,0 +1,29 @@
+=> Conditional Statements:
+   Conditional statements are used to make decisions in a program.
+   They allow a program to execute different code based on a condition (true/false).
+
+=> In JavaScript, the main conditional statements are:
+    - if
+    - if...else
+    - if...else if...else
+    - switch
+---------------------------------------------------------------------------------------------------------------------
+
+=>  if Statement:
+    Used when we want to run a block of code only if a condition is true.
+
+---------------------------------------------------------------------------------------------------------------------
+
+=> if...else Statement:
+   Used when we want one block to run if condition is true, 
+   and another block if condition is false.
+
+---------------------------------------------------------------------------------------------------------------------
+
+=> if...else if...else Statement:
+   Used when there are multiple conditions.
+
+---------------------------------------------------------------------------------------------------------------------
+
+=> switch Statement:
+   Used when we compare one value with multiple cases.

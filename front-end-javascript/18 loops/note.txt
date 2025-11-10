@@ -1,0 +1,30 @@
+=> Loops:
+   Loops are used to repeat a block of code multiple times.
+   They help in reducing repetition and make the code shorter & cleaner.
+
+=> Types of loops in JavaScript:
+
+    - for loop
+    - while loop
+    - do...while loop
+    - for...of loop
+    - for...in loop
+---------------------------------------------------------------------------------------------------------------------
+=> for loop:
+   Used when we know how many times to repeat the code.
+
+   for (initialization; condition; increment/decrement) {
+    code to execute repeatedly
+    }
+---------------------------------------------------------------------------------------------------------------------
+=> while Loop:
+    Used when we don't know the exact number of repetitions, but we know the condition to stop.
+
+=> do while loop:
+   This loop runs the code at least once, even if the condition is false.
+
+=> for...of Loop
+   Used to loop through values of an Array or String.
+
+=> for...in Loop
+   Used to loop through properties/keys in an Object.
