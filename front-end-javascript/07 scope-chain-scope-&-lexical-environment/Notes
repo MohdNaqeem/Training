@@ -1,0 +1,42 @@
+/*
+=> What is scope?
+   Scope mean where we can access a specific variable and function in our code that is scope. 
+   javascript has two types of scope.
+   
+   Global Scope:
+   Variables declared outside of any function, or declared with the var keyword at the top level 
+   of a script, have global scope. Global variables can be accessed and modified from anywhere 
+   within the script, including inside functions.
+
+   Local Scope:
+   Variables declared inside a function have local scope and are only accessible within that 
+   function. Each function creates its own scope, and variables declared within it are not 
+   visible outside of that function.
+
+   what is lexical scope?
+   Lexical scope is the ability for a function scope to access variables from the parent scope. 
+   We call the child function to be lexically bound by that of the parent function. 
+   whenever an execution context is created a lexical scope is also created, lexical enviroment
+   is the local memory along with the lexical enviroment of it's parent.
+ 
+   Example of lexical scope:
+
+   function parent(){
+      function child(){
+         console.log(b); // Output: 10
+      }
+      child();
+   }
+   var b = 10;
+   parent()
+
+   here we have created one parent function and inside this function we have created child function
+   which is lexical of parent and here child is able to access variable b becaue of lexical scope
+
+   so when child function will be run so it treis to find variable b inside local scope and it 
+   won't be there then it will go parent function through of lexical reference because child is 
+   lexical of parent so it will search inside parent and b also won't there then it will go global
+   scope because parent is lexical of global and b is there then it will print 10 in console.
+   so this is lexical scope.
+*/  
+  

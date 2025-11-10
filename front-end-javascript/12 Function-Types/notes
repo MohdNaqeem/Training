@@ -1,0 +1,85 @@
+/*
+=> What is statement function?
+   a function statement is one way to define a function. It is also referred to as a function 
+   declaration.
+   Syntax :
+   function a(){
+    console.log("A called")
+   }
+
+=> What is function expression?
+   When we assign function into an variable that's called function expression.
+   Syntax:
+   var b = function (){
+    console.log("b called")
+   }
+
+=> what is a difference between statement function and function expression?
+   (1)first difference is syntax.
+   Function Statement (Declaration):
+   function add(a, b) {
+    return a + b;
+   }
+
+   Function Expression:
+   const add = function(a, b) {
+    return a + b;
+   };
+
+   (2)Second difference is Hoisting.
+   Function Statement:
+   Function statements are hoisted to the top of their containing scope during the compilation 
+   phase. This means that you can call the function before its actual declaration in the code.
+
+   Function Expression:
+   Function expressions are not hoisted in the same way as statements. If you try to call a 
+   function expression before its declaration, you'll get an error.
+
+   (3)third difference is Use Cases
+   Function Statement:
+   Function statements are typically used for named functions in the global scope or within a 
+   block scope.
+
+   Function Expression:
+   Function expressions are often used when you need to assign a function to a variable, pass a 
+   function as an argument to another function, or create functions dynamically.
+
+
+=> What is anonymous function?
+   anonymous function in JavaScript is a function without a specified name. It is often used in 
+   situations where a function is needed temporarily or as an argument to another function. 
+   Anonymous functions are created using function expressions, and they don't have a function 
+   name.
+
+=> What is named function expression?
+   Named Function Expression (NFE) in JavaScript is a function expression that has a name. The 
+   primary advantage of a Named Function Expression is that it provides a reference to the 
+   function inside its own body, which can be useful for self-referencing or debugging.
+   Syntax: 
+   const myFunction = function functionName(parameters) {
+    // function body
+    // code to be executed
+   }; 
+
+=> what is difference between parameters and agrguments ?
+   Parameters:
+   Parameters behave like placeholders for the values that the function will receive when it is 
+   called
+
+   Arguments:
+   Arguments are the actual values that are passed into a function when it is called.
+
+=> What is first class function?
+   The ability to use function as values and can be pass this is an argument to another function
+   and can be returned from the functions is this ability is known as first class function.
+
+=> What is arrow function?
+
+
+=> Higher order function
+   A function which takes another function as an argument and return function from it it's known 
+   as higher order function.
+   
+
+   
+*/
