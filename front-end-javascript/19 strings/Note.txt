@@ -1,0 +1,104 @@
+=> Strings: Strings are for storing text Strings are written with quotes
+
+=> String methods:
+   Javascript strings are primitive and immutable: All string methods produce a new string 
+   without altering the original string.
+--------------------------------------------------------------------------------------------------
+
+   - String length: Returns the count of characters in a string.
+
+   Example: 
+   let str = "Hello";
+   console.log(str.length); // 5
+--------------------------------------------------------------------------------------------------
+
+   - String charAt(): Returns the character at a given index.
+
+   Example:
+   let str = "Hello";
+   console.log(str.charAt(1)); // e
+--------------------------------------------------------------------------------------------------
+
+   - String charCodeAt(): Returns the ASCII/Unicode number of a character at a given index.
+
+   Example:
+   let str = "A";
+   console.log(str.charCodeAt(0)); // 65
+--------------------------------------------------------------------------------------------------
+
+   - String codePointAt(): Returns the Unicode code point value of a character.
+
+   Example:
+   let str = "😀";
+   console.log(str.codePointAt(0)); // 128512
+--------------------------------------------------------------------------------------------------
+
+   - toUpperCase(): Converts to uppercase.
+
+   Example:
+   console.log("hello".toUpperCase()); // HELLO
+--------------------------------------------------------------------------------------------------
+
+   - toLowerCase(): Converts to lowercase.
+
+   Example: console.log("HELLO".toLowerCase()); // hello
+--------------------------------------------------------------------------------------------------
+
+   - trim(): Removes spaces from both ends.
+
+   Example: 
+   console.log("  Hi  ".trim()); // Hi
+--------------------------------------------------------------------------------------------------
+
+   - slice(): Extracts part of string (supports negative index).
+
+   Example:
+   let str = "JavaScript";
+   console.log(str.slice(0, 4)); // Java
+   console.log(str.slice(-6)); // Script
+--------------------------------------------------------------------------------------------------
+
+   - substring(): Extracts part of string (no negative index).
+
+   Example: 
+   let str = "JavaScript";
+   console.log(str.substring(0, 4)); // Java
+--------------------------------------------------------------------------------------------------
+
+   - replace(): Replaces first match.
+
+   Example: 
+   let str = "apple apple";
+   console.log(str.replace("apple", "mango")); // mango apple
+--------------------------------------------------------------------------------------------------
+
+   - replaceAll(): Replaces all matches.
+
+   Example: 
+   let str = "apple apple";
+   console.log(str.replaceAll("apple", "mango")); // mango mango
+--------------------------------------------------------------------------------------------------
+
+   - split(): Turns string into an array.
+
+   Example: 
+   let str = "a,b,c";
+   console.log(str.split(",")); // ["a","b","c"]
+--------------------------------------------------------------------------------------------------
+
+   - concat(): Joins strings.
+
+   Example: 
+   console.log("Hello".concat(" ", "World")); // Hello World
+--------------------------------------------------------------------------------------------------
+
+   - repeat(): Repeats a string.
+
+   Example: 
+   console.log("Hi ".repeat(3)); // Hi Hi Hi
+--------------------------------------------------------------------------------------------------
+
+=> Template Literals: 
+   Template Literals are special strings in JavaScript written using backticks (`).
+   They allow us to insert variables directly inside a string using the syntax ${variable}.
+   This is called String Interpolation.
