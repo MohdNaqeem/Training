@@ -102,3 +102,6 @@
    Template Literals are special strings in JavaScript written using backticks (`).
    They allow us to insert variables directly inside a string using the syntax ${variable}.
    This is called String Interpolation.
+ 
+   Note: Template Literals ( ` ` ) are better than "+" concatenation because they improve 
+   readability and allow variable insertion using ${variable}.

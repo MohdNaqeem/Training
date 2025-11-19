@@ -1,0 +1,5 @@
+=> Array:
+   An Array is an object type designed for storing data collections.
+   It is used when we want to store multiple items such as numbers or strings in an organized 
+   list. Each value in an array is called an element and every element has an index number, 
+   which starts from 0.

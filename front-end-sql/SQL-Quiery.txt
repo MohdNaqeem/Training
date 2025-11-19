@@ -1,13 +1,20 @@
 Server namee : DESKTOP-FL8TUPC\SQLEXPRESS
 
-=> Create Database using query
-   create database DatabaseName;
-   whether you create database using a query or graphically it will create 2 files
-   1 .MDL file-Data file (Contains actual data)
-   2. LDL file-Transiction Log File (Used to recover the database)
+=> Creating altering and dropping a database(video 01):
 
-=> Rename Database 
-   Alter Database DatabaseName Modify Name = RenameDatabase
+   # A SQL Server database can be created, altered, and dropped throug 2 way    
+     01. Graphically using SQL Server Management Studio (SSMS), or
+     02. Using a Query 
   
-   by stored procudure 
-   sp_renameDB 'DatabaseName', 'RenameDatabase'
+   # To create the database using a query
+     Create database DatabaseName
+ 
+   # Whether you create a database graphically using the designer or using a query, the following two files get generated:
+     01. .MDF file – Data File (contains actual data)
+     02. .LDF file – Transaction Log File (used to recover the database)
+
+   # To alter a database once it’s created:
+     Alter database DatabaseName Modify Name = NewDatabaseName
+
+   # Alternatively, you can also use system stored procedure
+     Execute sp_renameDB 'OldDatabaseName', 'NewDatabaseName'
