@@ -6,15 +6,31 @@ Server namee : DESKTOP-FL8TUPC\SQLEXPRESS
      01. Graphically using SQL Server Management Studio (SSMS), or
      02. Using a Query 
   
-   # To create the database using a query
+   > To create the database using a query
      Create database DatabaseName
  
-   # Whether you create a database graphically using the designer or using a query, the following two files get generated:
+   > Whether you create a database graphically using the designer or using a query, the following two files get generated:
      01. .MDF file – Data File (contains actual data)
      02. .LDF file – Transaction Log File (used to recover the database)
 
-   # To alter a database once it’s created:
+   > To alter a database once it’s created:
      Alter database DatabaseName Modify Name = NewDatabaseName
 
-   # Alternatively, you can also use system stored procedure
+   > Alternatively, you can also use system stored procedure
      Execute sp_renameDB 'OldDatabaseName', 'NewDatabaseName'
+
+   # Deleting or Dropping a Database:
+     
+   > To Delete or Drop a database:
+
+     Dropping a database deletes the LDF and MDF files. You cannot drop a database if it is currently in use.
+     Query : Drop Database DatabaseThatYouWantToDrop
+
+     So, if other users are connected, you need to put the database in single user mode and then drop the database. With Rollback Immediate option,
+     it will rollback all incomplete transactions and close the connection to the database.
+
+     Quesry : Alter Database DatabaseName Set SINGLE_USER With Rollback Immediate
+
+     Note: System databases cannot be dropped.
+
+=>   Creating and working with tables(video 03):

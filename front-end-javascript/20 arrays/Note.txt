@@ -3,3 +3,53 @@
    It is used when we want to store multiple items such as numbers or strings in an organized 
    list. Each value in an array is called an element and every element has an index number, 
    which starts from 0.
+
+=> Array Methods:
+
+   - Array length:
+     Returns the total number of elements in the array.
+
+   - Array toString()
+     Converts the array into a comma-separated string.
+
+   - Array at()
+     Returns the element at a specific index (supports negative index too).
+
+   - Array join()
+     Joins all array elements into a single string with a custom separator.
+
+   - Array pop()
+     Removes the last element from the array and returns it.
+
+   - Array push()
+     Adds a new element at the end of the array and returns new length.
+
+   - Array shift()
+     Removes the first element of the array and returns it.
+
+   - Array unshift()
+     Adds a new element at the beginning and returns new length.
+
+   - Array isArray()
+     Checks whether the value is an array or not → returns true/false.
+
+   - Array delete()
+     Deletes an element from an array index but does not change length (leaves empty spot). (Not recommended method)
+
+   - Array concat()
+     Merges two or more arrays and returns a new array.
+
+   - Array copyWithin()
+     Copies part of the array to another position in the same array (overwrites values).
+
+   - Array flat()
+     Flattens a nested array → converts it into a single-level array.
+
+   - Array slice()
+     Returns a new array containing selected elements (does NOT change original array).
+
+   - Array splice()
+     Adds/removes elements from an array (changes the original array).
+
+   - Array toSpliced()
+     Same as splice(), but returns a new array without modifying the original one.
