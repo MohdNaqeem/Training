@@ -1,0 +1,39 @@
+=> Function :
+   Functions is a block of code that performs a specific task, it can be invoked(call) whenever needed.
+
+   - parameters
+
+     Parameters are placeholders inside the function. They don’t have real values until the function is called.
+
+     values we pass into the function, that is parameters. values like a local variable, it has block scope and can be access only 
+     inside function.
+
+   - arguments 
+     Arguments are the actual values we pass into the function when calling it.
+
+   - return
+     The return keyword sends a value back from the function to wherever it was called.
+
+=> Example :
+
+    function calculateTotal(price, quantity) {
+        let total = price * quantity;
+         return total;   
+    }
+    
+=> forEach :
+   forEach executes a given function once for every element in the array in order.
+   forEach is NOT a loop by itself. It is a function (a method) that runs a callback function on every element of an array.
+
+   - Basic Syntax
+    
+        array.forEach(function(element, index, array) {
+               // code
+       });
+   
+   - Parameters of the callback function
+     element → current value
+
+     index (optional) → position of the element
+
+     array (optional) → the original array
