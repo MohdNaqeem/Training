@@ -1,0 +1,189 @@
+=> Window Object :
+   The window object represents an open window in a browser. It is browser’s object (not JavaScript’s) 
+   & is automatically created by browser. It is a global object with lots of properties & methods.
+
+=> What is DOM :
+   When a web page is loaded, the browser creates a Document Object Model (DOM) of the page.
+
+   Example : 
+    window
+  └── document
+       └── html
+            ├── head
+            │     ├── meta
+            │     ├── meta
+            │     ├── title
+            │     └── link
+            │
+            └── body
+                  ├── div
+                  │     ├── img
+                  │     ├── h1
+                  │     ├── p
+                  │     └── div
+                  │
+                  └── script
+
+=> why we don't add script file before body :
+   We don’t add script before body because it blocks the page from loading and the DOM elements don’t exist yet, so JavaScript 
+   can’t access them.
+
+=> DOM manipulation :
+   DOM Manipulation means using JavaScript to change the webpage after it has loaded. The browser converts HTML into a DOM 
+   (Document Object Model), and JavaScript can access and modify this DOM.
+
+=> DOM methods :
+   
+   01 getElementById():
+      What it is: Selects an element using its unique ID.
+      Why use: Select ONE element by ID.
+      Returns: Single element (or null if not found).
+      Affects HTML: Does NOT change structure.
+
+   02 getElementsByClassName():
+      What it is: Selects all elements with the same class name.
+      Why use: Select multiple elements with same class.
+      Returns: HTMLCollection (live).
+      Affects HTML: Does NOT change structure.
+
+   03 getElementsByTagName():
+      What it is: Selects elements by their tag (p, div, h1, li…).
+      Why use: Select elements by tag (p, div, li).
+      Returns: HTMLCollection (live).
+      Affects HTML: Does NOT change structure.
+
+   04 querySelector():
+      What it is: Selects the first element matching a CSS selector.
+      Why use: Select the first matching element using CSS selector.
+      Returns: Single element (or null).
+      Affects HTML: No structural change.
+
+   05 querySelectorAll():
+      What it is: Selects all elements matching a CSS selector.
+      Why use: Select all matching elements using CSS selector.
+      Returns: NodeList (static).
+      Affects HTML: No structural change.
+
+   06 innerText:
+      What it is: Property that reads/changes *visible* text inside an element.
+      Why use: Read/change visible text inside an element.
+      Returns: The visible text.
+      Affects HTML: Only changes text content, not structure.
+
+   07 innerHTML:
+      What it is: Property used to read or replace HTML inside an element.
+      Why use: Replace or read HTML inside an element.
+      Returns: HTML string.
+      Affects HTML: YES — can change structure, remove old children, add new ones.
+
+   08 style:
+      What it is: Inline CSS control for an element.
+      Why use: Change CSS from JS.
+      Returns: Inline style object.
+      Affects HTML: Adds inline CSS, does NOT change structure.
+
+   09 setAttribute():
+      What it is: Method to add or update an attribute.
+      Why use: Add/update attributes like src, href, id, class.
+      Returns: Nothing.
+      Affects HTML: Updates attributes only, structure stays same.
+
+   10 getAttribute():
+      What it is: Method to read the value of an attribute.
+      Why use: Read the value of an attribute.
+      Returns: Attribute value (string).
+      Affects HTML: No change.
+
+   11 classList.add():
+      What it is: Adds a new CSS class to an element.
+      Why use: Add a CSS class.
+      Returns: Nothing.
+      Affects HTML: Updates class, structure stays same.
+
+   12 classList.remove():
+      What it is: Removes a CSS class from an element.
+      Why use: Remove a CSS class.
+      Returns: Nothing.
+      Affects HTML: Updates class, structure stays same.
+
+   13 classList.toggle():
+      What it is: Adds class if missing, removes if present.
+      Why use: Add/remove class automatically.
+      Returns: true (added) or false (removed).
+      Affects HTML: No structural change.
+
+   14 createElement():
+      What it is: Creates a new element in memory (not yet in DOM).
+      Why use: Create a new HTML element in memory.
+      Returns: New element object.
+      Affects HTML: NOT until you append it.
+
+   15 appendChild():
+      What it is: Appends an element as a child to another element.
+      Why use: Add a new element as the last child.
+      Returns: The added element.
+      Affects HTML: YES — modifies structure by adding nodes.
+
+   16 remove():
+      What it is: Removes the selected element from the DOM.
+      Why use: Remove an element from the DOM.
+      Returns: Nothing.
+      Affects HTML: YES — removes the element completely.
+
+   17 addEventListener():
+      What it is: Attaches an event handler to an element.
+      Why use: Attach event handlers like click, keyup, submit.
+      Returns: Nothing.
+      Affects HTML: No structure change — only behavior changes.
+
+   18 textContent:
+      What it is: A property that reads or sets ALL text inside an element (including hidden text).
+      Why use: To get or change full textual content without caring about visibility or styling.
+      Returns: The complete text inside the element.
+      Affects HTML: Only changes text, does NOT affect structure.
+
+=> DOM Node Types :
+   The DOM is not only made of elements — it has three main node types.
+
+   01 Element Node : These are actual HTML tags. Element nodes represent HTML tags.
+
+      Example: 
+      <div>, <p>, <img>, <h1>
+
+   02 Text Node : Text nodes store the actual text (including spaces/newlines).
+      
+      Example:
+      <p>Hello</p>
+      <p> → element node
+      "Hello" → text node
+
+   03 Comment Node : Comment nodes store comments.
+
+      Example:
+      <!-- This is a comment -->
+
+=> What is firstChild :
+   Returns the first child node (could be text, comment, or element).
+
+   Example:
+        <ul id="list">
+           <li>One</li>
+           <li>Two</li>
+        </ul>
+   If there is EMPTY SPACE or a NEWLINE inside <ul>, then:
+   list.firstChild → text node (newline)
+   list.firstElementChild → <li>One</li> (element node)
+
+=> What is lastChild :
+   Returns the last child node (could be text, comment, or element).
+
+   Example:
+        <ul id="list">
+           <li>One</li>
+           <li>Two</li>
+        </ul>
+   list.lastChild → text node (newline)
+   list.lastElementChild → <li>Two</li> (element node)
+
+
+      
