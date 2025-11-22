@@ -27,7 +27,7 @@
 => why we don't add script file before body :
    We don’t add script before body because it blocks the page from loading and the DOM elements don’t exist yet, so JavaScript 
    can’t access them.
-
+--------------------------------------------------------------------------------------------------------------------------------------
 => DOM manipulation :
    DOM Manipulation means using JavaScript to change the webpage after it has loaded. The browser converts HTML into a DOM 
    (Document Object Model), and JavaScript can access and modify this DOM.
@@ -141,7 +141,21 @@
       Why use: To get or change full textual content without caring about visibility or styling.
       Returns: The complete text inside the element.
       Affects HTML: Only changes text, does NOT affect structure.
+--------------------------------------------------------------------------------------------------------------------------------------
+=> Insert element into HTML :
 
+   01 node.append(el):
+      Adds a new element at the end of the selected element (INSIDE).
+
+   02 node.prepend(el):
+      Adds a new element at the start of the selected element (INSIDE).
+
+   03 node.before(el):
+      Adds a new element BEFORE the selected element (OUTSIDE).
+
+   04 node.after(el):
+      Adds a new element AFTER the selected element (OUTSIDE).
+--------------------------------------------------------------------------------------------------------------------------------------
 => DOM Node Types :
    The DOM is not only made of elements — it has three main node types.
 
@@ -161,7 +175,7 @@
 
       Example:
       <!-- This is a comment -->
-
+--------------------------------------------------------------------------------------------------------------------------------------
 => What is firstChild :
    Returns the first child node (could be text, comment, or element).
 
@@ -184,6 +198,8 @@
         </ul>
    list.lastChild → text node (newline)
    list.lastElementChild → <li>Two</li> (element node)
+
+=> appendChild
 
 
       
