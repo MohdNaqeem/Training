@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>Event</h1>
+
+    <!-- inline event handling -->
+    <button onclick="console.log('button was clicked');alert('hello!')">Click me!</button>
+    <button ondblclick="console.log('button clicked 2x')">click 2 times!</button>
+    <div class="box" onmouseover="console.log('you are inside div')">This is a box</div>
+
+    <!-- event handling using js -->
+    <button id="btn1">JS button</button>
+    <button id="btn2">JS button2</button>
+    <button id="btn3">JS button3</button>
+
+    <!-- removeEventListener -->
+     <button id="hidebtn">click and remove this button</button>
+
+     <!-- Practice -->
+      <button id="bgColor">change background color</button>
+      <button id="hover">hover and change color</button>
+
+    <script src="App.js"></script>
+</body>
+
+</html>

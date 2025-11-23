@@ -1,0 +1,18 @@
+=> What is Event:
+   A browser-generated notification that something has occurred (like click, scroll, keypress), which JavaScript can listen to and 
+   respond with predefined actions.
+
+=> Event Listener:
+   A function that waits for an event and executes code when that exact event happens.
+
+=> Why Events Exist:
+   Without events, a webpage is dead. Buttons wouldn’t work, forms wouldn’t submit, menus wouldn’t open — nothing would respond.
+
+=> What is the Event Object:
+   The event object is a special JavaScript object automatically created by the browser every time an event happens.
+   It contains full information about what happened, where it happened, and how it happened.
+
+=> removeEventListener:
+   removeEventListener() is a DOM method used to remove an event listener that was attached with addEventListener(), preventing the 
+   callback function from executing when the event occurs. It requires the exact same event type and function reference used during 
+   registration.
