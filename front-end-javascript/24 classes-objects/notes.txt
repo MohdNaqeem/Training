@@ -1,0 +1,26 @@
+=> What is object ?
+   An object in JavaScript is a collection of key–value pairs used to store data and behavior. Each key is called a property, and if 
+   a value is a function, it’s called a method. can inherit from another object through prototypes.
+
+   - In simple term (inherit from another object): 
+   If an object doesn’t have something (a property or method), it can borrow it from another object it is linked to. JavaScript objects 
+   are connected like a chain. If one object doesn’t know something, it looks “up the chain” to another object.
+
+   - JavaScript objects have a special property called prototype. we can set prototype using __proto__
+
+   - If objects & prototype have same method, objects method will be used.
+
+=> what is class ?
+   A class is a predefined blueprint that lets you generate multiple objects with consistent behavior and shared methods.
+
+=> what is constructor?
+   A constructor is a special method inside a class that initializes the object’s properties when a new instance is created.
+
+=> Why constructor invoked automatically ?
+   Every class has a constructor. Even if we don’t define one, JavaScript automatically provides an empty default constructor. That’s 
+   why it always appears in the prototype.
+
+=> what is inheritance ?
+   Inheritance in JavaScript is the mechanism where one object or class can access the properties and methods of another through the 
+   prototype chain.
+
