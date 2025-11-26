@@ -1,3 +1,5 @@
+# Episode 01 
+
 => What is CDN (Content Delivery Network) ?
    A CDN is a network of servers placed around the world that deliver files (CSS, JS, images, videos) to users faster by serving them 
    from the nearest server location.
@@ -48,3 +50,38 @@
 => Difference between Library and framework.:
    A library gives you tools to use when you want, while a framework gives you the entire structure and controls how your application 
    should run.
+----------------------------------------------------------------------------------------------------------------------------------------
+# Episode 02
+
+=> What is npm ?
+   NPM is a tool that allows us to download, install, manage, and update JavaScript packages (libraries, tools, frameworks).
+
+=> what is package.json?
+   package.json is the main configuration file for any Node.js or JavaScript project. It stores all the project information, 
+   settings, and the list of dependencies (libraries) the project needs.
+
+=> What are dependencies in package.json?
+   dependencies are the main packages your project needs to run in production. These are required for your app to work normally 
+   both during development and after deployment.
+
+   Type of dependencies:
+   01 dependencies:
+      These are the real, required, production dependencies.
+
+   02 devDependencies:
+      These are packages used only during development not needed in production.
+
+=> what is Caret ^ ?
+   updates automatically minor versions
+
+=> what is Tilde ~?
+   updates automatically major versions 
+
+=> What is package-lock.json?
+   It locks the exact versions of every dependency
+
+=> What is node_modules?
+   This is the actual folder containing every installed package your project uses.  
+
+=> What is parcel ?
+   It’s a tool that builds our project by taking all our files and turning them into optimized output for the browser.
