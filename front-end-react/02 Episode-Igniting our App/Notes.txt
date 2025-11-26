@@ -83,5 +83,18 @@
 => What is node_modules?
    This is the actual folder containing every installed package your project uses.  
 
+   - what is parcel doing :
+     It’s creates dev build for us
+     It’s creates local server for us
+     It’s automatically refresh the browser (its giving HMR)
+     It’s watches algorithms.
+     It’s faster builds 
+     It’s bundling.
+     It’s give good error handling.
+     Tree shaking. (It’s remove unused code)
+
 => What is parcel ?
    It’s a tool that builds our project by taking all our files and turning them into optimized output for the browser.
+
+=> What is npx ?
+   npx is a command that runs packages without installing them globally.

@@ -1,3 +1,6 @@
+import React from "react";
+import ReactDOM from "react-dom/client"
+
 // hello world program in js
 let heading = document.createElement("h1");
 heading.innerText = "Hello world from javascript !";
@@ -17,13 +20,17 @@ data.render(heading2);
 // how to create nested element in react
 
 let nestedEl = React.createElement("div", { id: "parent" }, [
-  React.createElement("div", { id: "child1" }, [
-    React.createElement("h1", {}, "I am an H1 tag"),
-  ]),
-  React.createElement("div", { id: "child1" }, [
-    React.createElement("h2", {}, "I am an H2 tag"),
-  ]),
-]);
+  React.createElement(
+    "div",
+    { id: "child1", key: "c1" },
+    React.createElement("h1", {}, "I am an H1 tag")
+  ),
+  React.createElement(
+    "div",
+    { id: "child2", key: "c2" },
+    React.createElement("h2", {}, "I am an H2 tag")
+  ),
+]);;
 
 let printEl = ReactDOM.createRoot(document.getElementById("nested"))
 printEl.render(nestedEl)
