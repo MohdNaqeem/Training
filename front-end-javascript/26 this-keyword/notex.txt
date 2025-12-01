@@ -1,0 +1,9 @@
+=> What is this keyword? 
+   this is a reference to the object that is executing the current function.
+
+   # Example :
+     - If a function is called inside an object, this refers to that object.
+     - If a function is called normally, this refers to global object (in browser: window).
+     - In arrow functions, this does NOT point to the object — it takes value from the outer lexical scope and for Regular 
+       functions bind dynamically.
+

@@ -32,5 +32,5 @@ Server namee : DESKTOP-FL8TUPC\SQLEXPRESS
      Quesry : Alter Database DatabaseName Set SINGLE_USER With Rollback Immediate
 
      Note: System databases cannot be dropped.
-
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 =>   Creating and working with tables(video 03):

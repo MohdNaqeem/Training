@@ -1,0 +1,9 @@
+=> What is call() method:
+   call() is a method that force a function to use a particular object as this, and pass arguments individually and execute 
+   it right now.
+
+=> What is apply() method:
+   apply() works exactly like call(), but it takes arguments as an array instead of individually.
+
+=> What is bind() method:
+   bind() returns a new function with a fixed this value (and optional preset arguments). It does NOT run the function immediately.

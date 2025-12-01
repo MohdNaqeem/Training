@@ -1,0 +1,8 @@
+=> what is currying?
+   Currying is a technique where a function doesn’t take all arguments at once. Instead, it takes one argument at a time and 
+   returns a new function for the next argument, until all arguments are received.
+
+   # Explanation:
+     - It transforms a function that takes multiple arguments into nested functions taking one argument each.
+     - It uses closures to remember previous arguments.
+     - Improves code reusability and modularity.
