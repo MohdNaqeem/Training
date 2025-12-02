@@ -1,0 +1,25 @@
+=> What is shallow copy?
+   A shallow copy creates a new object or array, but only copies the top-level values. If the original contains nested objects/arrays, 
+   the copy will still point to the same inner reference. So changes inside nested objects affect both copies.
+
+   # For primitive types (string, number, boolean, null, undefined):
+     - Shallow copy makes a new copy of the value.
+     - So changing it will NOT affect the original.
+     - Example: in App.js example number 1
+
+   # For non-primitive types (object,array,function)
+     - only the reference will copy 
+     - not inner data 
+     - Example: in App.js example number 2
+
+=> What is deep copy ?
+   Creating a new object where every level (top + nested) is copied, with new memory references, so changes in one object do not affect 
+   the other.
+
+   # Methods:
+     - structuredClone(obj) → best modern
+     - JSON.parse(JSON.stringify(obj)) → simple objects only
+
+=> Difference between shallow copy and deep copy.
+   Shallow copy in nested objects case will modify the parent object property value, if cloned object property value is changed. 
+   But deep copy will not modify the parent object property value.

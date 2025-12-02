@@ -1,0 +1,11 @@
+=> What is debouncing?
+   Debouncing ensures a function executes only after the user stops triggering it for a specified delay. It’s used to reduce 
+   cunnecessary function calls—especially in typing, scrolling, and resize events.
+
+   # Why Debouncing Exists:
+     - typing in a search bar (keyup fires every letter)
+     - resizing window
+     - scrolling
+     - button spam clicks
+     Running logic on every event is slow and wasteful. Debouncing fixes that by delaying execution until things settle down.
+
