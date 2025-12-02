@@ -1,0 +1,46 @@
+import ResturantCard from "./ResturantCard";
+import resList from "../utils/resData";
+import { useEffect, useState } from "react";
+
+// Body component
+const Body = () => {
+  let [resData, setresData] = useState([]);
+
+  useEffect(() => {
+    fetchData()
+  }, []);
+
+  const fetchData = async () => {
+    const data = await fetch(
+      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9351929&lng=77.62448069999999&page_type=DESKTOP_WEB_LISTING"
+    );
+    const json = await data.json();
+    console.log(json);
+    setresData(json.data?.cards?.[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants || [])
+  };
+
+  console.log("body called");
+
+  return (
+    <div className="body">
+      <div className="filter">
+        <button
+          className="filter-btn"
+          onClick={() => {
+            const filterData = resData.filter((res) => res.rating > 4);
+            setresData(filterData);
+          }}
+        >
+          Top Rated Resturants
+        </button>
+      </div>
+      <div className="res-container">
+        {resData.map((resturant) => (
+          <ResturantCard key={resturant.id} resData={resturant} />
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default Body;

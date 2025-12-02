@@ -1,0 +1,321 @@
+# Episode 01 
+
+=> What is React?
+   React is a JavaScript library used to build fast, interactive user interfaces. It focuses only on the view layer (UI) and helps you 
+   build applications using components. React was created by Facebook to solve the performance issues of large web apps.
+
+=> Why React is Fast?
+   React isn’t magically fast. It uses specific techniques that reduce unnecessary work in the browser.
+
+   # Virtual DOM:
+     - The browser DOM is slow.
+     - Instead of updating the real DOM every time, React creates a lightweight virtual copy.
+     * When something changes:
+       - React compares old Virtual DOM with the new Virtual DOM (diffing).
+       - Then React updates only the exact part of the real DOM that changed.
+
+   # Component-Based Architecture:
+     UI is broken into small independent pieces (components). Only the component with changed state re-renders, not the entire page.
+
+   # Lazy Loading + Code Splitting
+     React loads only the JS needed at the moment. This reduces initial load time drastically.
+
+   # React is a JavaScript library for building fast and interactive UIs using a component-based approach. It uses a Virtual DOM, 
+     efficient diffing, and unidirectional data flow to minimize real DOM updates. This makes React highly performant, predictable, 
+     and suitable for large-scale applications.
+
+=> Why React is good?
+   React is good because it solves the biggest problems in modern frontend development: speed, scalability, reusability, and efficient 
+   UI rendering. It gives developers a predictable way to build complex UI without the app turning into unmaintainable spaghetti.
+
+=> What is CDN (Content Delivery Network) ?
+   A CDN is a network of servers placed around the world that deliver files (CSS, JS, images, videos) to users faster by serving them 
+   from the nearest server location.
+
+=> Why CDN exists ?
+   - Without CDN:
+     Everything loads from one server → slow if users are far away.
+
+   - With CDN:
+     Files load from a nearby server → faster, lower latency, better performance.
+
+=> What is crossorigin ?
+   crossorigin is an attribute that tells the browser how to handle CORS (Cross-Origin Resource Sharing) when loading a script from 
+   another domain.
+
+=> first hello world program in reach :
+   let heading2 = React.createElement("h1", {id:"showHeading"}, "Hello world from React!")
+   let data = ReactDOM.createRoot(document.getElementById("rootData"))
+   data.render(heading2)
+   
+   - React.createElement 
+     It's creat object and this react object becomes html that browser understands. and It takes three argument.
+     01 which tag we want to create.
+     02 object, and in this object we can pass attributes.
+     03 what Content we want to print in created tag.
+
+   - ReactDOM.createRoot
+     This tells React to create a React root on that HTML element.
+
+   - document.getElementById("rootData")
+     This finds the HTML element with id rootData.
+
+   - data.render(heading2)
+     render() tells React what we want to show inside the root.
+
+=> What is a Library? 
+   A library is a collection of reusable functions and tools that you call whenever we need them. We control the flow.
+
+   Example : React is a library because we decide.
+   - when to render
+   - what to render
+   - how to structure your app
+
+=> What is a Framework?
+   A framework is a complete structure or architecture for building an application. The framework controls the flow we just fill 
+   in the missing parts.
+
+=> Difference between Library and framework.:
+   A library gives you tools to use when you want, while a framework gives you the entire structure and controls how your application 
+   should run.
+----------------------------------------------------------------------------------------------------------------------------------------
+# Episode 02
+
+=> What is npm ?
+   NPM is a tool that allows us to download, install, manage, and update JavaScript packages (libraries, tools, frameworks).
+
+=> what is package.json?
+   package.json is the main configuration file for any Node.js or JavaScript project. It stores all the project information, 
+   settings, and the list of dependencies (libraries) the project needs.
+
+=> What are dependencies in package.json?
+   dependencies are the main packages your project needs to run in production. These are required for your app to work normally 
+   both during development and after deployment.
+
+   Type of dependencies:
+   01 dependencies:
+      These are the real, required, production dependencies.
+
+   02 devDependencies:
+      These are packages used only during development not needed in production.
+
+=> what is Caret ^ ?
+   updates automatically minor versions
+
+=> what is Tilde ~?
+   updates automatically major versions 
+
+=> What is package-lock.json?
+   It locks the exact versions of every dependency
+
+=> What is node_modules?
+   This is the actual folder containing every installed package your project uses.  
+
+   - what is parcel doing :
+     It’s creates dev build for us
+     It’s creates local server for us
+     It’s automatically refresh the browser (its giving HMR)
+     It’s watches algorithms.
+     It’s faster builds 
+     It’s bundling.
+     It’s give good error handling.
+     Tree shaking. (It’s remove unused code)
+
+=> What is parcel ?
+   It’s a tool that builds our project by taking all our files and turning them into optimized output for the browser.
+
+=> What is npx ?
+   npx is a command that runs packages without installing them globally.
+------------------------------------------------------------------------------------------------------------------------------------
+# Episode 03
+
+=> What is JSX ?
+   JSX is a cleaner way to write React elements instead of using React.createElement.
+
+   - Key points you must know (interview level)
+     - JSX is not HTML : It’s just a syntax extension for JavaScript.
+     - JSX must be compiled : Babel converts JSX → JS because browsers can’t read JSX. So Babel converts JSX → React.createElement().
+     - JSX prevents injection attacks : React escapes everything by default.
+     - JSX expressions must return one parent element
+     - JSX allows JS inside {} : <h1>{2 + 2}</h1>
+     - JSX should be in round brackets because babel needs to understand from where is JSX starting and where is ending.
+   
+=> What JSX Really Is?
+   SX is a JavaScript syntax extension that allows you to write UI using HTML-like code, and embed anything inside it — components, 
+   variables, expressions, function calls, arrays, and even other JSX elements — because JSX ultimately compiles into normal 
+   JavaScript.
+
+=> What is babel ?
+   Babel is a compiler that converts modern JavaScript (ES6+) and JSX into older JavaScript that browsers actually understand.
+
+   - Why do we need Babel?
+     - Browsers don’t support all modern JS features.
+     - Browsers cannot understand JSX at all.
+     - We want consistent code behavior across old and new browsers.
+
+=> What is a Component in React?
+   A component in React is an independent, reusable unit of UI that behaves like a JavaScript function. It accepts input 
+   (props) and returns React elements that describe what should appear on the screen.
+
+=> Types of Components in React
+   React has two official types of components: Functional Components (Modern React) and Class Components (Legacy React).
+   And They are patterns, not different component types.
+
+   - Functional Components (Modern React)
+     A functional component is a plain JavaScript function that returns JSX. It uses React Hooks to manage state, side effects, 
+     and lifecycle behavior. Modern React uses Functional components.
+   
+   - Class Components (Legacy React)
+     A class component is an ES6 class that extends React.Component and uses the render() method to return JSX.
+     It manages state and lifecycle through class methods.
+
+=> What is composition component?
+   Component composition is the technique of building complex UIs by combining multiple smaller, reusable components together.
+
+=> What is React element?
+   A React Element is a plain JavaScript object that describes what you want to show on the screen. It is the smallest building 
+   block in React and is created using JSX or React.createElement().
+------------------------------------------------------------------------------------------------------------------------------------
+# Episode 04
+
+=> What is props?
+   Props (properties) are read-only inputs passed from a parent component to a child component. They allow data to flow down the 
+   component tree and make components reusable and dynamic.
+   When we have to dynamically pass some data to a component we pass it as a props.
+
+=> What is Conflict-Driven UI?
+   Conflict-driven UI is a pattern where the UI updates itself based on the differences (conflicts) between the old virtual UI and 
+   the new virtual UI. React compares both and updates only the changed parts automatically.
+
+=> What is a key?
+   A key is a unique identifier that React uses to track each item in a list when rendering arrays.
+
+   - What you MUST NOT use as keys
+     React documentation and experienced developers agree: never use index for key.
+     - Breaks when list changes order
+     - Breaks when items deleted
+     - Breaks when items inserted
+     - Causes React to reuse wrong components
+---------------------------------------------------------------------------------------------------------------------------------------
+# Episode 05 
+
+=> What is component?
+   A React component is a reusable piece of UI that returns JSX and can be composed to build the entire application. React has two 
+   main component types.
+
+   # Functional Components
+     A functional component is a JavaScript function that returns JSX. It is lightweight, easy to write, and the modern standard.
+     - Clean & simple
+     - Use hooks (useState, useEffect, etc.)
+     - Easier to test
+     - Better performance
+
+   # Class Components
+     A class component is a JS class that extends React.Component, and must use a render() method to return JSX.
+     - Old method of building components
+     - Use lifecycle methods (componentDidMount, etc.)
+     - More code + more complex
+     - Still asked in interviews 
+
+=> What is import and export?
+   They are ES Module features used to share code between files. React uses ES Modules to break your app into components, functions, 
+   variables, and classes across separate files — making your project modular. It has two types
+
+   # Named Export:
+     Named export is used when you want to export many variables, functions, or components from the same file. Import name must match 
+     the exported name.
+     - Must use {} while importing
+     - Names must match exactly.
+
+   # Default Export:
+     Default export is used when your file returns one main value/component. Import does not need {} and name can be changed.
+     - No {} required.
+     - Import name can be whatever you choose.
+     - One default export per file.
+
+   # Tips:
+     we can use named exports along with a default export in the same file. React/JavaScript fully supports mixing both it's common 
+     in real projects.
+
+=> What Are Hooks in React?
+   Hooks are functions that let you use React features like state, lifecycle methods, context, and performance optimization inside 
+   functional components.
+
+   # Common Hooks:
+     - useState → state management
+     - useEffect → side effects
+     - useContext → global data
+     - useReducer → complex state
+     - useMemo → performance
+     - useCallback → memoized functions
+     - useRef → DOM access, persistent values
+
+=> What is useState()?
+   useState is a Hook that lets you define a state variable and a function to update that variable. React re-renders the component 
+   whenever the state update function is called.
+
+=> What is a State Variable?
+   A state variable holds dynamic data in React. Whenever it changes, React re-renders the component to keep the UI in sync with the 
+   latest state 
+
+=> What is useEffect()?
+   useEffect is used to run code when the component renders, when specific state values change, or when the component unmounts. It 
+   manages side effects such as API calls, timers, subscriptions, and event listeners.
+
+=> What is the Virtual DOM?
+   Virtual DOM is a lightweight in-memory representation of the real DOM. React uses this virtual copy to track changes and update 
+   only the specific parts of the real DOM that actually changed — not the entire UI.
+
+=> How Virtual DOM Works
+   - React Component Changes State:
+     Whenever state or props change, React doesn’t update the real DOM immediately.
+   - React Creates a NEW Virtual DOM Tree:
+     React builds a new virtual snapshot of the UI.
+   - React Compares it with the OLD Virtual DOM
+     This is called the Diffing Algorithm. It checks, What changed?, Which element?, Which attribute/text/style was modified?
+   - React Finds the Minimum Required Changes:
+     React calculates the smallest possible update to move the old DOM → new DOM.
+   - React Updates Only the Required Real DOM Nodes
+     This is done through: Reconciliation
+
+=> Why React Uses Virtual DOM?
+   - Browser DOM is slow to update.
+   - Re-rendering entire UI is expensive.
+   - Updating only the changed elements is fast.
+---------------------------------------------------------------------------------------------------------------------------------------
+# Episode 06
+
+=> What is Monolith architecture?
+   A monolithic architecture is a software design where the frontend, backend, and all application logic are built, managed, and 
+   deployed as a single unified application, instead of being divided into independent services or modules.
+
+=> What is Microservices architecture?
+   Microservices architecture is a design where the application is split into multiple small, independent services, each deployed and 
+   scaled separately.
+
+=> how webApp and UI application fetch the data from backend?
+   There are two approach.
+
+   01 Load → Fetch API → Render
+      - Sequence:
+        - Page loads
+        - UI waits for API response
+        - Once data arrives, UI renders the final content
+ 
+   02 Load → Render UI → Fetch API → Re-render
+      - Sequence:
+        - Page loads
+        - UI renders immediately (empty state, loader, skeleton)
+        - API call happens in the background
+        - UI re-renders when data arrives
+
+=> What is useState?
+   useState is a React Hook that lets a functional component create and manage its own state. It stores a value, and provides a 
+   function to update that value so React can re-render the component whenever the state changes.
+
+   - What is it used for?
+     You use useEffect when your component needs to do something like:
+     - Fetch data from backend
+     - Run code only when the component mounts
+     - Run code when state/props change
+     - Clean up things when component unmounts
