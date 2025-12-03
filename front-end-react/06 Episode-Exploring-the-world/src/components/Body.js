@@ -12,14 +12,14 @@ const Body = () => {
 
   const fetchData = async () => {
     const data = await fetch(
-      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9351929&lng=77.62448069999999&page_type=DESKTOP_WEB_LISTING"
+      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9352403&lng=77.624532&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
     );
-    const json = await data.json();
-    console.log(json);
-    setresData(json.data?.cards?.[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants || [])
-  };
 
-  console.log("body called");
+    const json = await data.json();
+    console.log(json)
+
+    setresData(json.data.cards[4].card.card.gridElements.infoWithStyle.restaurants)
+  };
 
   return (
     <div className="body">
@@ -36,7 +36,7 @@ const Body = () => {
       </div>
       <div className="res-container">
         {resData.map((resturant) => (
-          <ResturantCard key={resturant.id} resData={resturant} />
+          <ResturantCard key={resturant.info.id} resData={resturant} />
         ))}
       </div>
     </div>
