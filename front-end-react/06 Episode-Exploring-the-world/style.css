@@ -132,3 +132,110 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* Grid matches .res-container layout */
+.shimmer-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+  padding: 10px 0;
+}
+
+/* individual shimmer card */
+.shimmer-card {
+  background: #fff;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid #eee;
+  box-shadow: 0px 3px 10px rgba(0,0,0,0.06);
+  overflow: hidden;
+  min-height: 260px; /* match your real cards */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* shimmer base */
+.shimmer-img,
+.shimmer-line,
+.shimmer-pill {
+  background: linear-gradient(90deg, #ececec 25%, #f6f6f6 50%, #ececec 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.2s linear infinite;
+}
+
+/* image placeholder */
+.shimmer-img {
+  width: 100%;
+  height: 150px; /* same as your real img height */
+  border-radius: 10px;
+  flex: 0 0 150px;
+}
+
+/* title line */
+.shimmer-line.title {
+  height: 16px;
+  width: 60%;
+  border-radius: 6px;
+}
+
+/* cuisines line (subheading) */
+.shimmer-line.cuisines {
+  height: 12px;
+  width: 80%;
+  border-radius: 6px;
+}
+
+/* delivery / small line */
+.shimmer-line.delivery {
+  height: 12px;
+  width: 40%;
+  border-radius: 6px;
+  margin-top: auto; /* push to bottom like real layout */
+}
+
+/* rating + price row */
+.shimmer-row {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+/* small pill placeholders */
+.shimmer-pill.rating {
+  width: 40%;
+  height: 18px;
+  border-radius: 10px;
+}
+.shimmer-pill.price {
+  width: 45%;
+  height: 18px;
+  border-radius: 10px;
+}
+
+/* shimmer animation */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* responsive */
+@media (max-width: 1100px) {
+  .shimmer-container { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 800px) {
+  .shimmer-container { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 500px) {
+  .shimmer-container { grid-template-columns: 1fr; }
+}
+
+.search-box{
+  margin-right: 5px;
+  width: 30%;
+}
+
+.search-btn{
+  margin-right: 5px;
+}
+

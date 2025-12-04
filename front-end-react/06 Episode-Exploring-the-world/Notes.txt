@@ -319,3 +319,15 @@
      - Run code only when the component mounts
      - Run code when state/props change
      - Clean up things when component unmounts
+
+=> What is Shimmer UI?
+   Shimmer UI is a loading placeholder technique where grey placeholder shapes are displayed with a moving light-gradient animation to 
+   indicate that real content is loading.
+
+=> What is conditional rendering?
+   Conditional rendering is the process of deciding which UI elements to display based on conditions such as state, props, or logic, 
+   instead of always showing everything.
+
+=> why we use state variable not local variable?
+   We use state variables instead of local variables because state persists between renders and updates the UI when changed, while 
+   local variables reset on every render and cannot update the UI.
