@@ -1,0 +1,35 @@
+=> What is throttling?
+   Throttling limits how often a function executes. Even if an event fires 100 times, the function runs at fixed intervals
+
+=> Throttling vs Debouncing — difference?
+   Throttle: Allows periodic execution at fixed intervals → good for continuous events.
+   Debounce: Executes only after inactivity → good for actions that should fire once after the user stops.
+   Throttle = controlled frequency. Debounce = final output.
+
+=> On scroll event, what will you use and why?
+   Throttling. Scroll generates extremely frequent events, and you need regular updates (like showing a sticky header) 
+   without flooding the main thread. Throttle gives predictable intervals.
+
+=> For search input API call, what will you use?
+   Debounce. The user types multiple characters rapidly; calling the API every keystroke is wasteful. Debounce ensures the API is 
+   called only after the typing stops for a short delay.
+
+=> Where do you use throttling in real applications?
+   In tasks like scroll tracking, window resizing, element dragging, and mousemove listeners. These events fire too fast, and 
+   throttling prevents performance drops by reducing function execution frequency.
+
+=> Where do you use debouncing in real applications?
+   For search bars, form field validation, auto-save, and filtering lists. These are situations where you want the action to 
+   happen only after the user pauses, not during continuous input.
+
+=> Why is debouncing sometimes bad for UX?
+   
+=> How does debouncing avoid unnecessary API calls?
+   It resets a timer on every input event. The function executes only when the user stops typing for a certain period. 
+   This ensures only one final API call happens instead of one per keystroke.
+
+=> What is “Leading” and “Trailing” execution?
+   These are timing options that control when your throttled or debounced function actually runs.
+   - Leading: Function runs immediately on the first event, then waits for the delay.
+   - Trailing: Function runs only after the delay when events stop.
+   
