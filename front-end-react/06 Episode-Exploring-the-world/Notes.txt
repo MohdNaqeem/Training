@@ -261,6 +261,16 @@
 => What is useEffect()?
    useEffect is used to run code when the component renders, when specific state values change, or when the component unmounts. It 
    manages side effects such as API calls, timers, subscriptions, and event listeners.
+   useEffect takes two arguments: a callback function and a dependency array. React runs the callback after the component renders, 
+   and the dependency array controls when that callback should run again.
+
+=> How dependency array controls when useEffect runs
+   - useEffect(() => {}, [])
+     Runs only once → after initial render
+   - useEffect(() => {})
+     Runs after every render
+   - useEffect(() => {}, [value])
+     Runs every time value changes
 
 => What is the Virtual DOM?
    Virtual DOM is a lightweight in-memory representation of the real DOM. React uses this virtual copy to track changes and update 
