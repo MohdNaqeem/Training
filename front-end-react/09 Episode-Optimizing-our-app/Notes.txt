@@ -394,3 +394,95 @@
    Link renders an anchor tag in the DOM, but it overrides the default navigation behavior. Instead of letting the browser reload the 
    page like a normal <a> tag, React Router intercepts the click using the History API and performs client-side navigation. So the DOM 
    shows <a>, but the behavior is completely different
+-----------------------------------------------------------------------------------------------------------------------------------------
+# Episode 08 (All about old version - class component)
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+# Episode 09 
+
+=> What is Single Responsibility Principle (SRP) in React?
+   A React component should do only ONE thing and be responsible for ONE purpose. Not multiple roles, not mixed logic, not everything 
+   in one file.
+
+   # Why it matters
+     When a component has only one responsibility:
+     - it becomes easier to read
+     - easier to maintain
+     - easier to test
+     - easier to reuse
+     - fewer bugs
+     - fewer re-renders
+
+=> What is a Custom Hook in React?
+   A custom hook is a reusable function that contains React hook logic. We create it to reuse logic, avoid duplication, separate UI 
+   from logic, and keep components clean. It must start with use and can manage state, effects, or any side-effects.
+
+   Rules to create custom hook:
+   # Every custom hook MUST start with “use”
+     Example : const useRestaurantList = () => {}
+
+     Why: Because React internally checks:
+     if (functionName.startsWith("use")) {
+     React treats it as a hook
+     }
+     Note : If you don't name it like that → rules of hooks break → errors.
+
+   # A custom hook MUST use built-in hooks
+     If your function does NOT use any React hook → then it’s not a custom hook. It’s just a normal function.
+
+   # Hooks must be declared at the top level
+     Hooks must always be:
+     - at the top
+     - not inside loops
+     - not inside conditions
+
+   # Custom hook can accept parameters (optional)
+     const useRestaurantList = (url) => {}, Now the hook is reusable because URL is dynamic.
+
+   # Custom hook handles only logic, NOT UI
+     Inside the hook:
+     - No HTML
+     - No JSX
+     - No DOM
+     - No Components
+     Only:
+     - state
+     - data fetching
+     - API parsing
+     - reusable logic
+
+   # You return ONLY the data that the component needs
+     return { resData, filteredRestaurant, setFilteredRestaurant };
+
+=> Why do we create a custom hook?
+   - To reuse logic across multiple components
+     If two components need the same logic (fetching, form handling, timers, scroll, filters), you don’t want to copy-paste code. You 
+     move that code into a custom hook.
+
+   - To keep components clean
+     Components should focus on UI. Custom hooks handle logic.
+
+   - To avoid repeat useEffect + useState code
+     Whenever you find yourself writing the same effect twice → make a custom hook.
+
+   - To separate logic from UI
+     Logic goes into a hook. Component only renders. This makes testing easier and code predictable
+
+=> What is Code Splitting / Chunking / Lazy loading in React?
+   Code splitting (chunking) is a performance technique where React breaks your JavaScript bundle into smaller files and loads them 
+   only when needed. Instead of loading the entire app at once, React uses lazy loading and dynamic imports to load specific components 
+   on demand, reducing initial load time and improving performance.
+
+   # Why do we need it: A big React app might have:
+     - many components
+     - big libraries
+     - heavy pages
+     If you bundle everything into one giant file:
+     - slower initial load
+     - bad performance
+     - unnecessary code downloaded even if user never visits that page
+     Lazy loading fix this.
+   
+=> What is <Suspense> in React?
+   Suspense is a React component that displays a fallback UI while lazy-loaded components or asynchronous boundaries are being resolved.
+   It’s required when using React.lazy() for code splitting.

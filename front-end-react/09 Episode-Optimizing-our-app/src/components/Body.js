@@ -1,43 +1,28 @@
 import ResturantCard from "./ResturantCard";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Shimmmer from "./Shimmer";
+import { RES_CARD_URL } from "../utils/constants";
+import useRestaurantsCard from "../utils/useRestaurantsCard";
+import useOnlineStatus from "../utils/usenlineStatus";
 
 // Body component
 const Body = () => {
-  const [resData, setresData] = useState([]);
+  // for searc box
   const [searchText, setSearchText] = useState("");
-  const [filteredRestaurant,setFilteredRestaurant] = useState([])
-  
 
-  console.log("body");
+  const { resData, filteredRestaurant, setFilteredRestaurant } =
+    useRestaurantsCard(RES_CARD_URL);
 
-  useEffect(() => {
-    fetchData();
-  }, []);
+  const onlinStatus = useOnlineStatus();
 
-  const fetchData = async () => {
-    const data = await fetch(
-      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9352403&lng=77.624532&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
+  if (onlinStatus === false)
+    return (
+      <h1>
+        Looks like you're offline!!! Please check your internet connection
+      </h1>
     );
 
-    const json = await data.json();
-    console.log(json);
-
-    setresData(
-      json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
-    );
-    setFilteredRestaurant(
-      json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
-    );
-  };
-
-  if (resData.length === 0) {
-    return <Shimmmer />;
-  }
-
-  return resData.length === 0 ? (
-    <Shimmmer />
-  ) : (
+  return resData.length === 0 ? (<Shimmmer/>) : (
     <div className="body">
       <div className="filter">
         <input
@@ -55,7 +40,7 @@ const Body = () => {
             const filteredList = resData.filter((res) =>
               res.info.name.toLowerCase().includes(searchText.toLowerCase())
             );
-            setFilteredRestaurant(filteredList)
+            setFilteredRestaurant(filteredList);
           }}
         >
           Search
@@ -66,7 +51,7 @@ const Body = () => {
             const filterData = resData.filter(
               (res) => res?.info?.avgRating > 4.2
             );
-            setresData(filterData);
+            setFilteredRestaurant(filterData);
           }}
         >
           Top Rated Resturants
