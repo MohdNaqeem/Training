@@ -1,0 +1,27 @@
+=> what is closure?
+   A closure is formed when an inner (child) function remembers and can access variables from its outer (parent) function, 
+   even after the parent function has finished executing.
+
+=> Why does this happen?
+   Because JavaScript uses lexical scope, the child function is created inside the parent.So it gets a link to the parent’s 
+   variables.
+   When the parent function returns, JavaScript does not delete the parent’s variables if the child function is still 
+   using them. This preserved memory is called a closure.
+
+   # Simple Parent–Child Example:
+   
+   function parent() {
+   let count = 0;
+   function child() {
+   console.log(count);
+   }
+   return child;
+   }
+   const fn = parent();
+   fn(); // prints 0
+  
+   Explanation:
+   child() was created inside parent()
+   So child gets access to count
+   Even after parent() finishes, JS keeps count alive
+   Calling fn() still prints the value → this is closure

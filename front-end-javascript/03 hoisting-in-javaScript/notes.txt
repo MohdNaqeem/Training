@@ -1,0 +1,39 @@
+=> What is hoisting ?
+   Hoisting is a process where all variable and function declarations move top of the table before execution starts
+
+   var variables are hoisted and initialized with undefined, function declarations are hoisted with their full function body, 
+   while let and const are hoisted but not initialized and remain in the Temporal Dead Zone until their actual declaration 
+   executes.
+
+   Function expressions and arrow functions behave like variables and cannot be accessed before initialization.
+
+   Because of hoisting, we sometimes get undefined for var, errors for let/const, and full access for function declarations.
+
+=> Behavior of var, let, const, functions, and arrow functions
+
+   # var Hoisted + initialized with undefined
+       Example:
+       console.log(x);  // undefined
+       var x = 3;
+     JavaScript internally treats it like:
+       var x;          // hoisted
+       console.log(x); // undefined
+       x = 3;          // assignment
+
+   # let and const – Hoisted but not initialized (TDZ)
+       Example:
+       console.log(a);  // ReferenceError
+       let a = 10;
+     Because the variable exists in memory but is not yet initialized, this period is called the Temporal Dead Zone (TDZ). 
+
+   # Function Declarations – Fully Hoisted
+       Example:
+       hello();   // Works
+       function hello() {
+       console.log("Hi");
+       }
+     The entire function is stored in memory during the memory phase, so it can be invoked before reaching its line in the 
+     code.
+
+   # Function Expressions / Arrow Functions – NOT hoisted like functions
+     They behave like variables, not like function declarations.

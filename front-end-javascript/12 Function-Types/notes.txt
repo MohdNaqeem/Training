@@ -1,0 +1,85 @@
+=> What is statement function?
+   A function statement (also called a function declaration) is a way to define a named function.
+   Syntax :
+   function a(){
+    console.log("A called")
+   }
+
+   # Key points:
+     - Fully hoisted
+     - Can be called before declaration
+-------------------------------------------------------------------------------------------------------------------------------
+=> What is function expression?
+   When we assign function into an variable that's called function expression.
+   Syntax:
+   var b = function (){
+    console.log("b called")
+   }
+
+   # Key points:
+     - Not hoisted like declarations
+     - Cannot be called before initialization
+-------------------------------------------------------------------------------------------------------------------------------
+=> what is a difference between statement function and function expression?
+
+   # first difference is syntax.
+     - Statement: function add() {}
+     - Expression: const add = function() {}
+
+   # Second difference is Hoisting.
+     - Function Statement → fully hoisted; can be called before definition
+     - Function Expression → variable is hoisted but not initialized; calling before initialization gives ReferenceError
+
+   # third difference is Use Cases
+     - Function Statement → general named functions
+     - Function Expression → used when storing functions in variables, passing as arguments, or returning functions
+-------------------------------------------------------------------------------------------------------------------------------
+=> What is anonymous function?
+   An anonymous function is a function without a name. It is usually used in function expressions or passed as a callback.
+
+   # Key points:
+     - Cannot exist alone
+     - Must be assigned to a variable or used as a callback
+-------------------------------------------------------------------------------------------------------------------------------
+=> What is named function expression?
+   Named Function Expression (NFE) in JavaScript is a function expression that has a name. The primary advantage of a Named 
+   Function Expression is that it provides a reference to the function inside its own body, which can be useful for 
+   self-referencing or debugging.
+
+   # Syntax: 
+   const myFunction = function functionName(parameters) {
+    // function body
+    // code to be executed
+   }; 
+-------------------------------------------------------------------------------------------------------------------------------
+=> what is difference between parameters and agrguments ?
+   Parameters:
+   Parameters behave like placeholders for the values that the function will receive when it is 
+   called
+
+   Arguments:
+   Arguments are the actual values that are passed into a function when it is called.
+-------------------------------------------------------------------------------------------------------------------------------
+=> What is first class function?
+   first class function means a function:
+   - which can store them in variables
+   - Can pass them as arguments
+   - Can return them from other function
+   This ability is called first class function. 
+-------------------------------------------------------------------------------------------------------------------------------
+=> What is arrow function?
+   An arrow function is a shorter syntax for writing functions.
+   # Key Points:
+     - Shorter syntax
+     - No own this (lexically binds this)
+     - Cannot be used as constructors
+     - Ideal for callbacks and simple operations
+-------------------------------------------------------------------------------------------------------------------------------
+=> Higher order function
+   A higher-order function is a function that either takes another function as an argument, returns a function, or does both
+
+   # Key Points:
+     - Accepts a function
+     - Returns a function
+     - Very important in functional programming
+     - Used in methods like map, filter, reduce

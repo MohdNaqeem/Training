@@ -1,0 +1,9 @@
+=> The shortest JavaScript program is an empty file. Even with no code, the browser still creates:
+   - a Global Execution Context, and
+   - the global object, which is window in browsers.
+  
+- Global space means any code that is not written inside a function.
+  variables and functions are stored in the global scope and become properties of the global object
+
+  Anything you write outside a function becomes global; anything inside a function stays local and is not part of the global 
+  space

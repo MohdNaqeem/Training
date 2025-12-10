@@ -1,0 +1,21 @@
+=> How JavaScript works?
+   Everything in JavaScript happens inside an "execution context".
+
+=> Execution context has two component
+   1 - memory component[variable environment] 
+   This is the place where all variables and functions are stored as key value pairs. eg-{key: value ||  n:2;} 
+
+   2 - code component[Thread of execution]
+   This is the place where code is executed one line at a time using call Stack.
+
+   # JavaScript itself is a single-threaded, synchronous language, meaning
+    It has one call stack and It can run one instruction at a time.
+
+   # However, modern environments (browsers/Node) provide asynchronous behavior through:
+     - Web APIs
+     - Event Loop
+     - callback
+
+=> What is callback and microtask queue?
+   Callback queue stores asynchronous tasks like setTimeout or DOM events. Microtask queue stores higher-priority tasks like Promise 
+   callbacks, and it always runs before the callback queue.

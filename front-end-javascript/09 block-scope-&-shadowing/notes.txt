@@ -1,0 +1,20 @@
+
+=> What is block?
+   A block is a piece of code written inside { }. JavaScript uses blocks to group multiple statements together so they can 
+   be treated as one unit
+
+=> What is scope of variable pr function?
+   Scope is the region of code where a variable or function can be accessed. Different declarations (var, let, const) have 
+   different scope rules.
+
+=> what is block scope?
+   Block scope means that variables declared with let or const inside a block { } are only accessible inside that block, 
+   not outside it.
+
+=> What is shadowing?
+   Shadowing happens when a child block creates a new variable with the same name as a variable in the parent scope. The inner
+   variable temporarily hides the outer one inside that block.
+
+=> Why let and const are block scope?
+   Because every { } block creates its own separate area (lexical environment) for let and const. So they exist only inside 
+   that block and cannot be accessed outside.

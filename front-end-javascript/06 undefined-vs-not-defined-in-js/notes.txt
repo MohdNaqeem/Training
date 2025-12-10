@@ -1,0 +1,10 @@
+=> undefined:
+  - undefined is a special value assigned by the JavaScript engine during the Memory Creation Phase.
+  - When a variable is declared but not assigned, JavaScript gives it the value undefined. it means The variable exists in 
+    memory, but no value was assigned yet.
+
+=> not defined:
+  - means the variable doesn’t exist in memory at all.
+
+JavaScript is loosely/weakly typed, meaning variables do not have fixed types, and they can hold any data type.
+which is why undefined is used as a placeholder.

@@ -1,0 +1,36 @@
+=> What is synchronous?
+   Synchronous means code runs step-by-step, in order. Each instruction waits for the previous one to finish before moving 
+   ahead. Because JavaScript is single-threaded, synchronous code can block the flow if one task takes too long.
+
+=> What is asynchronous?
+   Asynchronous means JavaScript can start a task and move on without waiting for it to finish. The task completes in the 
+   background, and the result is handled later.
+
+=> What is callback function?
+   A callback function is a function passed as an argument to another function, and it is executed after a certain task 
+   completes. Callbacks are used especially for asynchronous operations like timers, network calls, etc.
+
+=> What is callbeck hell?
+   Callback Hell is when too many nested callbacks appear inside each other, forming a pyramid-like structure that is hard 
+   to read, debug, and maintain.
+
+=> What is promise?
+   Promises give us a cleaner and more structured way to handle asynchronous operations. It helps avoid callback hell and 
+   provides a cleaner way to handle async tasks.
+
+   A Promise has three states:
+   - Pending : operation is not finished
+   - Resolved : operation completed successfully
+   - Rejected : operation failed
+
+   To handle the result:
+   - .then() → handles success
+   - .finally() → runs regardless of success or failure
+   - .catch() → handles errors
+
+=> async await?
+   Async/await is a modern JavaScript feature that allows you to write asynchronous code in a synchronous style using async 
+   functions and the await keyword. This makes code much easier to read and write.
+   - async makes a function return a Promise
+   - await pauses the function until a Promise settles
+   

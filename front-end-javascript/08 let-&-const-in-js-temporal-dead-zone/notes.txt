@@ -1,0 +1,34 @@
+=> Are let and const hoisted?
+   let and const are hoisted, but they are not initialized during hoisting. They stay in the Temporal Dead Zone (TDZ) until 
+   execution reaches their declaration..
+   var is also hoisted but initialized to undefined, so it can be accessed early.
+
+=> Difference between var, let, and const
+   # Hoisting & Initialization
+     - var → hoisted + initialized to undefined
+     - let / const → hoisted but not initialized (TDZ)
+
+   # Redeclaration
+     - var → can redeclare
+     - let → cannot redeclare
+     - const → cannot redeclare
+
+   # Reassignment
+     - var → can reassign
+     - let → can reassign
+     - const → cannot reassign
+
+   # Scope
+     - var → function-scoped
+     - let / const → block-scoped
+
+=> Error Types in JavaScript
+   # SyntaxError
+     Thrown when the code is written incorrectly.
+     Example: missing brackets, invalid tokens.
+
+   # ReferenceError
+     Thrown when accessing a variable that is not declared or in TDZ.
+
+   # TypeError
+     Thrown when performing an invalid operation on a value.

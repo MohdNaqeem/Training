@@ -1,0 +1,16 @@
+=> JavaScript is a single-threaded language, so it has one call stack and executes one command at a time.
+
+  # When JavaScript code runs, it first creates a Global Execution Context. An execution context has two parts: 
+
+  01 Memory Creation Phase (Creation Phase): so in memory creattion phase
+    - JavaScript scans the code for variable and function declarations.
+    - It allocates memory for variables and function declarations.
+    - Variables are initialized with undefined (hoisting).
+    - let/const are hoisted but left uninitialized,
+    - Functions are stored with their entire function body.
+
+  02 Code Execution Phase: 
+    - JavaScript executes code line by line using the call stack.
+    - When a value is assigned, undefined is replaced with the actual value.
+    - When a function is called, JavaScript creates a new Execution Context for that function.
+    - This new context goes on top of the call stack, runs through the same two phases, and is removed after execution.
