@@ -486,3 +486,9 @@
 => What is <Suspense> in React?
    Suspense is a React component that displays a fallback UI while lazy-loaded components or asynchronous boundaries are being resolved.
    It’s required when using React.lazy() for code splitting.
+-----------------------------------------------------------------------------------------------------------------------------------------
+# Episode 11
+
+=> What is higher order function?
+   A Higher-Order Component (HOC) in React is a function that takes a component as input and returns a new enhanced component.
+   (have not practical so will see while revision )
