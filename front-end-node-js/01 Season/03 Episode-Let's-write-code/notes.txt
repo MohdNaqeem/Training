@@ -1,0 +1,37 @@
+=> what is nodeJs?
+   Node.js is a runtime environment that allows JavaScript to run outside the browser, typically on the server.
+
+=> How does Node.js work?
+   Node.js uses a single-threaded, event-driven, non-blocking I/O model, meaning it can handle many requests efficiently 
+   without creating multiple threads.
+
+=> What is a Server?
+   A server is a computer or program that receives client requests, processes them, and sends back responses (like web 
+   pages, data, or files).
+
+=> What is the V8 Engine?
+   V8 is Google’s JavaScript engine (used in Chrome and Node.js) that compiles JavaScript directly into machine code so 
+   it runs very fast.
+
+=> What is Machine Code?
+   Machine code is the lowest-level code made of binary instructions (0s and 1s) that the CPU can execute directly.
+
+=> What is High-Level Code?
+   High-level code is human-readable programming code (like JavaScript, Python, Java) that must be translated into 
+   machine code before execution.
+
+=> What is ECMAScript?
+   ECMAScript is the official standard specification for JavaScript — it defines the language rules and features that 
+   ßJavaScript engines (like V8) must follow.
+
+=> What is the Global Object?
+   In Node.js, the global object is called global. It contains variables, functions, and objects that are available 
+   everywhere in a Node.js program without importing them.
+
+=> How does V8 understand global?
+   V8 doesn’t define global. Node creates the global object and exposes it as global inside the V8 execution context, 
+   similar to how browsers expose window.
+
+=> What is globalThis?
+   globalThis is the standardized way to access the global object across all JavaScript environments, so the same code 
+   works in both browsers and Node.js.
