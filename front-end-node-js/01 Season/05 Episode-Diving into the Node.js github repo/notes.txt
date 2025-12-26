@@ -106,3 +106,22 @@
 
 => What is utils?
    There is no built-in module called utils. Developers often create a folder named utils to store helper functions.
+---------------------------------------------------------------------------------------------------------------------------
+# Episode 05 
+
+=> Why can’t we access functions/variables from one module in another (by default)?
+   Node.js isolates each file in its own module scope. That means variables and functions are not global across files. To 
+   share them, we explicitly export and import code using module.exports and require().
+
+=> How require() works behind the scenes?
+   - When we use require() in Node.js, Node first locates the module file, 
+   - Then it secretly wraps that entire file inside an IIFE-style function (function(exports, require, module, __filename, __dirname){ ... }).
+   - This wrapper gives the module its own scope, so variables and functions don’t leak outside its keep variables and 
+     function safe. 
+   - The file is then executed, and whatever value we assign to module.exports becomes the exported value.
+   - Finally, require() simply returns module.exports, and Node caches the result so the module runs only once.
+
+   # When a module is loaded once, Node remembers it.
+     In Node.js, when a module is required for the first time, Node executes the file and stores the exported value in 
+     require.cache. Next time we call require() for the same module, Node returns the cached value instead of executing 
+     the file again. So each module runs only once.
