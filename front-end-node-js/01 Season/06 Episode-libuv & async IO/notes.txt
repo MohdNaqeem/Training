@@ -1,0 +1,172 @@
+---------------------------------------------------------------------------------------------------------------------------
+# Episode 03
+=> what is nodeJs?
+   Node.js is Asynchronous.
+   Node.js is a runtime environment that allows JavaScript to run outside the browser, typically on the server.
+
+=> How does Node.js work?
+   Node.js uses a single-threaded, event-driven, non-blocking I/O model, meaning it can handle many requests efficiently 
+   without creating multiple threads.
+
+=> What is a Server?
+   A server is a computer or program that receives client requests, processes them, and sends back responses (like web 
+   pages, data, or files).
+
+=> What is the V8 Engine?
+   V8 is Google’s JavaScript engine (used in Chrome and Node.js) that compiles JavaScript directly into machine code so 
+   it runs very fast.
+
+=> What is Machine Code?
+   Machine code is the lowest-level code made of binary instructions (0s and 1s) that the CPU can execute directly.
+
+=> What is High-Level Code?
+   High-level code is human-readable programming code (like JavaScript, Python, Java) that must be translated into 
+   machine code before execution.
+
+=> What is ECMAScript?
+   ECMAScript is the official standard specification for JavaScript — it defines the language rules and features that 
+   ßJavaScript engines (like V8) must follow.
+
+=> What is the Global Object?
+   In Node.js, the global object is called global. It contains variables, functions, and objects that are available 
+   everywhere in a Node.js program without importing them.
+
+=> How does V8 understand global?
+   V8 doesn’t define global. Node creates the global object and exposes it as global inside the V8 execution context, 
+   similar to how browsers expose window.
+
+=> What is globalThis?
+   globalThis is the standardized way to access the global object across all JavaScript environments, so the same code 
+   works in both browsers and Node.js.
+---------------------------------------------------------------------------------------------------------------------------
+# Episode 04 
+
+=> What is a Module in Node.js?
+   A module is simply a separate JavaScript file that contains some code (functions, variables, logic, etc.). Modules help 
+   organize code, reuse code, and keep things separate. Every .js file in Node.js is treated as a module.
+
+   # Key points:
+     - Each file has its own scope
+     - Variables are not global by default
+     - You explicitly share things using module.exports
+
+=> What is module.exports?
+   module.exports is used to share code from one module (file) to another. Whatever you assign to module.exports becomes 
+   available to other files when they import it.
+
+=> What is require()?
+   require() is used to import and use a module in another file.
+
+=> Why Node.js uses modules?
+   Modules in Node.js help keep code modular, reusable, and maintainable.
+
+=> How do you export from one module to another in Node.js?
+   In Node.js, each file is treated as a module. If you want to use code from one file in another file, you must:
+   - Export the code from the first file, (using module.exports)
+   - Import it in the second file (using require())
+
+=> What are CJS (CommonJS)
+   CommonJS is the original Node.js module system that uses require() and module.exports for importing and exporting.
+   - Syntax:
+   // export
+   module.exports = something
+
+   // import
+   const something = require('./file')
+
+=> what are ES Modules (ESM / ES6 Modules)?
+   ES Modules are the modern, standardized JavaScript module system that use import and export.
+   - Syntax:
+     // export
+     export default something
+     export const a = 10;
+
+     // import
+     import something from './file.js'
+     import { a } from './file.js'
+
+=> Difference between CJS and ES modules.
+   - CommonJS:
+     CommonJS is the original Node.js module system that uses require() and module.exports. It loads modules synchronously 
+     and is mostly used in older Node projects
+
+   - ES Modules
+     ES Modules are the modern JavaScript standard using import and export. They support browsers, are always in strict 
+     mode, and are now fully supported in Node.js.
+
+=> What is util?
+   util is a core Node.js module that provides helper functions for working with callbacks, promises, debugging, type 
+   checking, and formatting. It is mainly used to simplify async code and debugging.
+
+=> Why does util exist?
+   Because old Node APIs used callbacks, and developers needed helpers to:
+   - convert callbacks → promises
+   - debug objects
+   - detect types
+   - format logs
+
+=> What is utils?
+   There is no built-in module called utils. Developers often create a folder named utils to store helper functions.
+---------------------------------------------------------------------------------------------------------------------------
+# Episode 05 
+
+=> Why can’t we access functions/variables from one module in another (by default)?
+   Node.js isolates each file in its own module scope. That means variables and functions are not global across files. To 
+   share them, we explicitly export and import code using module.exports and require().
+
+=> How require() works behind the scenes?
+   - When we use require() in Node.js, Node first locates the module file, 
+   - Then it secretly wraps that entire file inside an IIFE-style function (function(exports, require, module, __filename, __dirname){ ... }).
+   - This wrapper gives the module its own scope, so variables and functions don’t leak outside its keep variables and 
+     function safe. 
+   - The file is then executed, and whatever value we assign to module.exports becomes the exported value.
+   - Finally, require() simply returns module.exports, and Node caches the result so the module runs only once.
+
+   # When a module is loaded once, Node remembers it.
+     In Node.js, when a module is required for the first time, Node executes the file and stores the exported value in 
+     require.cache. Next time we call require() for the same module, Node returns the cached value instead of executing 
+     the file again. So each module runs only once.
+
+=> What is Event Driven?
+   Node.js uses events and callbacks. When something happens (like a request or file read completion), an event is emitted 
+   and the corresponding handler executes.
+
+=> What is Asynchronous?
+   Node.js does not wait for slow tasks like file or DB operations. It registers a callback and continues execution. When 
+   the task finishes, the callback runs later.
+
+=> What is Synchronous / Blocking?
+   Synchronous code blocks the thread — Node must wait for the task to finish before continuing. This is slower and not 
+   recommended for servers.
+   
+---------------------------------------------------------------------------------------------------------------------------
+# Episode 06 
+
+=> What is libuv?
+   libuv is the engine that makes Node.js asynchronous and non-blocking. libuv is a C library used inside Node.js that 
+   handles:
+   - the Event Loop
+   - asynchronous I/O
+   - timers
+   - filesystem
+   - networking
+   - thread pool
+
+=> Why does libuv exist? 
+   Because JavaScript is single-threaded, But modern apps need:
+   - file reads
+   - database calls
+   - timers
+   - network requests
+   - crypto work
+   These are slow. If JS ran them directly → app would freeze until they complete.
+
+   # So libuv was created to:
+     Offload slow tasks to OS or thread pool, then notify JavaScript when done.
+
+=> What is a Garbage Collector?
+   Garbage Collector (GC) is a system that automatically frees memory that your program is no longer using.
+   # In simple words:
+     - You create variables/objects
+     - When they are no longer needed
+     - Garbage Collector (GC) deletes them from memoryß
