@@ -1,0 +1,446 @@
+---------------------------------------------------------------------------------------------------------------------------
+# Episode 03
+=> what is nodeJs?
+   Node.js is Asynchronous.
+   Node.js is a runtime environment that allows JavaScript to run outside the browser, typically on the server.
+
+=> How does Node.js work?
+   Node.js uses a single-threaded, event-driven, non-blocking I/O model, meaning it can handle many requests efficiently 
+   without creating multiple threads.
+
+=> What is a Server?
+   A server is a computer or program that receives client requests, processes them, and sends back responses (like web 
+   pages, data, or files).
+
+=> What is the V8 Engine?
+   V8 is Google’s JavaScript engine (used in Chrome and Node.js) that compiles JavaScript directly into machine code so 
+   it runs very fast.
+
+=> What is Machine Code?
+   Machine code is the lowest-level code made of binary instructions (0s and 1s) that the CPU can execute directly.
+
+=> What is High-Level Code?
+   High-level code is human-readable programming code (like JavaScript, Python, Java) that must be translated into 
+   machine code before execution.
+
+=> What is ECMAScript?
+   ECMAScript is the official standard specification for JavaScript — it defines the language rules and features that 
+   ßJavaScript engines (like V8) must follow.
+
+=> What is the Global Object?
+   In Node.js, the global object is called global. It contains variables, functions, and objects that are available 
+   everywhere in a Node.js program without importing them.
+
+=> How does V8 understand global?
+   V8 doesn’t define global. Node creates the global object and exposes it as global inside the V8 execution context, 
+   similar to how browsers expose window.
+
+=> What is globalThis?
+   globalThis is the standardized way to access the global object across all JavaScript environments, so the same code 
+   works in both browsers and Node.js.
+---------------------------------------------------------------------------------------------------------------------------
+# Episode 04 
+
+=> What is a Module in Node.js?
+   A module is simply a separate JavaScript file that contains some code (functions, variables, logic, etc.). Modules help 
+   organize code, reuse code, and keep things separate. Every .js file in Node.js is treated as a module.
+
+   # Key points:
+     - Each file has its own scope
+     - Variables are not global by default
+     - You explicitly share things using module.exports
+
+=> What is module.exports?
+   module.exports is used to share code from one module (file) to another. Whatever you assign to module.exports becomes 
+   available to other files when they import it.
+
+=> What is require()?
+   require() is used to import and use a module in another file.
+
+=> Why Node.js uses modules?
+   Modules in Node.js help keep code modular, reusable, and maintainable.
+
+=> How do you export from one module to another in Node.js?
+   In Node.js, each file is treated as a module. If you want to use code from one file in another file, you must:
+   - Export the code from the first file, (using module.exports)
+   - Import it in the second file (using require())
+
+=> What are CJS (CommonJS)
+   CommonJS is the original Node.js module system that uses require() and module.exports for importing and exporting.
+   - Syntax:
+   // export
+   module.exports = something
+
+   // import
+   const something = require('./file')
+
+=> what are ES Modules (ESM / ES6 Modules)?
+   ES Modules are the modern, standardized JavaScript module system that use import and export.
+   - Syntax:
+     // export
+     export default something
+     export const a = 10;
+
+     // import
+     import something from './file.js'
+     import { a } from './file.js'
+
+=> Difference between CJS and ES modules.
+   - CommonJS:
+     CommonJS is the original Node.js module system that uses require() and module.exports. It loads modules synchronously 
+     and is mostly used in older Node projects
+
+   - ES Modules
+     ES Modules are the modern JavaScript standard using import and export. They support browsers, are always in strict 
+     mode, and are now fully supported in Node.js.
+
+=> What is util?
+   util is a core Node.js module that provides helper functions for working with callbacks, promises, debugging, type 
+   checking, and formatting. It is mainly used to simplify async code and debugging.
+
+=> Why does util exist?
+   Because old Node APIs used callbacks, and developers needed helpers to:
+   - convert callbacks → promises
+   - debug objects
+   - detect types
+   - format logs
+
+=> What is utils?
+   There is no built-in module called utils. Developers often create a folder named utils to store helper functions.
+---------------------------------------------------------------------------------------------------------------------------
+# Episode 05 
+
+=> Why can’t we access functions/variables from one module in another (by default)?
+   Node.js isolates each file in its own module scope. That means variables and functions are not global across files. To 
+   share them, we explicitly export and import code using module.exports and require().
+
+=> How require() works behind the scenes?
+   - When we use require() in Node.js, Node first locates the module file, 
+   - Then it secretly wraps that entire file inside an IIFE-style function (function(exports, require, module, __filename, __dirname){ ... }).
+   - This wrapper gives the module its own scope, so variables and functions don’t leak outside its keep variables and 
+     function safe. 
+   - The file is then executed, and whatever value we assign to module.exports becomes the exported value.
+   - Finally, require() simply returns module.exports, and Node caches the result so the module runs only once.
+
+   # When a module is loaded once, Node remembers it.
+     In Node.js, when a module is required for the first time, Node executes the file and stores the exported value in 
+     require.cache. Next time we call require() for the same module, Node returns the cached value instead of executing 
+     the file again. So each module runs only once.
+
+=> What is Event Driven?
+   Node.js uses events and callbacks. When something happens (like a request or file read completion), an event is emitted 
+   and the corresponding handler executes.
+
+=> What is Asynchronous?
+   Node.js does not wait for slow tasks like file or DB operations. It registers a callback and continues execution. When 
+   the task finishes, the callback runs later.
+
+=> What is Synchronous / Blocking?
+   Synchronous code blocks the thread — Node must wait for the task to finish before continuing. This is slower and not 
+   recommended for servers.
+   
+---------------------------------------------------------------------------------------------------------------------------
+# Episode 06 
+
+=> What is libuv?
+   libuv is the engine that makes Node.js asynchronous and non-blocking. libuv is a C library used inside Node.js that 
+   handles:
+   - the Event Loop
+   - asynchronous I/O
+   - timers
+   - filesystem
+   - networking
+   - thread pool
+
+=> Why does libuv exist? 
+   Because JavaScript is single-threaded, But modern apps need:
+   - file reads
+   - database calls
+   - timers
+   - network requests
+   - crypto work
+   These are slow. If JS ran them directly → app would freeze until they complete.
+
+   # So libuv was created to:
+     Offload slow tasks to OS or thread pool, then notify JavaScript when done.
+
+=> What is a Garbage Collector?
+   Garbage Collector (GC) is a system that automatically frees memory that your program is no longer using.
+   # In simple words:
+     - You create variables/objects
+     - When they are no longer needed
+     - Garbage Collector (GC) deletes them from memory
+---------------------------------------------------------------------------------------------------------------------------
+# Episode 07
+
+=> What is Node.js Core Modules?
+   Node.js core modules are built-in system modules included with Node.js runtime.
+   Examples:
+   - fs — file system
+   - http — web servers
+   - path — file paths
+   - crypto — hashing/encryption
+   - events — event emitter
+   These are built-in modules shipped with Node.js.
+
+=> what is PBKDF2?
+   Password-Based Key Derivation Function 2
+   Purpose:
+   - Take a password
+   - Add a salt
+   - Run a hash function a huge number of times
+   - Output a fixed-length key
+   Why?
+   To make password cracking slow and expensive.
+
+=> Synchronous (blocking)
+   # code:
+     crypto.pbkdf2Sync("akshumint999", "salt", 5000000, 20, "sha512");
+     console.log("First synchronous key is generated");
+
+   # What really happens:
+   - Node calls into the C/C++ OpenSSL crypto library
+   - PBKDF2 runs on the main thread
+   - It blocks the event loop
+   - Nothing else can run until it finishes
+   So your app is frozen until the key is ready.
+
+   # Note:
+     If that takes 2–3 seconds, Your whole Node.js server is frozen for 2–3 seconds, That’s why sync crypto is 
+     dangerous in servers.
+
+=> Asynchronous (non-blocking)
+   # code:
+     crypto.pbkdf2("akshumint999", "salt", 50000, 20, "sha512", (err, key) => {
+     console.log("Below is the asynchronous key of your password")
+     console.log(key)
+     })
+
+   # What happens internally:
+     - Node receives the request
+     - It sends the work to libuv’s thread pool
+     - A worker thread runs the PBKDF2 hashing
+     - Meanwhile the event loop stays free
+     - When the work finishes, your callback runs
+
+=> Key difference between asynchronous(non-blocking) and synchronous(blocking).
+   # pbkdf2Sync:
+     - Runs on: Main thread
+     - Blocks event loop?: YES (this is bad for servers)
+     - Typical use case: Simple scripts, CLI tools, non-server code
+
+   # pbkdf2 (asynchronous)
+     - Runs on: libuv thread pool (worker threads)
+     - Blocks event loop?: NO
+     - Typical use case: Real-world production apps and servers.
+
+   # Key idea:
+     - pbkdf2Sync freezes the Node.js event loop until the hash is finished.
+     - pbkdf2 runs in the background, so Node.js stays responsive.
+
+=> Why does setTimeout have a “trust issue”?
+   setTimeout has a “trust issue” because the delay is only a minimum wait time, not exact timing. JavaScript is 
+   single-threaded, so if the call stack is busy when the timer expires, the callback is delayed.
+---------------------------------------------------------------------------------------------------------------------------
+# Episoode 08
+
+=> Explain how V8 parses JavaScript code?
+   V8 is Google’s JavaScript engine used by Chrome and Node.js. Before executing JavaScript, V8 first parses the code to 
+   convert it into a machine-understandable structure.
+
+   # Step 1: Parsing Phase:
+     Parsing is the first step inside V8 and it has two stages:
+
+     (1) - Lexical Analysis (Tokenization):
+           V8 breaks the JavaScript source code into tokens. Tokens are the smallest meaningful units like:
+           - keywords (let, function)
+           - identifiers (x, sum)
+           - operators (+, =)
+           - literals (10, "hello")
+
+         Example: let x = 10; -> (convert into tokens) let | x | = | 10 | ;
+         Note: At this stage:
+         - No execution happens
+         - No logic is checked
+         - Only structure is identified
+
+      (2) - Syntax Analysis (Parsing):
+            Tokens are analyzed using JavaScript grammar rules. V8 builds an Abstract Syntax Tree (AST). AST represents 
+            the logical structure of the program, not the formatting
+
+            Example: a + b * c -> AST ensures: * has higher precedence than +
+            “Higher” means:
+            - It gets executed first
+            - It binds more tightly to operands
+
+=> What is AST?
+   AST stands for Abstract Syntax Tree. It is a tree representation of the program structure. It removes unnecessary 
+   details like spaces and semicolons. V8 uses AST for:
+   - syntax validation
+   - scope resolution
+   - optimization
+   - execution planning 
+
+   # Error Handling During Parsing:
+     V8 checks your JavaScript code for grammar mistakes before it runs anything. This happens in the parsing phase, 
+     not during execution.
+
+   # Types of errors in JavaScript (important distinction)
+     JavaScript has two main categories of errors:
+     - Syntax Errors → detected during parsing
+     - Runtime Errors → detected during execution
+
+   (1) Syntax Errors:
+
+     Example: if ( { console.log("hi") -> Let’s break why this fails.
+     - What if expects (grammar rule):
+       An if statement must be written as: if (condition) { ... }
+
+     - But your code has:
+       No condition
+       Broken parentheses
+       Invalid structure
+
+     - So when V8 tries to build the AST, it says, This code does not follow JavaScript grammar.
+     - At that point:
+       AST cannot be created
+       Parsing fails
+       Execution never starts
+     - That’s why the program crashes immediately.
+
+    # What does “execution never starts” ACTUALLY mean?
+      - No line of code runs
+      - No console.log
+      - No variables created
+      - No memory allocated for execution
+      - Node.js or the browser stops right there.
+
+   (2) Runtime Errors:
+
+     Example: console.log(x); -> ReferenceError: x is not defined
+     Here:
+     - Parsing succeeded
+     - AST was built
+     - Execution started
+     - Error occurred while running
+
+   # Final takeaway:
+     - Parsing errors = grammar problem → code never runs
+     - Runtime errors = logic problem → code starts, then fails
+
+=> What is a Compiler?
+   A compiler converts the entire source code into machine code before execution.
+
+=> What is an Interpreter?
+   It reads, translates, and executes code line-by-line at runtime.
+
+=> What is JIT (Just-In-Time) Compilation?
+   Code is compiled into machine code while the program is running, not before and not fully line-by-line.
+   JavaScript is NEITHER purely interpreted NOR purely compiled, JavaScript (V8) uses JIT (Just-In-Time) Compilation
+
+=> how V8 executes JavaScript after parsing:
+   AST
+   ↓
+   Ignition (Interpreter)
+   ↓
+   Bytecode
+   ↓
+   Execution
+   ↘
+   TurboFan (JIT Compiler) → Optimized Machine Code
+          ↑
+     De-optimization (if assumptions break)
+
+   (1) AST (starting point)
+       - AST = Abstract Syntax Tree
+       - Output of parsing
+       - Logical structure of your JS program
+       AST itself cannot run. It must be converted into something executable.
+
+   (2) Ignition Interpreter (first execution engine)
+       Ignition is V8’s interpreter. 
+       Its job is, Convert AST → Bytecode and start execution immediately.
+
+       # Why interpreter first?
+         - Fast startup
+         - No waiting for heavy compilation
+         - Good for short scripts
+
+       # What is Bytecode?
+         - Bytecode is closer to machine instructions than human-written JavaScript.
+         - Platform-independent
+           Its means, The same bytecode can run on:
+            Windows
+            Linux
+            macOS
+            ARM
+            x86
+           Because Bytecode is executed by V8, not directly by the CPU.
+         - Faster to generate than machine code
+         - Slower to execute than optimized machine code
+
+   (3) Execution (while interpreting):
+       While bytecode is executing, V8 tracks:
+       - Which functions run often
+       - What types are used
+       - How objects are shaped
+       This is where HOT code is detected.
+
+   (4) HOT code (critical concept):
+       frequently executed code
+
+       Example:
+       function sum(a, b) {
+       return a + b;
+       }
+       sum(1, 2);
+       sum(10, 5);
+       sum(2, 3);
+       sum(6, 7);
+       This function runs many times → HOT
+
+   (5) TurboFan Compiler (JIT):
+       TurboFan is V8’s optimizing compiler.
+
+       # What TurboFan does:
+         - Takes HOT bytecode
+         - Makes assumptions
+         - Generates optimized machine code
+         Example assumption: a and b are always numbers
+
+       # This allows:
+         - Inline operations
+         - Remove type checks
+         - Faster CPU execution 
+
+   (6) Optimized Machine Code:
+       - Real CPU-level code
+       - Extremely fast
+       - Comparable to C++ in some cases
+       Execution now switches from: Bytecode → Optimized Machine Code
+ 
+   (7) Assumptions (this is where things break):
+       TurboFan assumes stability. If your code changes behavior, Assumption breaks.
+       Example:
+       sum(1, 2);       // numbers
+       sum("1", "2");   // strings ❌
+
+   (8) De-optimization (fallback mechanism)
+       When assumptions fail:
+       - Optimized code is thrown away
+       - Execution falls back to Ignition
+       - This is called de-optimization
+
+   # Interview-ready explanation:
+     After parsing, V8 converts the AST into bytecode using the Ignition interpreter and starts execution immediately. While executing, V8 identifies hot code paths. These hot sections are then optimized by the TurboFan JIT compiler, which generates optimized machine code based on runtime assumptions. If assumptions break, V8 de-optimizes and falls back to the interpreter.
+
+=> Why V8 uses this hybrid model
+   Pure interpretation → slow
+   Pure compilation → slow startup
+
+   V8 wants:
+   - Fast startup ✅
+   - Fast execution later ✅
+   So it uses:
+   Interpreter first, compiler later
+   
