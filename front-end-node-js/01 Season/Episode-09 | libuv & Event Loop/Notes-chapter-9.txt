@@ -1,0 +1,160 @@
+# Episode 09
+
+=> How does Node.js handle asynchronous operations internally?
+   Node.js executes JavaScript using V8. When it encounters an asynchronous operation, it delegates it to libuv, which 
+   either uses the OS or a thread pool. Once the operation completes, the callback is queued, and the event loop pushes 
+   it to the call stack when it’s free, enabling non-blocking execution.
+
+=> What is the role of libuv in Node.js?
+   libuv is a C library that provides the event loop, asynchronous I/O handling, and a thread pool. It allows Node.js to perform non-blocking operations like file system access, networking, and timers.
+
+=> What exactly does the event loop do?
+   The event loop continuously checks whether the call stack is empty and if there are pending callbacks in the queues. When the stack is free, it pushes callbacks to the call stack for execution. The event loop schedules execution, it does not execute JavaScript.
+
+=> Where do asynchronous callbacks wait before execution?
+   Completed async callbacks are placed into callback queues such as the timer queue or I/O queue, and the event loop picks them up when the call stack becomes empty.
+
+=> Does Node.js use threads internally?
+   Yes. While JavaScript runs on a single thread, libuv uses a thread pool to handle operations like file system access, crypto, DNS, and compression.
+
+=> Why is Node.js called non-blocking?
+   Because Node.js does not wait for I/O operations to complete. Instead, it delegates them to libuv or the OS and continues executing other code, handling results later via callbacks or promises.
+
+=> Event loop
+   The Event Loop runs in PHASES (clockwise cycle)
+   # The image shows 5 main phases:
+     - Timers → Poll → Check → Close
+
+   # Plus two special queues (Microtask phase):
+     - process.nextTick()
+     - Promise callbacks (microtasks)
+     (This is inner cycle of main phase)
+
+=> How the Node.js Event Loop Cycle ACTUALLY runs?
+   Think of the event loop as a never-ending while loop. But it does NOT just spin randomly. It follows a fixed order every time.
+   - First, the golden rule
+     JavaScript runs only when the call stack is empty. The event loop only moves when JS is idle.
+
+   # STEP 0️⃣: Run synchronous code (BEFORE the loop)
+     - Runs immediately
+     - On the call stack
+     - No async, no queues
+     Only after all sync code finishes, the event loop starts its cycle.
+
+   # STEP 1️⃣: Microtasks ALWAYS run first (special rule)
+     Before touching ANY phase, Node checks: Microtask queues
+     - process.nextTick()
+     - Promise callbacks (.then, await)
+     Order:
+     process.nextTick → Promises → Event Loop Phases(Timers → Poll → Check → Close)
+
+     Example:
+     - process.nextTick(() => console.log("nextTick"));
+     - Promise.resolve().then(() => console.log("promise"));
+     These run immediately after current JS execution, even before timers.
+
+     This happens:
+     - After sync code
+     - After every callback
+     - After every phase
+     This is why they are dangerous.
+
+   # STEP 2️⃣: Timers Phase: Now the loop starts properly.
+     What runs here:  
+     - setTimeout
+     - setInterval
+    But ONLY if: Their delay time has expired
+
+    Important case:
+    - setTimeout(fn, 0);
+    does NOT mean “run now”, means “run in the timers phase, after microtasks”
+
+    After each timer callback: Node again runs microtasks
+
+   # STEP 3️⃣: Poll Phase (MOST IMPORTANT)
+     This is where Node spends most of its life.
+
+     - What happens here:
+       Execute I/O callbacks:
+       - fs.readFile
+       - HTTP responses
+       - Network sockets
+
+     - Poll phase logic:
+       - If I/O callbacks exist → execute them
+       - If no I/O callbacks:
+       - If setImmediate exists → move to CHECK
+       - Else → wait for I/O
+
+       After each poll callback: Microtasks run again
+
+    # STEP 4️⃣: Check Phase
+      What runs here:
+      - setImmediate()
+      Guaranteed rule: setImmediate runs after poll phase
+
+      After each setImmediate callback: Microtasks again
+
+    # STEP 5️⃣: Close Phase
+      What runs here:
+      - Cleanup callbacks
+      - socket.on("close")
+      - Resource deallocation
+
+      After close callbacks: Microtasks again
+
+    # STEP 6️⃣: Loop repeats forever
+      Once close phase ends:
+      - Event loop goes back to Timers
+      - Same order repeats
+      Until:
+      - Process exits
+      - No pending work remains
+
+    # Full order:
+      Sync Code → process.nextTick → Promises → Timers → process.nextTick → Promises → Poll → process.nextTick → Promises → Check → process.nextTick → Promises → Close → (repeat)
+
+=> How Node.js Code Runs (Simple Explanation)
+   Node.js runs JavaScript using V8 and handles asynchronous work using libuv and the Event Loop.
+
+   # Step 01 : Synchronous Code
+     - Runs first
+     - Executes line by line
+     - Uses the Call Stack
+     - Blocks nothing
+
+   # Step 02 : Asynchronous Code (Registration only)
+     When Node sees async functions, it does not execute them immediately.
+
+     Function	           What Node Does
+     - setTimeout	       Registers callback in Timers Queue
+     - fs.readFile	       Sends work to OS / thread pool
+     - setImmediate	       Registers callback in Check Queue
+
+     At this stage:
+     - No callback runs
+     - Only registration happens
+
+   # Step 03 : Callback Queues
+     Node.js has multiple callback queues, not one:
+     - Timers Queue → setTimeout, setInterval
+     - Poll Queue → File I/O, network I/O
+     - Check Queue → setImmediate
+     - Close Queue → Cleanup callbacks
+     Callbacks wait in these queues after async work is done.
+
+   # Step 04 : Event Loop
+     The Event Loop:
+     - Runs continuously
+     - Checks if the call stack is empty
+     - Moves callbacks from queues to the call stack
+
+   # Step 05 : Execution Flow
+     - Run all synchronous code
+     - Start Event Loop
+     - Execute callbacks one by one based on phase order
+     - Repeat until no work remains
+
+   # Important Rule:
+     - Callbacks do NOT run when async work finishes.
+     - They run only when the event loop picks them.
