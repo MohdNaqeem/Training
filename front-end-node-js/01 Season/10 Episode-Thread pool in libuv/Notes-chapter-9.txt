@@ -1,0 +1,214 @@
+# Episode 10
+
+=> Why order changes when poll phase is empty?
+   Node.js does not want to block. If the poll phase is empty, Node immediately moves forward instead of waiting.
+
+   # What is the poll phase ACTUALLY for?
+     The poll phase has two jobs:
+     - Execute I/O callbacks (fs, network, http)
+     - Wait for new I/O if there is nothing else to do
+
+    If poll has work → do poll work
+    Else if setImmediate exists → go to check phase
+    Else → wait for I/O
+
+=> Why Node.js is designed this way?
+   If Node always waited in poll phase:
+   - setImmediate would be slow
+   - Timers could be delayed
+   - App would feel unresponsive
+
+   If Node always skipped waiting:
+   - CPU would spin uselessly
+   - Bad performance
+
+=> Does fs.readFile always runs before setImmediate?
+   It depends on whether the poll phase is empty.
+   When the poll phase is empty, Node.js skips waiting and moves to the check phase to execute setImmediate callbacks, 
+   ensuring the event loop remains non-blocking and responsive.
+   
+=> Case 01 : Poll phase HAS fs.readFile, Check & Close have NOTHING, Timers phase HAS setTimeout
+   Step-by-step execution:
+   1 Synchronous code
+   - Registers fs.readFile
+   - Registers setTimeout
+   - No output yet
+
+   2 Event loop starts
+   - setTimeout(0) is ready
+   - Timers phase runs FIRST
+   Output: Timer
+
+   3 Poll phase
+   - fs.readFile has completed
+   - Poll queue has callback
+   - Output: File read
+  
+   Note: If timers are ready, Node executes the Timers phase before the Poll phase.
+
+=> Case 02 : ONLY Poll phase has work, Timers, Check, Close have NOTHING
+   Will Node wait at poll phase or keep rotating the cycle?
+   If poll phase is empty AND no timers or setImmediate exist, Node waits in poll phase.
+
+   Situation                             What Node does
+   - Timers ready	                       Run Timers phase first
+   - Poll has callbacks	                 Execute Poll callbacks
+   - Poll empty + setImmediate exists	   Go to Check phase
+   - Poll empty + no other work	         WAIT in poll phase
+
+=> HOW Node.js handles slow operations(What is thread pool)?
+   JavaScript runs on ONE thread. If it waits for slow work (file, network, crypto), the app freezes.
+   So Node.js says: “I will NOT wait. I will ask someone else to do the slow work.”
+
+   # Think of Node.js like this (real-life analogy)
+     - JavaScript = Manager
+     - Thread pool / OS = Workers
+     - Event loop = Secretary
+     The manager never does slow work himself.
+
+   # 1️⃣ JavaScript (V8):
+     - Runs your code
+     - Single-threaded
+     - Fast
+     - Cannot read files or talk to network by itself
+
+   # 2️⃣ Slow work (I/O):
+     - Examples of slow work:
+     - Reading a file
+     - Network request
+     - Database call
+     - Crypto hashing
+
+   # 3️⃣ What happens when JS sees slow work:
+     Example : fs.readFile("file.txt", callback);
+     - fs.readFile("file.txt", callback);
+     - JS tells libuv:“Please read this file”
+     - JS continues running other code
+     - JS is FREE (not blocked)
+
+   # 4️⃣ Who actually does the slow work?
+     - Thread Pool (for fs, crypto)
+     - OS (for network, timers)
+    They work in background.
+
+   # 5️⃣ What happens when slow work finishes?
+     - libuv puts the callback in a queue
+     - Worker says: “Done”
+     - Callback does NOT run immediately
+
+   # 6️⃣ Event Loop (VERY IMPORTANT)
+     The event loop:
+     - Checks if JS is free
+     - Picks one callback from the queue
+     - Gives it to JavaScript to run
+
+     Explanation : JavaScript runs on a single thread. When Node.js encounters slow operations like file system or crypto, it delegates them to the thread pool or OS using libuv. The main thread remains free, and once the operation completes, the event loop executes the callback.
+
+     JavaScript runs code
+     ↓
+     Slow task is sent to OS / Thread Pool
+     ↓
+     JavaScript keeps running
+     ↓
+     Slow task finishes
+     ↓
+     Callback is queued
+     ↓
+     Event loop sends callback to JavaScript
+     ↓
+     JavaScript runs callback
+
+=> What is the Thread Pool? (plain meaning)
+   a small group of worker threads that Node.js uses to do slow or blocking work in the background.
+
+   # Why does Node.js need a thread pool?
+     - JavaScript is single-threaded
+     - Some tasks are slow and would block JS
+     - Examples of slow tasks: Reading files, Crypto hashing, Compression, Some DNS operations
+     If JS did these directly → app would freeze.
+
+   # Where does the thread pool live?
+     - The thread pool is part of libuv, not JavaScript.
+     - Runs outside the JS call stack
+     - Default size of the thread pool 4
+
+   # What tasks use the thread pool?
+     - fs.readFile
+     - fs.writeFile
+     - crypto.pbkdf2
+     - crypto.scrypt
+     - zlib compression
+     - Some DNS functions
+
+=> How the thread pool works?
+   Code : fs.readFile("file.txt", callback);
+   - JS calls fs.readFile
+   - libuv sends this job to a free thread in the pool
+   - Thread reads the file (slow work)
+   - When done, callback is returned to libuv
+   - Callback is placed in the poll queue
+   - Event loop executes the callback
+   - JS prints result
+
+   # What if all thread pool threads are busy?
+     If Pool size = 4, You start 10 file reads.
+     Then : 4 run immediately, 6 wait in a queue They run when a thread becomes free
+
+   # Why thread pool saturation is bad:
+     - File reads slow down
+     - Crypto becomes slow
+     - API responses delay
+     - App looks “stuck” even though JS is fine
+  
+   # How to avoid thread pool problems
+     - Avoid heavy crypto in main app
+     - Increase pool size if needed
+     - Use streaming (fs.createReadStream)
+     - Offload CPU-heavy tasks to worker threads
+
+=> What are epoll and kqueue?
+   These are OS-level mechanisms for handling many network connections efficiently.
+   - On Linux: epoll
+   - On macOS: kqueue
+   
+   They are called: Scalable I/O event notification mechanisms
+   Meaning:
+   - The OS tells you only when something happens
+   - You don’t keep checking again and again
+   - One thread can manage thousands of connections
+
+   # Old / bad model: “Thread per connection”
+     How it works:
+     - 1 client → 1 thread
+     - 10,000 clients → 10,000 threads
+     Problems:
+     - Huge memory usage
+     - Context switching overhead
+     - OS becomes slow
+     - Server crashes under load
+
+=> How Node.js handles API requests
+   Node.js Model: Event-Driven (using epoll / kqueue)
+   - Node.js runs JavaScript on one main thread
+   - It does not create one thread per user
+   - For network operations, Node uses OS features, not threads
+
+   # What epoll / kqueue do
+     - epoll → used on Linux
+     - kqueue → used on macOS
+     - These are OS mechanisms for handling many network connections efficiently
+
+   # They work like this:
+     - Node registers all network sockets with the OS
+     - The OS notifies Node only when something happens
+
+     Note: Node.js does not keep checking sockets again and again. The OS informs Node only when an event happens.
+
+=> How the flow works?
+   - Suppose 10,000 users hit an API:
+   - All users connect to the server
+   - OS tracks all network sockets
+   - epoll / kqueue monitor the sockets
+   - OS tells Node: “Data is ready”, “Connection closed”
+   - Event loop runs the corresponding callback
+   - Response is sent to the user
