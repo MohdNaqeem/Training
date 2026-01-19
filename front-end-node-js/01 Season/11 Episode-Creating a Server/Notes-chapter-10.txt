@@ -1,0 +1,148 @@
+# Episode 11 
+
+=> What is a Server?
+   A server is a software application that runs continuously on a machine and listens for client requests over a network. 
+   It uses the operating system to manage hardware resources like CPU, memory, disk, and network. When a request arrives, 
+   the server processes it using application logic and sends a response back to the client.
+
+=> Hardware side of a Server
+   A server program runs on hardware, which includes:
+   Core hardware components
+   - CPU → executes instructions
+   - RAM → holds running programs & data
+   - Disk (SSD/HDD) → stores files, databases
+   - Network card → sends/receives data
+   What makes “server hardware” special?
+   - More RAM
+   - Better CPU
+   - Better network
+   - Runs 24×7
+
+=> Software side of a server
+   A server is built from layers of software:
+   Hardware
+   ↓
+   Operating System (Linux / Windows)
+   ↓
+   Server Runtime (Node.js / Java / Python)
+   ↓
+   Server Application (Your code)
+
+=> Operating System’s role (critical)
+   The OS does the heavy lifting:
+   - Manages CPU time
+   - Manages memory
+   - Manages disk I/O
+   - Manages network sockets
+   - Your server does not talk to hardware directly. It asks the OS.
+
+=> What does a server ACTUALLY do?
+   At runtime, a server:
+   - Listens on a port
+   - Accepts client connections
+   - Receives requests
+   - Processes logic
+   - Sends responses
+   - Keeps running
+
+=> What is a PORT and why it matters:
+   A port is a numbered door on a machine
+   Example:
+   HTTP → 80
+   HTTPS → 443
+   Node dev → 3000
+   IP Address + Port = Server address 
+
+=> Simple server flow (real world):
+   Browser (Client)
+   ↓
+   Internet
+   ↓
+   Server OS (network stack)
+   ↓
+   Server program (Node.js)
+   ↓
+   Your code
+   ↓
+   Response back
+
+=> How a Node.js server works internally:
+   const http = require("http");
+   http.createServer((req, res) => {
+     res.end("Hello");
+   }).listen(3000);
+
+   # What happens step-by-step:
+     - Node asks OS: “Listen on port 3000”
+     - OS listens for incoming connections
+     - Client sends request
+     - OS notifies Node
+     - Node’s event loop handles the request
+     - Your callback runs
+     - Response is sent
+     Node itself does not manage sockets — OS does.
+
+=> Why servers are always running:
+   - Is long-lived
+   - Does not exit after one request
+   - Waits for thousands of requests
+   That’s why we say: “Server runs continuously”
+
+=> Client vs Server
+   Client	                Server
+   - Initiates request	  Waits for request
+   - Short-lived	        Long-running
+   - Browser / App	      Backend program
+   - Requests data	      Serves data
+
+=> Types of servers:
+   By role:
+   - Web server (APIs)
+   - Database server
+   - File server
+   - Authentication server
+   By protocol:
+   - HTTP server
+   - TCP server
+   - WebSocket server
+
+=> What is AWS?
+   AWS is a cloud platform that provides servers, storage, databases, networking, and many other services over the 
+   internet.
+
+=> Why AWS exists?
+   Before AWS:
+   - Companies bought physical servers
+   - Needed data centers
+   - Paid for hardware, power, cooling
+   - Hard to scale (slow, expensive)
+   AWS solution:
+   - Pay only for what you use
+   - Get servers in minutes
+   - Scale up or down instantly
+   - No hardware management
+
+   AWS is a collection of services. A big toolbox for building and running backend systems
+
+=> What is the client?
+   A client is the machine or application that requests data
+   Examples:
+   - Browser (Chrome)
+   - Mobile app
+   - Postman
+
+=> What is IP Address?
+   An IP address is a unique identifier of a machine on a network.
+   - Client IP → tells where request is coming from
+   - Server IP → tells where request should go
+   Without IP addresses, machines cannot find each other.
+
+=> What is TCP/IP?
+   TCP/IP is the foundation of internet communication
+   - IP → finds the destination machine
+   - TCP → ensures reliable data transfer
+   
+   TCP guarantees:
+   - Data arrives in order
+   - No data is lost
+   - Data is reassembled correctly
