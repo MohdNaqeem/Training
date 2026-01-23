@@ -146,3 +146,40 @@
    - Data arrives in order
    - No data is lost
    - Data is reassembled correctly
+
+=> What are req and res in Node.js?
+   req (request object) represents the incoming HTTP request from the client.
+   It contains:
+   - URL (req.url)
+   - HTTP method (req.method)
+   - Headers, body, query params, etc.
+   res (response object) is used to send data back to the client.
+   It controls:
+   - Status code
+   - Headers
+   - Response body (res.end())
+
+=> How does routing work in Node.js (without Express)?
+   Routing is done manually by checking:
+   - req.url
+   - req.method
+   - Based on conditions (if / else), the server decides what response to send.
+
+=> Why does this raw Node.js approach NOT scale?
+   This approach does not scale because:
+   
+   # Manual routing
+     - Too many if-else blocks
+     - Hard to maintain as routes increase
+   
+   # No middleware system
+     - Cannot easily handle authentication, logging, validation
+   
+   # Code duplication
+     - Headers, status codes, parsing repeated everywhere
+
+   # Poor error handling
+     - One uncaught error can crash the server
+   
+   # Hard to structure large apps
+     - No separation of concerns (routes, controllers, services)
