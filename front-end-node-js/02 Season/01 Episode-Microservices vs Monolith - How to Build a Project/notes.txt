@@ -1,0 +1,137 @@
+=> What is the Waterfall Model?
+   The Waterfall Model is a linear and sequential software development process where work flows step by step, and each 
+   phase must be completed before the next one starts.
+
+=> Phases of the Waterfall Model:
+   # Requirement Analysis
+     - Collect all requirements at the start
+     - Freeze them
+     - No changes expected later
+
+   # System Design
+     - Decide architecture, technologies, database, design
+     - Blueprint of the system
+
+   # Development / Implementation (Coding)
+     - Developers write code based on design
+     - No requirement changes allowed
+
+   # Testing
+     - Test the complete system after coding
+     - Bugs are found late
+
+   # Deployment
+     - Software is delivered to the client
+
+   # Maintenance
+     - Fix issues after delivery
+
+=> What is a Monolith?
+   A monolithic architecture is an application where all features and logic live in a single codebase and are deployed 
+   as one unit.
+
+   Example:
+   One Node.js app handles:
+   - Authentication
+   - User management
+   - Orders
+   - Payments
+   - All in the same project
+   If the app crashes → everything goes down.
+
+   When Monolith is a good choice:
+   - Small teams
+   - Startups
+   - Early-stage products
+   - Freshers / learning phase
+
+=> What are Microservices?
+   Microservices architecture breaks an application into small, independent services, each responsible for a single 
+   business capability.
+
+   Example:
+   - Auth Service
+   - User Service
+   - Order Service
+   - Payment Service
+   Each service:
+   - Has its own codebase
+   - Can be deployed independently
+   - Often has its own database
+
+=> Monolith vs Microservices
+
+   # Development Speed:
+     In a monolithic architecture, development speed is faster in the initial stage because the entire application is built and managed as a single codebase. Developers do not need to worry about service communication or infrastructure setup.
+
+     In microservices architecture, development is slower initially because each service needs its own setup, communication logic, and deployment configuration.
+
+   # Code Repository
+     In a monolithic architecture, the entire application is stored in a single code repository, which makes it easier to  manage for small teams.
+
+     In microservices architecture, each service usually has its own repository, which allows independent development but increases management complexity.
+
+   # Scalability
+     In a monolithic system, scaling usually means scaling the entire application even if only one feature requires more resources.
+
+     In microservices, each service can be scaled independently, which makes resource usage more efficient for large applications.
+
+   # Deployment
+     In a monolithic architecture, the entire application must be redeployed even for a small change in one feature.
+
+     In microservices architecture, individual services can be deployed independently without affecting other services.
+
+   # Technology Stack
+     In monolithic applications, a single technology stack is usually used across the entire system.
+
+     In microservices, different services can use different technology stacks depending on the specific requirements of each service.
+
+   # Infrastructure Cost
+     Monolithic applications generally have lower infrastructure costs because fewer servers and simpler setups are required.
+
+     Microservices have higher infrastructure costs because each service may require separate servers, monitoring, and networking resources.
+
+   # Complexity
+     Monolithic systems are less complex because all components are part of one application and communicate directly.
+
+     Microservices systems are more complex due to inter-service communication, service discovery, and monitoring requirements.
+
+   # Fault Isolation
+     In a monolithic architecture, a failure in one part of the application can potentially bring down the entire system.
+
+     In microservices architecture, failures are isolated to individual services, so other services can continue to function normally.
+
+   # Testing
+     Testing a monolithic application is generally easier because the entire system can be tested as a single unit.
+
+     Testing microservices is more challenging because services depend on each other and require integration and contract testing.
+
+   # Ownership
+     In monolithic architecture, ownership is usually shared among teams, which can sometimes cause coordination issues.
+
+     In microservices architecture, each service typically has a dedicated team, making ownership and responsibility clearer.
+
+   # Maintenance
+     As monolithic applications grow, maintaining the codebase becomes difficult due to tight coupling between components.
+
+     Microservices are easier to maintain in large systems because changes in one service do not directly affect others.
+
+   # Maintenance
+     As monolithic applications grow, maintaining the codebase becomes difficult due to tight coupling between components.
+
+     Microservices are easier to maintain in large systems because changes in one service do not directly affect others.
+
+   # Revamps
+     In monolithic applications, making major changes or revamps is risky because the entire application is affected.
+
+     In microservices architecture, individual services can be redesigned or replaced without impacting the whole system.
+
+   # Debugging
+     Debugging monolithic applications is simpler because logs and errors are located in one place.
+
+     Debugging microservices is more complex because issues may involve multiple services and distributed logs.
+
+   # Developer Experience
+     Monolithic architecture provides a smoother developer experience for beginners and small teams due to its simplicity.
+
+     Microservices architecture provides a better experience for experienced teams but requires strong tooling and operational discipline.
