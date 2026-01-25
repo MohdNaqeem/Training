@@ -1,0 +1,46 @@
+=> What is MongoDB?
+   MongoDB is a NoSQL, document-oriented database that stores data in JSON-like BSON documents instead of tables and rows.
+   It is designed for flexibility, scalability, and high performance, especially for modern web applications.
+
+=> Why MongoDB is called NoSQL?
+   MongoDB is called NoSQL because it:
+   - Does not use tables, rows, and columns
+   - Does not enforce a fixed schema
+   - Does not rely on SQL
+   - Instead, it stores data as documents inside collections.
+   NoSQL does not mean “no structure”, it means no fixed relational structure.
+
+=> How does MongoDB store data?
+   MongoDB follows this hierarchy:
+   Cluster
+    → Database
+       → Collection
+          → Document
+             → Fields
+
+    - Cluster: Group of servers
+    - Database: Container for collections
+    - Collection: Group of documents
+    - Document: JSON-like data object
+
+=> What is a Cluster in MongoDB Atlas?
+   A cluster is a managed MongoDB environment hosted on cloud (AWS, Azure, GCP). It handles storage, replication, 
+   and scaling. A cluster can contain multiple databases.
+
+=> What is MongoDB Compass?
+   MongoDB Compass is a GUI tool used to:
+   - View databases and collections
+   - Insert, update, delete documents
+   - Run queries visually
+   MongoDB Compass is NOT a database. It only connects to MongoDB.
+
+=> Why can’t we create an empty database in MongoDB?
+   Because MongoDB is schema-less and lazy by design. It only creates databases when actual data or collections exist.
+
+=> What are the two approaches of MongoDB?
+   This is a VERY IMPORTANT interview question. MongoDB supports two data modeling approaches:
+   - Embedding
+   - Referencing
+   These decide how related data is stored, not free or paid versions.
+   
+
