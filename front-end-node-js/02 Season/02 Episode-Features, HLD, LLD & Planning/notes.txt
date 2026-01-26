@@ -1,0 +1,94 @@
+=> DevTinder project features:
+   - Create an account
+   - Login
+   - Update your profile pitcures
+   - Feed page explore 
+   - Send connection request 
+   - See our matches
+   - See the request we have sent 
+   - Update your profile
+
+=> What is LLD?
+   LLD (Low Level Design) is the detailed design of how a system is implemented at code level. LLD comes after High 
+   Level Design (HLD) and before coding.
+
+=> What LLD focuses on (core idea)?
+   LLD focuses on:
+   - Classes
+   - Methods
+   - APIs
+   - Data structures
+   - Database schema
+   - Relationships between components
+
+=> What is included in LLD?
+   # Class / Module Design
+     - What modules exist
+     - Responsibilities of each module
+    
+   # Method-Level Design
+     - Function names
+     - Inputs and outputs
+     - Business logic steps
+     sendConnectionRequest(senderId, receiverId)
+
+   # Database Design (very important)
+     - Collections / tables
+     - Fields
+     - Indexes
+     - Relationships
+
+     Example: 
+          User {
+                 _id,
+                 name,
+                 email,
+                 passwordHash
+              }
+
+   # API Design
+     - Endpoints
+     - HTTP methods
+     - Request & response structure
+     - Status codes
+     POST /api/connections/send
+
+   # Validation & Error Handling
+     - What checks happen
+     - What errors are thrown
+     - How failures are handled
+
+=> What is an API?
+   API (Application Programming Interface) is a way for two software systems to communicate with each other. An API 
+   defines how you can ask for data or send data to another system, and what response you will get.
+
+   Real-life analogy
+   - You (client) → place an order
+   - Waiter (API) → takes request
+   - Kitchen (server/database) → prepares food
+   - Waiter → brings response
+
+   In software terms
+   - Frontend / mobile app → sends request
+   - Backend API → processes request
+   - Database → stores/retrieves data
+   - API → sends response back
+
+=> Why APIs are used
+   APIs are used to:
+   - Connect frontend and backend
+   - Share data between services
+   - Hide internal logic
+   - Enforce security
+   - Enable scalability
+
+=> What is a REST API(Representational State Transfer)?
+   REST API is a type of API that follows specific rules called REST principles. A REST API uses HTTP methods and URLs 
+   in a standardized way to perform operations on data.
+
+   HTTP methods in REST:
+   - GET	        Read data
+   - POST	        Create data
+   - PUT / PATCH	Update data
+   - DELETE	        Delete data 
+   
