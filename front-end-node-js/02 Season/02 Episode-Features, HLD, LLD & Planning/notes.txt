@@ -91,4 +91,47 @@
    - POST	        Create data
    - PUT / PATCH	Update data
    - DELETE	        Delete data 
+
+=> What is HLD?
+   HLD (High Level Design) is the big-picture design of a system. It explains what components exist and how they interact, 
+   without going into code-level details. HLD answers “What will we build and how major parts talk to each other
+
+=> What HLD focuses on: 
+   HLD focuses on:
+   - Overall architecture
+   - Major components/services
+   - Data flow between components
+   - Technology choices
+   - Deployment overview
+   It avoids:
+   - Function names
+   - Classes
+   - Detailed logic
+
+=> What is included in HLD:
    
+   # System Architecture
+     - Monolith or Microservices
+     - Client–server structure
+
+   # Major Components
+     - Frontend
+     - Backend services
+     - Database
+     - Cache (if any)
+
+   # Data Flow
+     - How requests move
+     - Where authentication happens
+     - Where data is stored
+
+   # Technology Stack
+     - Frontend framework
+     - Backend language
+     - Database
+     - Hosting/cloud
+
+   # Non-functional considerations
+     - Scalability (basic)
+     - Security (basic)
+     - Availability (basic)
