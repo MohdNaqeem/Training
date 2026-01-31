@@ -1,0 +1,56 @@
+=> What is Express.js?
+   Express.js is a minimal web framework built on top of Node.js that helps you create backend servers and APIs easily.
+   Node.js alone can create a server, but it’s low-level and messy. Express makes backend development clean, readable, 
+   and scalable.
+
+=> What problem does Express.js solve?
+   # Without Express (pure Node.js):
+     You manually handle:
+     - URLs
+     - HTTP methods
+     - Parsing data
+     - Errors
+     - Code becomes hard to manage very fast
+
+   # With Express:
+     You get:
+     - Routing system
+     - Middleware support
+     - Clean request/response handling
+     - Easy API creation
+     That’s why Express exists.
+
+=> What exactly does Express.js do?
+   Express helps you:
+   - Create a server
+   - Define routes (URLs)
+   - Handle HTTP methods (GET, POST, PUT, DELETE)
+   - Process request data
+   - Send responses
+   - Add middleware (auth, logging, validation)
+
+=> Why do we create Express first in a backend project?
+   Because Express is the foundation of the backend application.
+   When you build a backend, everything depends on:
+   - How requests come in
+   - How responses go out
+   - How APIs are structured
+   Express sets up this foundation by:
+   - Creating the server
+   - Defining routing rules
+   - Attaching middleware
+   - Handling incoming requests
+
+   Typical backend flow (correct order):
+   This is how real projects are structured:
+   - Initialize project
+   - Create Express app
+   - Add middleware
+   - Define routes
+   - Connect database
+   - Add business logic
+   - Start server
+     
+=> What is nodemon?
+   nodemon is a development tool that automatically restarts the Node.js server whenever code changes are detected, which 
+   improves development speed and removes the need for manual restarts.
