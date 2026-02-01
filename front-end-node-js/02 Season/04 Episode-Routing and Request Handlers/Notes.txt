@@ -1,0 +1,109 @@
+=> How does Express match routes?
+   Express matches routes sequentially from top to bottom. The first matching route handles the request.
+
+=> What happens if / route is first?
+   It catches all requests and blocks other routes.
+
+=> Does app.use("/test") match /test/123?
+   Yes, because app.use matches prefixes.
+
+=> Why should catch-all routes be last?
+   Otherwise they block specific routes.
+
+=> Difference between app.use and app.get?
+   app.use handles all HTTP methods and prefix matching, while app.get handles only GET requests and exact matching.
+
+   Complete Ans: 
+   Express routes are matched sequentially from top to bottom. The first matching route handles the request. Specific 
+   routes should come first and generic routes like '/' should come last to avoid blocking other routes.”
+
+=> What is app.use() in Express?
+   app.use() is used to register middleware functions in Express. It runs for all HTTP methods and matches routes by 
+   prefix, making it useful for global middleware like parsing, authentication, logging, or mounting routers.
+
+=> What is Routing?
+   Routing is the process of mapping an incoming client request (URL + HTTP method) to a specific handler function that 
+   processes the request and sends a response.
+
+=> How Routing Works Internally?
+   - Client sends request
+   - Server checks method (GET/POST)
+   - Server checks URL
+   - Matching route runs
+   - Response sent
+   - If no match → 404
+
+=> What is the difference between Node routing and Express routing?
+   Node.js uses the native HTTP module which requires manual condition checking, while Express provides a routing layer 
+   that simplifies route handling.
+
+=> What are HTTP Methods in routing?
+   HTTP methods define the type of operation performed on a resource.
+   - Method	      Purpose
+   - GET	         Read data
+   - POST	      Create
+   - PUT	         Update
+   - DELETE	      Remove
+   Example:
+   app.get('/users')
+   app.post('/users')
+
+=> What is a Route?
+   A route is a combination of path + HTTP method + handler function.
+
+=> What are Route Parameters?
+   Route parameters are dynamic values embedded in the URL used to capture specific resource identifiers.
+
+=> What are Query Parameters?
+   Query parameters are optional key-value pairs passed in the URL to filter or modify request results.
+
+=> Why do we use Router?
+   To improve scalability, maintainability, and separation of concerns.
+
+=> What is 404 handling?
+   A fallback route that handles unmatched requests.
+
+=> What is a Route Path?
+   A route path is the URL pattern that Express uses to match incoming requests.
+
+=> Types of Route Paths in Express.js?
+   - Static path
+   - String pattern (operators)
+   - Regular Expression (regex)
+
+   # Static Path (basic):
+     Example: app.get('/about', handler)
+     Matches: /about
+     Only exact match.
+
+   # String Pattern Paths (operators like ?, +, *)
+     These are mini-regex shortcuts. Operators you can use in path:
+
+     - ? (question mark) : Makes the previous character optional.
+       Example: app.get('/colou?r', handler)
+       Matches: /color , /colour
+       Because u is optional
+
+     - + (plus): Matches one or more occurrences of previous character.
+       Example: app.get('/go+d', handler)
+       Matches: /god , /good , /goood
+       Because multiple "o"
+
+     - * (multiply) : Matches zero or more characters.
+       Example: app.get('/user*', handler)
+       Matches: /user , /user123 , /user/abc , /userXYZ
+       Anything allowed
+
+     - () (paranthesis) : Groups characters together. Treat multiple characters as one unit
+       Example: app.get('/(cat|dog)', handler)
+       Matches: /cat , /dog
+
+   # Regular Expression Routes (Full Power):
+     A regular expression route uses JavaScript RegExp to define complex matching rules. Instead of string, you pass 
+     regex pattern.
+     Example: app.get(/a/, handler)
+     Matches: /apple , /cat , /batman
+     Matches anything containing "a":
+
+
+        
