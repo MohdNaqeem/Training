@@ -1,0 +1,16 @@
+=> JS Object vs JSON
+
+   # JavaScript Object:
+     - Lives in JavaScript memory
+     - Used inside code
+     - Can contain functions, methods, undefined
+     - Flexible, executable
+
+   # JSON (JavaScript Object Notation)
+     - Plain text format
+     - Used for data transfer / storage
+     - No functions
+     - Strict rules
+       - keys should be in quotes
+       - functions not allowed
+       - undefined not allowed
