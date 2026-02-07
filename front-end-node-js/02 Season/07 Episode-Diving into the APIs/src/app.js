@@ -9,7 +9,6 @@ app.use(express.json())
 app.post("/signup", async (req,res)=>{
     // creating a new instance of the user model
     const user = new User(req.body)
-
     try {
         await user.save()
     res.send("User added successfully")
@@ -35,6 +34,30 @@ app.get("/feed", async (req,res)=>{
         const users = await User.find({})
         res.send(users)
     } catch(err) {
+        res.status(400).send("Something went wrong")
+    }
+})
+
+// To delete the user by Id 
+app.delete("/user", async (req,res)=>{
+    const userId = req.body.userId
+    try{
+        const user = await User.findByIdAndDelete(userId)
+        res.send("user deleted successfully")
+    }catch(err) {
+        res.status(400).send("Something went wrong")
+    }
+})
+
+// To Update the use fields
+app.patch("/user", async (req,res)=>{
+    const userId = req.body.userId;
+    const data = req.body
+    console.log(data)
+    try{
+        await User.findByIdAndUpdate({_id : userId}, data)
+        res.send("User updated successfully")
+    }catch(err) {
         res.status(400).send("Something went wrong")
     }
 })

@@ -14,3 +14,59 @@
        - keys should be in quotes
        - functions not allowed
        - undefined not allowed
+
+=> Difference between patch and put:
+   PUT = replace the entire resource
+   PATCH = update only specific fields
+
+   Feature	             PUT	                   PATCH
+   Purpose	             Replace resource	       Update part of resource
+   Sends full object	   ✅ Yes	                ❌ No
+   Partial update	       ❌ No	                  ✅ Yes
+   Risk of data loss.    🔥 High	               Low
+   Commonly used	       Rare	                   Very common
+
+   Why PATCH is used more in real projects:
+   - Frontend usually updates one or two fields
+   - Sending full object every time is risky
+   - One missing field in PUT = data wiped
+   That’s why: 90% of update APIs use PATCH
+   PUT exists mainly for strict REST correctness, not practicality.
+
+=> What is returnDocument?
+   returnDocument tells Mongoose which version of the document you want back after an update:
+   - before → old data
+   - after → updated data
+
+   Example: 
+
+   Suppose this user exists in DB:
+   {
+     "_id": "abc123",
+     "name": "Naqeem",
+     "age": 22
+   }
+
+   You run an update:
+   User.findByIdAndUpdate(
+     "abc123",
+     { age: 23 },
+     { returnDocument: "after" }
+   )
+
+   Meaning : “Give me the document after the update is applied.”
+   Returned result
+   {
+     "_id": "abc123",
+     "name": "Naqeem",
+     "age": 22
+   }
+   "Even though the DB is updated, the returned value is old."
+
+=> What if you DON’T use returnDocument?
+   By default, Mongoose returns the OLD document.
+
+   Option used	     What DB stores	     What function returns
+   "before"	         Updated	           Old document
+   "after"	         Updated	           Updated document
+   Not used	         Updated	           Old document
