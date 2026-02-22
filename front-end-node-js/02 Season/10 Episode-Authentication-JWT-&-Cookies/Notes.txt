@@ -1,0 +1,132 @@
+=> JS Object vs JSON
+
+   # JavaScript Object:
+     - Lives in JavaScript memory
+     - Used inside code
+     - Can contain functions, methods, undefined
+     - Flexible, executable
+
+   # JSON (JavaScript Object Notation)
+     - Plain text format
+     - Used for data transfer / storage
+     - No functions
+     - Strict rules
+       - keys should be in quotes
+       - functions not allowed
+       - undefined not allowed
+
+=> Difference between patch and put:
+   PUT = replace the entire resource
+   PATCH = update only specific fields
+
+   Feature	             PUT	                   PATCH
+   Purpose	             Replace resource	       Update part of resource
+   Sends full object	   ✅ Yes	                ❌ No
+   Partial update	       ❌ No	                  ✅ Yes
+   Risk of data loss.    🔥 High	               Low
+   Commonly used	       Rare	                   Very common
+
+   Why PATCH is used more in real projects:
+   - Frontend usually updates one or two fields
+   - Sending full object every time is risky
+   - One missing field in PUT = data wiped
+   That’s why: 90% of update APIs use PATCH
+   PUT exists mainly for strict REST correctness, not practicality.
+
+=> What is returnDocument?
+   returnDocument tells Mongoose which version of the document you want back after an update:
+   - before → old data
+   - after → updated data
+
+   Example: 
+
+   Suppose this user exists in DB:
+   {
+     "_id": "abc123",
+     "name": "Naqeem",
+     "age": 22
+   }
+
+   You run an update:
+   User.findByIdAndUpdate(
+     "abc123",
+     { age: 23 },
+     { returnDocument: "after" }
+   )
+
+   Meaning : “Give me the document after the update is applied.”
+   Returned result
+   {
+     "_id": "abc123",
+     "name": "Naqeem",
+     "age": 22
+   }
+   "Even though the DB is updated, the returned value is old."
+--------------------------------------------------------------------------------------------------------------------------------------------
+for more details about mongoose check and validator we can visit following links:
+for mongoose : https://mongoosejs.com/docs/timestamps.html
+for validator : https://www.npmjs.com/package/validator
+
+=> What if you DON’T use returnDocument?
+   By default, Mongoose returns the OLD document.
+
+   Option used	     What DB stores	     What function returns
+   "before"	         Updated	           Old document
+   "after"	         Updated	           Updated document
+   Not used	         Updated	           Old document
+
+=> What is runValidators?
+   runValidators is an option for update queries in Mongoose. 
+   It tells Mongoose: “When I UPDATE a document, also run the schema validators.”
+--------------------------------------------------------------------------------------------------------------------------------------------
+=> What Is Authentication?
+   Authentication proving who the user is.
+   Example:
+   - User enters email + password
+   - Server verifies it
+   - If correct → user is logged in
+   Authorization = what the user is allowed to do after login.
+
+=> Why We Need Authentication in Backend?
+   Every request is independent.
+   So when a user logs in:
+   - Server must remember that user for future requests.
+   - Otherwise every request would need email/password again.
+   To “remember” users, we use:
+   - Sessions (older way)
+   - Cookies
+   - JWT (modern token-based way)
+
+=> What Is a Cookie?
+   Small data stored in the browser, sent automatically with every request to the same domain.
+   How It Works:
+   - User logs in.
+   - Server sends response with: Set-Cookie: token=abc123
+   - Browser stores it.
+   - For every next request: Cookie: token=abc123
+   Server reads that cookie and identifies user.
+
+=> What Is JWT?
+   JWT = JSON Web Token, It is just a digitally signed token that proves identity.
+   It has 3 parts: HEADER.PAYLOAD.SIGNATURE
+   Example:
+   - eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.
+   - eyJpZCI6IjEyMyIsInJvbGUiOiJ1c2VyIn0.
+   - abc123signature
+
+   Structure Explained:
+   - Header: Algorithm used to sign token.
+   - Payload: Data you store: userId, role, email, Never store password in JWT.
+   - Signature
+     Created using:
+     Secret key
+     Header + Payload
+
+=> What is middleware in Express?
+   Middleware is a function that executes during the request-response cycle. It has access to the request and response 
+   objects and can either modify them, terminate the request, or pass control to the next middleware using next(). It 
+   is commonly used for authentication, validation, logging, and error handling.
+
+=> Why use middleware for authentication?
+   Because authentication is a cross-cutting concern. Instead of repeating token verification logic in every protected 
+   route, we centralize it in middleware and reuse it across routes.
