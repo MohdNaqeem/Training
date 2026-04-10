@@ -1,0 +1,24 @@
+{
+  "name": "00-node-js-training",
+  "version": "1.0.0",
+  "description": "node-js-training",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MohdNaqeem/Training.git"
+  },
+  "author": "Naqeem Momin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MohdNaqeem/Training/issues"
+  },
+  "homepage": "https://github.com/MohdNaqeem/Training#readme",
+  "dependencies": {
+    "express": "^5.2.1",
+    "mongoose": "^9.4.1"
+  }
+}
